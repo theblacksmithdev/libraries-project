@@ -1,8 +1,28 @@
 import * as React from "react"
+import { cva, type VariantProps } from "class-variance-authority"
 
 import { cn } from "@/lib/utils"
 
-export interface EmptyStateProps extends React.HTMLAttributes<HTMLDivElement> {
+const emptyStateVariants = cva(
+  "flex flex-col items-center justify-center text-center",
+  {
+    variants: {
+      variant: {
+        default: "py-12",
+        compact: "py-6",
+        card: "py-12 rounded-lg border bg-card",
+        dashed: "py-12 rounded-lg border border-dashed",
+      },
+    },
+    defaultVariants: {
+      variant: "default",
+    },
+  }
+)
+
+export interface EmptyStateProps
+  extends React.HTMLAttributes<HTMLDivElement>,
+    VariantProps<typeof emptyStateVariants> {
   /** Icon to display above the title */
   icon?: React.ReactNode
   /** Title text */
@@ -14,13 +34,10 @@ export interface EmptyStateProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 const EmptyState = React.forwardRef<HTMLDivElement, EmptyStateProps>(
-  ({ className, icon, title, description, action, ...props }, ref) => (
+  ({ className, icon, title, description, action, variant, ...props }, ref) => (
     <div
       ref={ref}
-      className={cn(
-        "flex flex-col items-center justify-center py-12 text-center",
-        className
-      )}
+      className={cn(emptyStateVariants({ variant }), className)}
       {...props}
     >
       {icon && (
@@ -40,4 +57,4 @@ const EmptyState = React.forwardRef<HTMLDivElement, EmptyStateProps>(
 )
 EmptyState.displayName = "EmptyState"
 
-export { EmptyState }
+export { EmptyState, emptyStateVariants }

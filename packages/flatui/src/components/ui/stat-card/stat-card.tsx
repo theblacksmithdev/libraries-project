@@ -1,9 +1,26 @@
 import * as React from "react"
 import { TrendingUp, TrendingDown } from "lucide-react"
+import { cva, type VariantProps } from "class-variance-authority"
 
 import { cn } from "@/lib/utils"
 
-export interface StatCardProps extends React.HTMLAttributes<HTMLDivElement> {
+const statCardVariants = cva("rounded-lg p-6 text-card-foreground", {
+  variants: {
+    variant: {
+      default: "border bg-card",
+      elevated: "border bg-card shadow-md",
+      minimal: "bg-transparent",
+      highlighted: "border-primary bg-primary/5",
+    },
+  },
+  defaultVariants: {
+    variant: "default",
+  },
+})
+
+export interface StatCardProps
+  extends React.HTMLAttributes<HTMLDivElement>,
+    VariantProps<typeof statCardVariants> {
   /** Label above the value */
   label: string
   /** Primary value to display */
@@ -19,10 +36,10 @@ export interface StatCardProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 const StatCard = React.forwardRef<HTMLDivElement, StatCardProps>(
-  ({ className, label, value, trend, trendValue, icon, description, ...props }, ref) => (
+  ({ className, label, value, trend, trendValue, icon, description, variant, ...props }, ref) => (
     <div
       ref={ref}
-      className={cn("rounded-lg border bg-card p-6 text-card-foreground", className)}
+      className={cn(statCardVariants({ variant }), className)}
       {...props}
     >
       <div className="flex items-center justify-between">
@@ -60,4 +77,4 @@ const StatCard = React.forwardRef<HTMLDivElement, StatCardProps>(
 )
 StatCard.displayName = "StatCard"
 
-export { StatCard }
+export { StatCard, statCardVariants }

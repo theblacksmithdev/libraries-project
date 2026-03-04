@@ -28,4 +28,30 @@ describe('StatCard', () => {
     render(<StatCard label="Test" value="0" description="from last month" />)
     expect(screen.getByText('from last month')).toBeInTheDocument()
   })
+
+  it('renders default variant with border and bg-card', () => {
+    const { container } = render(<StatCard label="Test" value="0" />)
+    const cls = (container.firstChild as HTMLElement).className
+    expect(cls).toContain('border')
+    expect(cls).toContain('bg-card')
+  })
+
+  it('renders elevated variant with shadow', () => {
+    const { container } = render(<StatCard label="Test" value="0" variant="elevated" />)
+    const cls = (container.firstChild as HTMLElement).className
+    expect(cls).toContain('shadow-md')
+  })
+
+  it('renders minimal variant without border', () => {
+    const { container } = render(<StatCard label="Test" value="0" variant="minimal" />)
+    const cls = (container.firstChild as HTMLElement).className
+    expect(cls).toContain('bg-transparent')
+    expect(cls).not.toContain('border')
+  })
+
+  it('renders highlighted variant with primary border', () => {
+    const { container } = render(<StatCard label="Test" value="0" variant="highlighted" />)
+    const cls = (container.firstChild as HTMLElement).className
+    expect(cls).toContain('border-primary')
+  })
 })

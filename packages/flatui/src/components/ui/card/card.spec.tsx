@@ -35,4 +35,37 @@ describe('Card', () => {
     )
     expect(screen.getByText('Legacy')).toBeInTheDocument()
   })
+
+  it('renders default variant with border and bg-card', () => {
+    const { container } = render(<Card title="Test">Body</Card>)
+    const root = container.firstChild as HTMLElement
+    expect(root.className).toContain('border')
+    expect(root.className).toContain('bg-card')
+  })
+
+  it('renders elevated variant with shadow', () => {
+    const { container } = render(<Card title="Test" variant="elevated">Body</Card>)
+    const root = container.firstChild as HTMLElement
+    expect(root.className).toContain('shadow-md')
+    expect(root.className).toContain('bg-card')
+  })
+
+  it('renders ghost variant without border', () => {
+    const { container } = render(<Card title="Test" variant="ghost">Body</Card>)
+    const root = container.firstChild as HTMLElement
+    expect(root.className).toContain('bg-transparent')
+    expect(root.className).not.toContain('border')
+  })
+
+  it('renders outlined variant with border-2', () => {
+    const { container } = render(<Card title="Test" variant="outlined">Body</Card>)
+    const root = container.firstChild as HTMLElement
+    expect(root.className).toContain('border-2')
+  })
+
+  it('renders filled variant with bg-muted', () => {
+    const { container } = render(<Card title="Test" variant="filled">Body</Card>)
+    const root = container.firstChild as HTMLElement
+    expect(root.className).toContain('bg-muted')
+  })
 })

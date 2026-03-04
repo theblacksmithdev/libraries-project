@@ -1,4 +1,5 @@
 import * as React from "react"
+import { type VariantProps } from "class-variance-authority"
 import {
   Card as CardRoot,
   CardHeader,
@@ -6,10 +7,12 @@ import {
   CardDescription,
   CardContent,
   CardFooter,
+  cardVariants,
 } from "./card"
 
 export interface CardProps
-  extends Omit<React.ComponentPropsWithoutRef<typeof CardRoot>, "title"> {
+  extends Omit<React.ComponentPropsWithoutRef<typeof CardRoot>, "title">,
+    VariantProps<typeof cardVariants> {
   /** Card title */
   title?: React.ReactNode
   /** Card description shown below the title */
@@ -21,8 +24,8 @@ export interface CardProps
 const Card = React.forwardRef<
   React.ElementRef<typeof CardRoot>,
   CardProps
->(({ title, description, footer, children, ...props }, ref) => (
-  <CardRoot ref={ref} {...props}>
+>(({ title, description, footer, children, variant, ...props }, ref) => (
+  <CardRoot ref={ref} variant={variant} {...props}>
     {(title || description) && (
       <CardHeader>
         {title && <CardTitle>{title}</CardTitle>}

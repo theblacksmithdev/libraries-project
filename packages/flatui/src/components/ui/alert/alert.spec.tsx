@@ -32,4 +32,25 @@ describe('Alert', () => {
     )
     expect(screen.getByText('Legacy Title')).toBeInTheDocument()
   })
+
+  it('renders success variant', () => {
+    render(<Alert variant="success" title="Done" />)
+    const el = screen.getByRole('alert')
+    expect(el.className).toContain('text-emerald-700')
+    expect(el.className).toContain('border-emerald-500/50')
+  })
+
+  it('renders warning variant', () => {
+    render(<Alert variant="warning" title="Caution" />)
+    const el = screen.getByRole('alert')
+    expect(el.className).toContain('text-amber-700')
+    expect(el.className).toContain('border-amber-500/50')
+  })
+
+  it('renders info variant', () => {
+    render(<Alert variant="info" title="Note" />)
+    const el = screen.getByRole('alert')
+    expect(el.className).toContain('text-blue-700')
+    expect(el.className).toContain('border-blue-500/50')
+  })
 })
