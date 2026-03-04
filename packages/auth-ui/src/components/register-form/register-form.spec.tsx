@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react'
+import { render, screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { RegisterForm } from '.'
 
@@ -22,10 +22,12 @@ describe('RegisterForm', () => {
     await user.type(screen.getByLabelText(/confirm password/i), 'password123')
     await user.click(screen.getByRole('button', { name: /create account/i }))
 
-    expect(onSubmit).toHaveBeenCalledWith({
-      email: 'john@example.com',
-      password: 'password123',
-      displayName: 'John Doe',
+    await waitFor(() => {
+      expect(onSubmit).toHaveBeenCalledWith({
+        email: 'john@example.com',
+        password: 'password123',
+        displayName: 'John Doe',
+      })
     })
   })
 
@@ -40,7 +42,7 @@ describe('RegisterForm', () => {
     await user.type(screen.getByLabelText(/confirm password/i), 'different')
     await user.click(screen.getByRole('button', { name: /create account/i }))
 
-    expect(screen.getByRole('alert')).toHaveTextContent('Passwords do not match')
+    expect(await screen.findByText('Passwords do not match')).toBeInTheDocument()
     expect(onSubmit).not.toHaveBeenCalled()
   })
 
@@ -55,7 +57,7 @@ describe('RegisterForm', () => {
     await user.type(screen.getByLabelText(/confirm password/i), 'short')
     await user.click(screen.getByRole('button', { name: /create account/i }))
 
-    expect(screen.getByRole('alert')).toHaveTextContent('at least 8 characters')
+    expect(await screen.findByText(/at least 8 characters/)).toBeInTheDocument()
     expect(onSubmit).not.toHaveBeenCalled()
   })
 

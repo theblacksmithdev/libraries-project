@@ -1,10 +1,23 @@
-import React, { useState } from 'react'
-import { Button, Input, Label } from '@flatui/react'
-import { cn } from '../../lib/utils'
+import React from 'react'
+import { z } from 'zod'
+import { Button, Alert, AlertDescription, Divider } from '@flatui/react'
+import { Form, FormInput } from '@flatui/forms'
 import { AuthLayout } from '../auth-layout'
 import { SocialLoginButtons } from '../social-login-buttons'
 import type { AuthLabels, SocialProvider, AuthError } from '../../types/auth'
 import { defaultLabels } from '../../types/auth'
+
+const registerSchema = z.object({
+  displayName: z.string().min(1),
+  email: z.string().min(1).email(),
+  password: z.string().min(8, 'Password must be at least 8 characters'),
+  confirmPassword: z.string().min(1),
+}).refine(data => data.password === data.confirmPassword, {
+  message: 'Passwords do not match',
+  path: ['confirmPassword'],
+})
+
+type RegisterData = z.infer<typeof registerSchema>
 
 export interface RegisterFormProps {
   /** Called when the form is submitted */
@@ -36,31 +49,11 @@ export function RegisterForm({
   className,
 }: RegisterFormProps) {
   const labels = { ...defaultLabels, ...labelOverrides }
-  const [displayName, setDisplayName] = useState('')
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
-  const [confirmPassword, setConfirmPassword] = useState('')
-  const [validationError, setValidationError] = useState<string | null>(null)
 
-  async function handleSubmit(e: React.FormEvent) {
-    e.preventDefault()
-    setValidationError(null)
-
-    if (password !== confirmPassword) {
-      setValidationError('Passwords do not match')
-      return
-    }
-    if (password.length < 8) {
-      setValidationError('Password must be at least 8 characters')
-      return
-    }
-
+  async function handleSubmit(data: RegisterData) {
+    const { email, password, displayName } = data
     await onSubmit({ email, password, displayName })
   }
-
-  const displayError = validationError
-    ? { code: 'validation', message: validationError }
-    : error
 
   return (
     <AuthLayout
@@ -69,78 +62,50 @@ export function RegisterForm({
       className={className}
       footer={
         onLoginClick ? (
-          <button
-            type="button"
-            className="text-sm text-muted-foreground underline-offset-4 hover:underline"
-            onClick={onLoginClick}
-          >
+          <Button variant="link" size="sm" onClick={onLoginClick}>
             {labels.loginLink}
-          </button>
+          </Button>
         ) : undefined
       }
     >
-      <form onSubmit={handleSubmit} className="space-y-4">
-        {displayError && (
-          <div role="alert" className="rounded-md bg-destructive/10 p-3 text-sm text-destructive">
-            {displayError.message}
-          </div>
+      <Form schema={registerSchema} onSubmit={handleSubmit} mode="onSubmit">
+        {error && (
+          <Alert variant="destructive">
+            <AlertDescription>{error.message}</AlertDescription>
+          </Alert>
         )}
 
-        <div className="space-y-2">
-          <Label htmlFor="register-name">{labels.displayNameLabel}</Label>
-          <Input
-            id="register-name"
-            type="text"
-            placeholder={labels.displayNamePlaceholder}
-            value={displayName}
-            onChange={(e) => setDisplayName(e.target.value)}
-            required
-            disabled={loading}
-            autoComplete="name"
-          />
-        </div>
+        <FormInput
+          name="displayName"
+          label={labels.displayNameLabel}
+          placeholder={labels.displayNamePlaceholder}
+          type="text"
+          disabled={loading}
+        />
 
-        <div className="space-y-2">
-          <Label htmlFor="register-email">{labels.emailLabel}</Label>
-          <Input
-            id="register-email"
-            type="email"
-            placeholder={labels.emailPlaceholder}
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-            disabled={loading}
-            autoComplete="email"
-          />
-        </div>
+        <FormInput
+          name="email"
+          label={labels.emailLabel}
+          placeholder={labels.emailPlaceholder}
+          type="email"
+          disabled={loading}
+        />
 
-        <div className="space-y-2">
-          <Label htmlFor="register-password">{labels.passwordLabel}</Label>
-          <Input
-            id="register-password"
-            type="password"
-            placeholder={labels.passwordPlaceholder}
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-            disabled={loading}
-            autoComplete="new-password"
-          />
-        </div>
+        <FormInput
+          name="password"
+          label={labels.passwordLabel}
+          placeholder={labels.passwordPlaceholder}
+          type="password"
+          disabled={loading}
+        />
 
-        <div className="space-y-2">
-          <Label htmlFor="register-confirm-password">{labels.confirmPasswordLabel}</Label>
-          <Input
-            id="register-confirm-password"
-            type="password"
-            placeholder={labels.confirmPasswordPlaceholder}
-            value={confirmPassword}
-            onChange={(e) => setConfirmPassword(e.target.value)}
-            required
-            disabled={loading}
-            autoComplete="new-password"
-          />
-        </div>
+        <FormInput
+          name="confirmPassword"
+          label={labels.confirmPasswordLabel}
+          placeholder={labels.confirmPasswordPlaceholder}
+          type="password"
+          disabled={loading}
+        />
 
         <Button type="submit" className="w-full" disabled={loading}>
           {loading ? 'Creating account…' : labels.registerButton}
@@ -148,16 +113,7 @@ export function RegisterForm({
 
         {socialProviders.length > 0 && onSocialLogin && (
           <>
-            <div className="relative my-4">
-              <div className="absolute inset-0 flex items-center">
-                <span className="w-full border-t" />
-              </div>
-              <div className="relative flex justify-center text-xs uppercase">
-                <span className={cn('bg-card px-2 text-muted-foreground')}>
-                  {labels.orContinueWith}
-                </span>
-              </div>
-            </div>
+            <Divider label={labels.orContinueWith} className="my-4" />
             <SocialLoginButtons
               providers={socialProviders}
               onSocialLogin={onSocialLogin}
@@ -165,7 +121,7 @@ export function RegisterForm({
             />
           </>
         )}
-      </form>
+      </Form>
     </AuthLayout>
   )
 }

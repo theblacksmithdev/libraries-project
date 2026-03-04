@@ -13,6 +13,9 @@
     "test:coverage": "yarn workspace @flatui/react test:coverage",
     "storybook": "yarn workspace @flatui/react storybook",
     "storybook:auth-ui": "yarn workspace @flatui/auth-ui storybook",
+    "build:forms": "yarn workspace @flatui/forms build",
+    "test:forms": "yarn workspace @flatui/forms test",
+    "storybook:forms": "yarn workspace @flatui/forms storybook",
     "lint": "yarn workspace @flatui/react lint"
   },
   "packageManager": "yarn@1.22.22"

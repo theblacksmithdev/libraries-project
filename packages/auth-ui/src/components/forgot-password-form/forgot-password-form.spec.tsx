@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react'
+import { render, screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { ForgotPasswordForm } from '.'
 
@@ -17,7 +17,9 @@ describe('ForgotPasswordForm', () => {
     await user.type(screen.getByLabelText(/email/i), 'test@example.com')
     await user.click(screen.getByRole('button', { name: /send reset link/i }))
 
-    expect(onSubmit).toHaveBeenCalledWith({ email: 'test@example.com' })
+    await waitFor(() => {
+      expect(onSubmit).toHaveBeenCalledWith({ email: 'test@example.com' })
+    })
   })
 
   it('shows success message after submission', async () => {
@@ -27,7 +29,9 @@ describe('ForgotPasswordForm', () => {
     await user.type(screen.getByLabelText(/email/i), 'test@example.com')
     await user.click(screen.getByRole('button', { name: /send reset link/i }))
 
-    expect(screen.getByRole('status')).toHaveTextContent(/check your email/i)
+    await waitFor(() => {
+      expect(screen.getByRole('status')).toHaveTextContent(/check your email/i)
+    })
   })
 
   it('displays error message', () => {

@@ -1,8 +1,20 @@
 import React, { useState } from 'react'
-import { Button, Input, Label } from '@flatui/react'
+import { z } from 'zod'
+import { Button, Alert, AlertTitle, AlertDescription } from '@flatui/react'
+import { Form, FormInput } from '@flatui/forms'
 import { AuthLayout } from '../auth-layout'
 import type { AuthLabels, AuthError } from '../../types/auth'
 import { defaultLabels } from '../../types/auth'
+
+const resetPasswordSchema = z.object({
+  password: z.string().min(8, 'Password must be at least 8 characters'),
+  confirmPassword: z.string().min(1),
+}).refine(data => data.password === data.confirmPassword, {
+  message: 'Passwords do not match',
+  path: ['confirmPassword'],
+})
+
+type ResetPasswordData = z.infer<typeof resetPasswordSchema>
 
 export interface ResetPasswordFormProps {
   /** Called when the form is submitted */
@@ -31,31 +43,12 @@ export function ResetPasswordForm({
   className,
 }: ResetPasswordFormProps) {
   const labels = { ...defaultLabels, ...labelOverrides }
-  const [password, setPassword] = useState('')
-  const [confirmPassword, setConfirmPassword] = useState('')
-  const [validationError, setValidationError] = useState<string | null>(null)
   const [submitted, setSubmitted] = useState(false)
 
-  async function handleSubmit(e: React.FormEvent) {
-    e.preventDefault()
-    setValidationError(null)
-
-    if (password !== confirmPassword) {
-      setValidationError('Passwords do not match')
-      return
-    }
-    if (password.length < 8) {
-      setValidationError('Password must be at least 8 characters')
-      return
-    }
-
-    await onSubmit({ password, code })
+  async function handleSubmit(data: ResetPasswordData) {
+    await onSubmit({ password: data.password, code })
     setSubmitted(true)
   }
-
-  const displayError = validationError
-    ? { code: 'validation', message: validationError }
-    : error
 
   return (
     <AuthLayout
@@ -64,68 +57,52 @@ export function ResetPasswordForm({
       className={className}
       footer={
         onLoginClick ? (
-          <button
-            type="button"
-            className="text-sm text-muted-foreground underline-offset-4 hover:underline"
-            onClick={onLoginClick}
-          >
+          <Button variant="link" size="sm" onClick={onLoginClick}>
             Back to sign in
-          </button>
+          </Button>
         ) : undefined
       }
     >
-      {submitted && !error && !validationError ? (
-        <div role="status" className="rounded-md bg-primary/10 p-4 text-center text-sm">
-          <p className="font-medium">Password reset successful</p>
-          <p className="mt-1 text-muted-foreground">
+      {submitted && !error ? (
+        <Alert role="status">
+          <AlertTitle>Password reset successful</AlertTitle>
+          <AlertDescription>
             You can now sign in with your new password.
-          </p>
+          </AlertDescription>
           {onLoginClick && (
             <Button variant="outline" className="mt-4" onClick={onLoginClick}>
               Go to sign in
             </Button>
           )}
-        </div>
+        </Alert>
       ) : (
-        <form onSubmit={handleSubmit} className="space-y-4">
-          {displayError && (
-            <div role="alert" className="rounded-md bg-destructive/10 p-3 text-sm text-destructive">
-              {displayError.message}
-            </div>
+        <Form schema={resetPasswordSchema} onSubmit={handleSubmit} mode="onSubmit">
+          {error && (
+            <Alert variant="destructive">
+              <AlertDescription>{error.message}</AlertDescription>
+            </Alert>
           )}
 
-          <div className="space-y-2">
-            <Label htmlFor="reset-password">{labels.passwordLabel}</Label>
-            <Input
-              id="reset-password"
-              type="password"
-              placeholder="New password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required
-              disabled={loading}
-              autoComplete="new-password"
-            />
-          </div>
+          <FormInput
+            name="password"
+            label={labels.passwordLabel}
+            placeholder="New password"
+            type="password"
+            disabled={loading}
+          />
 
-          <div className="space-y-2">
-            <Label htmlFor="reset-confirm-password">{labels.confirmPasswordLabel}</Label>
-            <Input
-              id="reset-confirm-password"
-              type="password"
-              placeholder={labels.confirmPasswordPlaceholder}
-              value={confirmPassword}
-              onChange={(e) => setConfirmPassword(e.target.value)}
-              required
-              disabled={loading}
-              autoComplete="new-password"
-            />
-          </div>
+          <FormInput
+            name="confirmPassword"
+            label={labels.confirmPasswordLabel}
+            placeholder={labels.confirmPasswordPlaceholder}
+            type="password"
+            disabled={loading}
+          />
 
           <Button type="submit" className="w-full" disabled={loading}>
             {loading ? 'Resetting…' : labels.resetPasswordButton}
           </Button>
-        </form>
+        </Form>
       )}
     </AuthLayout>
   )

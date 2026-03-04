@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button } from '@flatui/react'
+import { Button, Text } from '@flatui/react'
 import type { SocialProvider } from '../../types/auth'
 import { cn } from '../../lib/utils'
 
@@ -105,7 +105,7 @@ export function SocialLoginButtons({
           className="w-full justify-center gap-3"
         >
           {providerIcons[provider]}
-          <span>Continue with {providerLabels[provider]}</span>
+          <Text as="span">Continue with {providerLabels[provider]}</Text>
         </Button>
       ))}
     </div>

@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react'
+import { render, screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { ResetPasswordForm } from '.'
 
@@ -19,7 +19,9 @@ describe('ResetPasswordForm', () => {
     await user.type(screen.getByLabelText(/confirm password/i), 'newpass123')
     await user.click(screen.getByRole('button', { name: /reset password/i }))
 
-    expect(onSubmit).toHaveBeenCalledWith({ password: 'newpass123', code: 'abc123' })
+    await waitFor(() => {
+      expect(onSubmit).toHaveBeenCalledWith({ password: 'newpass123', code: 'abc123' })
+    })
   })
 
   it('shows validation error when passwords do not match', async () => {
@@ -31,7 +33,7 @@ describe('ResetPasswordForm', () => {
     await user.type(screen.getByLabelText(/confirm password/i), 'different1')
     await user.click(screen.getByRole('button', { name: /reset password/i }))
 
-    expect(screen.getByRole('alert')).toHaveTextContent('Passwords do not match')
+    expect(await screen.findByText('Passwords do not match')).toBeInTheDocument()
     expect(onSubmit).not.toHaveBeenCalled()
   })
 
@@ -44,7 +46,7 @@ describe('ResetPasswordForm', () => {
     await user.type(screen.getByLabelText(/confirm password/i), 'short')
     await user.click(screen.getByRole('button', { name: /reset password/i }))
 
-    expect(screen.getByRole('alert')).toHaveTextContent('at least 8 characters')
+    expect(await screen.findByText(/at least 8 characters/)).toBeInTheDocument()
     expect(onSubmit).not.toHaveBeenCalled()
   })
 
@@ -56,7 +58,9 @@ describe('ResetPasswordForm', () => {
     await user.type(screen.getByLabelText(/confirm password/i), 'newpass123')
     await user.click(screen.getByRole('button', { name: /reset password/i }))
 
-    expect(screen.getByRole('status')).toHaveTextContent(/password reset successful/i)
+    await waitFor(() => {
+      expect(screen.getByRole('status')).toHaveTextContent(/password reset successful/i)
+    })
   })
 
   it('displays external error', () => {

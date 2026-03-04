@@ -1,10 +1,18 @@
-import React, { useState } from 'react'
-import { Button, Input, Label } from '@flatui/react'
-import { cn } from '../../lib/utils'
+import React from 'react'
+import { z } from 'zod'
+import { Button, Alert, AlertDescription, Divider } from '@flatui/react'
+import { Form, FormInput } from '@flatui/forms'
 import { AuthLayout } from '../auth-layout'
 import { SocialLoginButtons } from '../social-login-buttons'
 import type { AuthLabels, SocialProvider, AuthError } from '../../types/auth'
 import { defaultLabels } from '../../types/auth'
+
+const loginSchema = z.object({
+  email: z.string().min(1).email(),
+  password: z.string().min(1),
+})
+
+type LoginData = z.infer<typeof loginSchema>
 
 export interface LoginFormProps {
   /** Called when the form is submitted */
@@ -39,12 +47,9 @@ export function LoginForm({
   className,
 }: LoginFormProps) {
   const labels = { ...defaultLabels, ...labelOverrides }
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
 
-  async function handleSubmit(e: React.FormEvent) {
-    e.preventDefault()
-    await onSubmit({ email, password })
+  async function handleSubmit(data: LoginData) {
+    await onSubmit(data)
   }
 
   return (
@@ -54,61 +59,42 @@ export function LoginForm({
       className={className}
       footer={
         onRegisterClick ? (
-          <button
-            type="button"
-            className="text-sm text-muted-foreground underline-offset-4 hover:underline"
-            onClick={onRegisterClick}
-          >
+          <Button variant="link" size="sm" onClick={onRegisterClick}>
             {labels.registerLink}
-          </button>
+          </Button>
         ) : undefined
       }
     >
-      <form onSubmit={handleSubmit} className="space-y-4">
+      <Form schema={loginSchema} onSubmit={handleSubmit} mode="onSubmit">
         {error && (
-          <div role="alert" className="rounded-md bg-destructive/10 p-3 text-sm text-destructive">
-            {error.message}
-          </div>
+          <Alert variant="destructive">
+            <AlertDescription>{error.message}</AlertDescription>
+          </Alert>
         )}
 
-        <div className="space-y-2">
-          <Label htmlFor="login-email">{labels.emailLabel}</Label>
-          <Input
-            id="login-email"
-            type="email"
-            placeholder={labels.emailPlaceholder}
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-            disabled={loading}
-            autoComplete="email"
-          />
-        </div>
+        <FormInput
+          name="email"
+          label={labels.emailLabel}
+          placeholder={labels.emailPlaceholder}
+          type="email"
+          disabled={loading}
+        />
 
-        <div className="space-y-2">
-          <div className="flex items-center justify-between">
-            <Label htmlFor="login-password">{labels.passwordLabel}</Label>
-            {onForgotPasswordClick && (
-              <button
-                type="button"
-                className="text-sm text-muted-foreground underline-offset-4 hover:underline"
-                onClick={onForgotPasswordClick}
-              >
-                {labels.forgotPasswordLink}
-              </button>
-            )}
+        <FormInput
+          name="password"
+          label={labels.passwordLabel}
+          placeholder={labels.passwordPlaceholder}
+          type="password"
+          disabled={loading}
+        />
+
+        {onForgotPasswordClick && (
+          <div className="flex justify-end -mt-2">
+            <Button variant="link" size="sm" onClick={onForgotPasswordClick}>
+              {labels.forgotPasswordLink}
+            </Button>
           </div>
-          <Input
-            id="login-password"
-            type="password"
-            placeholder={labels.passwordPlaceholder}
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-            disabled={loading}
-            autoComplete="current-password"
-          />
-        </div>
+        )}
 
         <Button type="submit" className="w-full" disabled={loading}>
           {loading ? 'Signing in…' : labels.loginButton}
@@ -116,16 +102,7 @@ export function LoginForm({
 
         {socialProviders.length > 0 && onSocialLogin && (
           <>
-            <div className="relative my-4">
-              <div className="absolute inset-0 flex items-center">
-                <span className="w-full border-t" />
-              </div>
-              <div className="relative flex justify-center text-xs uppercase">
-                <span className={cn('bg-card px-2 text-muted-foreground')}>
-                  {labels.orContinueWith}
-                </span>
-              </div>
-            </div>
+            <Divider label={labels.orContinueWith} className="my-4" />
             <SocialLoginButtons
               providers={socialProviders}
               onSocialLogin={onSocialLogin}
@@ -133,7 +110,7 @@ export function LoginForm({
             />
           </>
         )}
-      </form>
+      </Form>
     </AuthLayout>
   )
 }

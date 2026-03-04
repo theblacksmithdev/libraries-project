@@ -54,6 +54,7 @@ export default {
     'react-dom',
     'react/jsx-runtime',
     '@flatui/react',
+    '@flatui/forms',
     'zod',
     'lucide-react',
   ],

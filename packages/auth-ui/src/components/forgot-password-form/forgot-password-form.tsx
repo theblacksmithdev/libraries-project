@@ -1,8 +1,16 @@
 import React, { useState } from 'react'
-import { Button, Input, Label } from '@flatui/react'
+import { z } from 'zod'
+import { Button, Alert, AlertTitle, AlertDescription, Text } from '@flatui/react'
+import { Form, FormInput } from '@flatui/forms'
 import { AuthLayout } from '../auth-layout'
 import type { AuthLabels, AuthError } from '../../types/auth'
 import { defaultLabels } from '../../types/auth'
+
+const forgotPasswordSchema = z.object({
+  email: z.string().min(1).email(),
+})
+
+type ForgotPasswordData = z.infer<typeof forgotPasswordSchema>
 
 export interface ForgotPasswordFormProps {
   /** Called when the form is submitted */
@@ -28,12 +36,12 @@ export function ForgotPasswordForm({
   className,
 }: ForgotPasswordFormProps) {
   const labels = { ...defaultLabels, ...labelOverrides }
-  const [email, setEmail] = useState('')
   const [submitted, setSubmitted] = useState(false)
+  const [submittedEmail, setSubmittedEmail] = useState('')
 
-  async function handleSubmit(e: React.FormEvent) {
-    e.preventDefault()
-    await onSubmit({ email })
+  async function handleSubmit(data: ForgotPasswordData) {
+    setSubmittedEmail(data.email)
+    await onSubmit(data)
     setSubmitted(true)
   }
 
@@ -44,49 +52,39 @@ export function ForgotPasswordForm({
       className={className}
       footer={
         onLoginClick ? (
-          <button
-            type="button"
-            className="text-sm text-muted-foreground underline-offset-4 hover:underline"
-            onClick={onLoginClick}
-          >
+          <Button variant="link" size="sm" onClick={onLoginClick}>
             {labels.loginLink}
-          </button>
+          </Button>
         ) : undefined
       }
     >
       {submitted && !error ? (
-        <div role="status" className="rounded-md bg-primary/10 p-4 text-center text-sm">
-          <p className="font-medium">Check your email</p>
-          <p className="mt-1 text-muted-foreground">
-            If an account exists for <strong>{email}</strong>, you&apos;ll receive a password reset link.
-          </p>
-        </div>
+        <Alert role="status">
+          <AlertTitle>Check your email</AlertTitle>
+          <AlertDescription>
+            If an account exists for <Text as="strong">{submittedEmail}</Text>, you&apos;ll receive a password reset link.
+          </AlertDescription>
+        </Alert>
       ) : (
-        <form onSubmit={handleSubmit} className="space-y-4">
+        <Form schema={forgotPasswordSchema} onSubmit={handleSubmit} mode="onSubmit">
           {error && (
-            <div role="alert" className="rounded-md bg-destructive/10 p-3 text-sm text-destructive">
-              {error.message}
-            </div>
+            <Alert variant="destructive">
+              <AlertDescription>{error.message}</AlertDescription>
+            </Alert>
           )}
 
-          <div className="space-y-2">
-            <Label htmlFor="forgot-email">{labels.emailLabel}</Label>
-            <Input
-              id="forgot-email"
-              type="email"
-              placeholder={labels.emailPlaceholder}
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-              disabled={loading}
-              autoComplete="email"
-            />
-          </div>
+          <FormInput
+            name="email"
+            label={labels.emailLabel}
+            placeholder={labels.emailPlaceholder}
+            type="email"
+            disabled={loading}
+          />
 
           <Button type="submit" className="w-full" disabled={loading}>
             {loading ? 'Sending…' : labels.forgotPasswordButton}
           </Button>
-        </form>
+        </Form>
       )}
     </AuthLayout>
   )
