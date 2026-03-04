@@ -1,0 +1,124 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 60 20% 95%;
+    --foreground: 60 3% 8%;
+    --card: 45 33% 97%;
+    --card-foreground: 60 3% 8%;
+    --popover: 45 33% 97%;
+    --popover-foreground: 60 3% 8%;
+    --primary: 18 62% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 45% 61%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 48 16% 89%;
+    --muted-foreground: 48 5% 42%;
+    --accent: 48 16% 89%;
+    --accent-foreground: 60 3% 8%;
+    --destructive: 16 53% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 48 16% 89%;
+    --input: 48 16% 89%;
+    --ring: 18 62% 60%;
+    --radius: 0.5rem;
+
+    /* Typography */
+    --font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --font-family-heading: var(--font-family);
+    --font-family-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+    --font-size-base: 1rem;
+    --font-size-sm: 0.875rem;
+    --font-size-lg: 1.125rem;
+    --font-size-xl: 1.25rem;
+    --font-size-2xl: 1.5rem;
+    --font-size-3xl: 1.875rem;
+    --font-size-4xl: 2.25rem;
+    --line-height: 1.5;
+
+    /* Spacing */
+    --spacing-unit: 0.25rem;
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+    --spacing-2xl: 3rem;
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-xl: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+
+    /* Border widths */
+    --border-width: 1px;
+    --border-width-thick: 2px;
+
+    --chart-1: 18 62% 60%;
+    --chart-2: 210 45% 61%;
+    --chart-3: 48 16% 89%;
+    --chart-4: 45 33% 97%;
+    --chart-5: 16 53% 50%;
+    --sidebar-background: 45 33% 97%;
+    --sidebar-foreground: 60 3% 8%;
+    --sidebar-primary: 18 62% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 48 16% 89%;
+    --sidebar-accent-foreground: 60 3% 8%;
+    --sidebar-border: 48 16% 89%;
+    --sidebar-ring: 18 62% 60%;
+  }
+
+  .dark {
+    --background: 48 6% 15%;
+    --foreground: 48 16% 89%;
+    --card: 48 5% 18%;
+    --card-foreground: 48 16% 89%;
+    --popover: 48 5% 18%;
+    --popover-foreground: 48 16% 89%;
+    --primary: 18 62% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 45% 61%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 48 5% 25%;
+    --muted-foreground: 48 10% 60%;
+    --accent: 48 5% 25%;
+    --accent-foreground: 48 16% 89%;
+    --destructive: 16 53% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 48 5% 25%;
+    --input: 48 5% 25%;
+    --ring: 18 62% 60%;
+    --chart-1: 18 62% 60%;
+    --chart-2: 210 45% 61%;
+    --chart-3: 48 5% 25%;
+    --chart-4: 48 5% 18%;
+    --chart-5: 16 53% 50%;
+    --sidebar-background: 48 5% 18%;
+    --sidebar-foreground: 48 16% 89%;
+    --sidebar-primary: 18 62% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 48 5% 25%;
+    --sidebar-accent-foreground: 48 16% 89%;
+    --sidebar-border: 48 5% 25%;
+    --sidebar-ring: 18 62% 60%;
+
+    /* Dark shadows */
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.15);
+    --shadow-md: 0 1px 3px 0 rgb(0 0 0 / 0.3), 0 1px 2px -1px rgb(0 0 0 / 0.3);
+    --shadow-lg: 0 4px 6px -1px rgb(0 0 0 / 0.3), 0 2px 4px -2px rgb(0 0 0 / 0.3);
+    --shadow-xl: 0 10px 15px -3px rgb(0 0 0 / 0.3), 0 4px 6px -4px rgb(0 0 0 / 0.3);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}

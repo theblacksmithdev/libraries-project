@@ -1,0 +1,16 @@
+{
+  "name": "flatui-workspace",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "yarn workspace @flatui/react build",
+    "test": "yarn workspace @flatui/react test",
+    "test:watch": "yarn workspace @flatui/react test:watch",
+    "test:coverage": "yarn workspace @flatui/react test:coverage",
+    "storybook": "yarn workspace @flatui/react storybook",
+    "lint": "yarn workspace @flatui/react lint"
+  },
+  "packageManager": "yarn@1.22.22"
+}
