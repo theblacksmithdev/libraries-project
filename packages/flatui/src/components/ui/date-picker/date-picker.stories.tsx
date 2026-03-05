@@ -1,5 +1,6 @@
 import * as React from 'react'
 import type { Meta, StoryObj } from '@storybook/react'
+import type { DateRange } from 'react-day-picker'
 import { DatePicker, DateRangePicker } from '.'
 
 const meta: Meta<typeof DatePicker> = {
@@ -52,7 +53,7 @@ export const Disabled: Story = {
 
 export const RangePicker: Story = {
   render: () => {
-    const [range, setRange] = React.useState<{ from: Date; to?: Date } | undefined>()
+    const [range, setRange] = React.useState<DateRange | undefined>()
     return <DateRangePicker value={range} onChange={setRange} />
   },
 }

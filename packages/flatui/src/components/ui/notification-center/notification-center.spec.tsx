@@ -1,11 +1,11 @@
-import { render, screen, fireEvent } from '@testing-library/react'
+import { render, screen, fireEvent, renderHook } from '@testing-library/react'
 import { act } from 'react'
 import { NotificationCenter } from '.'
 import { useNotificationCenter, notify } from '@/hooks/use-notification-center'
 
 // Helper to reset notification state
 function resetNotifications() {
-  const { result } = require('@testing-library/react').renderHook(() =>
+  const { result } = renderHook(() =>
     useNotificationCenter()
   )
   act(() => {

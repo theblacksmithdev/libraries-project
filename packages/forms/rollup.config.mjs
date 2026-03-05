@@ -26,6 +26,11 @@ export default {
       exports: 'named',
     },
   ],
+  onwarn(warning, warn) {
+    if (warning.code === 'MODULE_LEVEL_DIRECTIVE' && warning.message.includes('"use client"')) return;
+    if (warning.code === 'UNRESOLVED_IMPORT') return;
+    warn(warning);
+  },
   plugins: [
     alias({
       entries: [

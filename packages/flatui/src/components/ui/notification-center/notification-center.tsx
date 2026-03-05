@@ -117,7 +117,7 @@ const notificationItemVariants = cva(
   }
 )
 
-interface NotificationCenterItemProps
+export interface NotificationCenterItemProps
   extends React.HTMLAttributes<HTMLDivElement>,
     VariantProps<typeof notificationItemVariants> {
   notification: Notification

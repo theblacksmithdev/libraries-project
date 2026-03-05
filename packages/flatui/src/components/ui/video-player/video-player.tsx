@@ -40,7 +40,7 @@ function formatTime(seconds: number): string {
   return `${mins}:${secs.toString().padStart(2, "0")}`
 }
 
-interface VideoPlayerRootProps extends React.HTMLAttributes<HTMLDivElement> {
+export interface VideoPlayerRootProps extends React.HTMLAttributes<HTMLDivElement> {
   children: React.ReactNode
 }
 

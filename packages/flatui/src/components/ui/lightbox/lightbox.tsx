@@ -85,7 +85,7 @@ const LightboxImage = React.forwardRef<
 ))
 LightboxImage.displayName = "LightboxImage"
 
-interface LightboxNavProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+export interface LightboxNavProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   direction: "prev" | "next"
 }
 

@@ -26,7 +26,7 @@ export interface TourLabels {
 
 // --- Primitives ---
 
-interface SpotlightOverlayProps extends React.HTMLAttributes<HTMLDivElement> {
+export interface SpotlightOverlayProps extends React.HTMLAttributes<HTMLDivElement> {
   targetRect: DOMRect | null
   padding?: number
 }
@@ -69,7 +69,7 @@ const SpotlightOverlay = React.forwardRef<HTMLDivElement, SpotlightOverlayProps>
 )
 SpotlightOverlay.displayName = "SpotlightOverlay"
 
-interface SpotlightTooltipProps extends React.HTMLAttributes<HTMLDivElement> {
+export interface SpotlightTooltipProps extends React.HTMLAttributes<HTMLDivElement> {
   targetRect: DOMRect | null
   placement?: "top" | "bottom" | "left" | "right"
   padding?: number
@@ -179,7 +179,7 @@ const SpotlightCounter = React.forwardRef<
 ))
 SpotlightCounter.displayName = "SpotlightCounter"
 
-interface SpotlightNavProps extends React.HTMLAttributes<HTMLDivElement> {
+export interface SpotlightNavProps extends React.HTMLAttributes<HTMLDivElement> {
   onBack?: () => void
   onNext?: () => void
   onSkip?: () => void

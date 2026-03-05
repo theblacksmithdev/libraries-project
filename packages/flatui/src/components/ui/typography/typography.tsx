@@ -70,7 +70,7 @@ const variantElementMap: Record<string, string> = {
 }
 
 export interface TypographyProps
-  extends React.HTMLAttributes<HTMLElement>,
+  extends Omit<React.HTMLAttributes<HTMLElement>, "color">,
     VariantProps<typeof typographyVariants> {
   as?: React.ElementType
 }
