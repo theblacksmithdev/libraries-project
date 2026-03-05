@@ -27,7 +27,8 @@
     "test:coverage": "vitest run --coverage",
     "storybook": "storybook dev -p 6008",
     "build-storybook": "storybook build",
-    "lint": "eslint src --ext .ts,.tsx"
+    "lint": "eslint src --ext .ts,.tsx",
+    "prepublishOnly": "rollup -c rollup.config.mjs && tsc --project tsconfig.build.json --emitDeclarationOnly"
   },
   "peerDependencies": {
     "@flatui/react": "^0.1.0",
@@ -75,5 +76,22 @@
     "clsx": "^2.1.1",
     "tailwind-merge": "^3.5.0"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "author": "oluwatobimaxwell <tobisholanke@gmail.com>",
+   "repository": {
+    "type": "git",
+    "url": "https://github.com/oluwatobimaxwell/libraries-project",
+    "directory": "packages/forms"
+  },
+  "keywords": [
+    "react",
+    "forms",
+    "react-hook-form",
+    "zod",
+    "validation",
+    "tailwind"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
 }

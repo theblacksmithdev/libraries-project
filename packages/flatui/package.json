@@ -27,7 +27,8 @@
     "test:coverage": "vitest run --coverage",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "lint": "eslint src --ext .ts,.tsx"
+    "lint": "eslint src --ext .ts,.tsx",
+    "prepublishOnly": "rollup -c rollup.config.mjs && tsc --project tsconfig.build.json --emitDeclarationOnly"
   },
   "peerDependencies": {
     "lucide-react": "^0.400.0",
@@ -67,6 +68,24 @@
     "vitest": "^2.1.0"
   },
   "license": "MIT",
+  "author": "oluwatobimaxwell <tobisholanke@gmail.com>",
+  "keywords": [
+    "react",
+    "ui",
+    "components",
+    "tailwind",
+    "radix",
+    "design-system",
+    "flat-design"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/oluwatobimaxwell/libraries-project",
+    "directory": "packages/flatui"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
     "@radix-ui/react-accordion": "^1.2.12",
