@@ -1,6 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import type { Preview } from '@storybook/react';
-import { ThemeProvider } from '@flatui/react';
 import '../src/styles/globals.css';
 
 const preview: Preview = {
@@ -24,13 +23,16 @@ const preview: Preview = {
   },
   decorators: [
     (Story, context) => {
-      const theme = context.globals.theme as 'light' | 'dark';
+      const theme = context.globals.theme;
 
-      return (
-        <ThemeProvider defaultMode={theme}>
-          <Story />
-        </ThemeProvider>
-      );
+      useEffect(() => {
+        document.documentElement.classList.remove('dark', 'light');
+        if (theme === 'dark') {
+          document.documentElement.classList.add('dark');
+        }
+      }, [theme]);
+
+      return <Story />;
     },
   ],
   parameters: {
