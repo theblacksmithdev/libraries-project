@@ -9,10 +9,10 @@ Argument: `$ARGUMENTS`
 
 ## Rules
 
-- If argument is empty or `all`, build all 3 packages **in dependency order**: `@flatui/react` → `@flatui/forms` → `@flatui/auth-ui`
-- If argument is `react` or `flatui`, build `@flatui/react`
-- If argument is `forms`, build `@flatui/forms`
-- If argument is `auth-ui` or `auth`, build `@flatui/auth-ui`
+- If argument is empty or `all`, build all 3 packages **in dependency order**: `@blacksmith-ui/react` → `@blacksmith-ui/forms` → `@blacksmith-ui/auth`
+- If argument is `react`, build `@blacksmith-ui/react`
+- If argument is `forms`, build `@blacksmith-ui/forms`
+- If argument is `auth-ui` or `auth`, build `@blacksmith-ui/auth`
 - Stop on first failure and report the error clearly
 - Use `source ~/.nvm/nvm.sh && nvm use 20` before running commands
 
@@ -20,12 +20,12 @@ Argument: `$ARGUMENTS`
 
 ```bash
 # Single package
-yarn workspace @flatui/react build
-yarn workspace @flatui/forms build
-yarn workspace @flatui/auth-ui build
+yarn workspace @blacksmith-ui/react build
+yarn workspace @blacksmith-ui/forms build
+yarn workspace @blacksmith-ui/auth build
 
 # All (dependency order)
-yarn workspace @flatui/react build && yarn workspace @flatui/forms build && yarn workspace @flatui/auth-ui build
+yarn workspace @blacksmith-ui/react build && yarn workspace @blacksmith-ui/forms build && yarn workspace @blacksmith-ui/auth build
 ```
 
 ## On Failure

@@ -29,7 +29,7 @@ export const Default: Story = {
   parameters: {
     docs: {
       source: {
-        code: `import { Skeleton } from '@forge-ui/react'
+        code: `import { Skeleton } from '@blacksmith-ui/react'
 
 <div className="flex items-center space-x-4">
   <Skeleton className="h-12 w-12 rounded-full" />

@@ -61,7 +61,7 @@ export const Default: Story = {
   parameters: {
     docs: {
       source: {
-        code: `import { NotificationCenter, notify } from '@forge-ui/react'
+        code: `import { NotificationCenter, notify } from '@blacksmith-ui/react'
 
 // Add notifications from anywhere
 notify({ title: 'Deployed!', variant: 'success' })

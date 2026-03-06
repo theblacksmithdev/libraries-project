@@ -57,7 +57,7 @@ export const Default: Story = {
   parameters: {
     docs: {
       source: {
-        code: `import { Wizard } from '@forge-ui/react'\n\n<Wizard\n  steps={[\n    { title: 'Account', content: <div>Step 1 content</div> },\n    { title: 'Profile', content: <div>Step 2 content</div> },\n    { title: 'Review', content: <div>Step 3 content</div> },\n  ]}\n/>`,
+        code: `import { Wizard } from '@blacksmith-ui/react'\n\n<Wizard\n  steps={[\n    { title: 'Account', content: <div>Step 1 content</div> },\n    { title: 'Profile', content: <div>Step 2 content</div> },\n    { title: 'Review', content: <div>Step 3 content</div> },\n  ]}\n/>`,
       },
     },
   },

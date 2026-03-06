@@ -57,7 +57,7 @@ export const Default: Story = {
   parameters: {
     docs: {
       source: {
-        code: `import { TreeView } from '@forge-ui/react'
+        code: `import { TreeView } from '@blacksmith-ui/react'
 import { Folder, File } from 'lucide-react'
 
 <TreeView

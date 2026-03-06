@@ -30,7 +30,7 @@ export const Default: Story = {
   parameters: {
     docs: {
       source: {
-        code: `import { NumberInput } from '@forge-ui/react'\n\nconst [value, setValue] = useState(5)\n<NumberInput value={value} onChange={setValue} />`,
+        code: `import { NumberInput } from '@blacksmith-ui/react'\n\nconst [value, setValue] = useState(5)\n<NumberInput value={value} onChange={setValue} />`,
       },
     },
   },

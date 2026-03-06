@@ -33,7 +33,7 @@ export const Default: Story = {
   parameters: {
     docs: {
       source: {
-        code: `import { StatCard } from '@forge-ui/react'
+        code: `import { StatCard } from '@blacksmith-ui/react'
 import { DollarSign } from 'lucide-react'
 
 <StatCard

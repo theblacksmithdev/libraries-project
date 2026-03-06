@@ -28,7 +28,7 @@ export const Default: Story = {
   parameters: {
     docs: {
       source: {
-        code: `import { Checkbox } from '@forge-ui/react'
+        code: `import { Checkbox } from '@blacksmith-ui/react'
 
 <div className="flex items-center space-x-2">
   <Checkbox id="terms" />

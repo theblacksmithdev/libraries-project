@@ -26,7 +26,7 @@ export const Default: Story = {
   parameters: {
     docs: {
       source: {
-        code: `import { ColorPicker } from '@forge-ui/react'\n\nconst [color, setColor] = useState('#3b82f6')\n<ColorPicker value={color} onChange={setColor} />`,
+        code: `import { ColorPicker } from '@blacksmith-ui/react'\n\nconst [color, setColor] = useState('#3b82f6')\n<ColorPicker value={color} onChange={setColor} />`,
       },
     },
   },

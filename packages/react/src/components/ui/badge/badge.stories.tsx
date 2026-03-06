@@ -22,7 +22,7 @@ export const Default: Story = {
   parameters: {
     docs: {
       source: {
-        code: `import { Badge } from '@forge-ui/react'
+        code: `import { Badge } from '@blacksmith-ui/react'
 
 <Badge>Badge</Badge>`,
       },

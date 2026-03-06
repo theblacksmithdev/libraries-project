@@ -22,7 +22,7 @@ export const Default: Story = {
   parameters: {
     docs: {
       source: {
-        code: `import { Input } from '@forge-ui/react'
+        code: `import { Input } from '@blacksmith-ui/react'
 
 <Input type="email" placeholder="Email" />`,
       },
@@ -52,8 +52,8 @@ export const WithLabel: Story = {
   parameters: {
     docs: {
       source: {
-        code: `import { Input } from '@forge-ui/react'
-import { Label } from '@forge-ui/react'
+        code: `import { Input } from '@blacksmith-ui/react'
+import { Label } from '@blacksmith-ui/react'
 
 <div className="grid w-full max-w-sm gap-1.5">
   <Label htmlFor="email">Email</Label>

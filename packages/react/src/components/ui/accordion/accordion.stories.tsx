@@ -32,7 +32,7 @@ export const Default: Story = {
   parameters: {
     docs: {
       source: {
-        code: `import { Accordion } from '@forge-ui/react'
+        code: `import { Accordion } from '@blacksmith-ui/react'
 
 <Accordion
   type="single"

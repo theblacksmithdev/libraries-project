@@ -56,7 +56,7 @@ export const Default: Story = {
   DrawerDescription,
   DrawerFooter,
   DrawerClose,
-} from '@forge-ui/react'
+} from '@blacksmith-ui/react'
 
 <Drawer>
   <DrawerTrigger asChild>

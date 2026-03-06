@@ -34,7 +34,7 @@ export const Default: Story = {
   parameters: {
     docs: {
       source: {
-        code: `import { Stack } from '@forge-ui/react'\n\n<Stack>\n  <div>Item 1</div>\n  <div>Item 2</div>\n  <div>Item 3</div>\n</Stack>`,
+        code: `import { Stack } from '@blacksmith-ui/react'\n\n<Stack>\n  <div>Item 1</div>\n  <div>Item 2</div>\n  <div>Item 3</div>\n</Stack>`,
       },
     },
   },

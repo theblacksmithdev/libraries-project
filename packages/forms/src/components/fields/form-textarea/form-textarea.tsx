@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { type FieldPath, type FieldValues } from 'react-hook-form'
-import { Textarea } from '@forge-ui/react'
+import { Textarea } from '@blacksmith-ui/react'
 import { FieldWrapper } from '../shared'
 import type { BaseFieldProps } from '../shared'
 

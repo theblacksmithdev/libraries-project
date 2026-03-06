@@ -84,7 +84,7 @@ export const Default: Story = {
   parameters: {
     docs: {
       source: {
-        code: `import { Lightbox } from '@forge-ui/react'
+        code: `import { Lightbox } from '@blacksmith-ui/react'
 
 const images = [
   { src: '/photo1.jpg', alt: 'Photo 1', caption: 'First photo' },

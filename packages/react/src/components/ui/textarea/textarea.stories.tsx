@@ -22,7 +22,7 @@ export const Default: Story = {
   parameters: {
     docs: {
       source: {
-        code: `import { Textarea } from '@forge-ui/react'
+        code: `import { Textarea } from '@blacksmith-ui/react'
 
 <Textarea placeholder="Type your message here." />`,
       },
@@ -40,8 +40,8 @@ export const WithLabel: Story = {
   parameters: {
     docs: {
       source: {
-        code: `import { Textarea } from '@forge-ui/react'
-import { Label } from '@forge-ui/react'
+        code: `import { Textarea } from '@blacksmith-ui/react'
+import { Label } from '@blacksmith-ui/react'
 
 <div className="grid w-full gap-1.5">
   <Label htmlFor="message">Your message</Label>

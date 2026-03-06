@@ -29,7 +29,7 @@ export const Default: Story = {
   parameters: {
     docs: {
       source: {
-        code: `import { EmptyState } from '@forge-ui/react'
+        code: `import { EmptyState } from '@blacksmith-ui/react'
 import { Inbox } from 'lucide-react'
 
 <EmptyState

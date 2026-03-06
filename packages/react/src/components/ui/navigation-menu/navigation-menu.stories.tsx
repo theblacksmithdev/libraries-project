@@ -46,7 +46,7 @@ export const Default: Story = {
   NavigationMenuList,
   NavigationMenuItem,
   NavigationMenuLink,
-} from '@forge-ui/react'
+} from '@blacksmith-ui/react'
 
 <NavigationMenu>
   <NavigationMenuList>

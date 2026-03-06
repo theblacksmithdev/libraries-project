@@ -58,7 +58,7 @@ export default {
     'react',
     'react-dom',
     'react/jsx-runtime',
-    '@forge-ui/react',
+    '@blacksmith-ui/react',
     'zod',
     'lucide-react',
     '@tanstack/react-query',

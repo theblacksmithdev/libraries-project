@@ -1,6 +1,6 @@
-# @forge-ui/forms
+# @blacksmith-ui/forms
 
-Smart form components with Zod validation, react-hook-form integration, and React Query hooks. Depends on `@forge-ui/react`.
+Smart form components with Zod validation, react-hook-form integration, and React Query hooks. Depends on `@blacksmith-ui/react`.
 
 ## Key Directories
 
@@ -31,9 +31,9 @@ src/
 ## Commands
 
 ```bash
-yarn workspace @forge-ui/forms build
-yarn workspace @forge-ui/forms test
-yarn workspace @forge-ui/forms storybook    # port 6008
+yarn workspace @blacksmith-ui/forms build
+yarn workspace @blacksmith-ui/forms test
+yarn workspace @blacksmith-ui/forms storybook    # port 6008
 ```
 
 ## Form Component API

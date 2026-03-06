@@ -32,7 +32,7 @@ export const Default: Story = {
   parameters: {
     docs: {
       source: {
-        code: `import { Select } from '@forge-ui/react'
+        code: `import { Select } from '@blacksmith-ui/react'
 
 <Select
   placeholder="Select a fruit"

@@ -33,7 +33,7 @@ export const Default: Story = {
   parameters: {
     docs: {
       source: {
-        code: `import { RangeSlider } from '@forge-ui/react'\n\nconst [value, setValue] = useState<[number, number]>([25, 75])\n<RangeSlider value={value} onValueChange={setValue} />`,
+        code: `import { RangeSlider } from '@blacksmith-ui/react'\n\nconst [value, setValue] = useState<[number, number]>([25, 75])\n<RangeSlider value={value} onValueChange={setValue} />`,
       },
     },
   },

@@ -36,7 +36,7 @@ export const Default: Story = {
   parameters: {
     docs: {
       source: {
-        code: `import { Separator } from '@forge-ui/react'
+        code: `import { Separator } from '@blacksmith-ui/react'
 
 <Separator />                          {/* horizontal */}
 <Separator orientation="vertical" />   {/* vertical */}`,

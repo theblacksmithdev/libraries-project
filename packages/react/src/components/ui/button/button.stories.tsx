@@ -22,7 +22,7 @@ export const Default: Story = {
   parameters: {
     docs: {
       source: {
-        code: `import { Button } from '@forge-ui/react'
+        code: `import { Button } from '@blacksmith-ui/react'
 
 <Button>Button</Button>`,
       },
@@ -100,7 +100,7 @@ export const WithIcon: Story = {
   parameters: {
     docs: {
       source: {
-        code: `import { Button } from '@forge-ui/react'
+        code: `import { Button } from '@blacksmith-ui/react'
 import { Plus } from 'lucide-react'
 
 <Button>
@@ -126,7 +126,7 @@ export const Sizes: Story = {
   parameters: {
     docs: {
       source: {
-        code: `import { Button } from '@forge-ui/react'
+        code: `import { Button } from '@blacksmith-ui/react'
 
 <Button size="sm">Small</Button>
 <Button size="default">Default</Button>

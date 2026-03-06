@@ -1,4 +1,4 @@
-# ForgeUI
+# BlacksmithUI
 
 A modern React component library with Apple/Anthropic-inspired flat design, powered by Tailwind CSS and Radix UI.
 
@@ -8,20 +8,20 @@ Built as a Yarn workspaces monorepo with three composable packages — core prim
 
 | Package | Description | Version |
 |---------|-------------|---------|
-| [`@forge-ui/react`](./packages/react) | Core UI primitives — 60+ accessible components built on Radix UI | ![npm](https://img.shields.io/npm/v/@forge-ui/react) |
-| [`@forge-ui/forms`](./packages/forms) | Smart form components with react-hook-form + Zod validation | ![npm](https://img.shields.io/npm/v/@forge-ui/forms) |
-| [`@forge-ui/auth`](./packages/auth-ui) | Pre-built authentication flows — login, register, forgot/reset password | ![npm](https://img.shields.io/npm/v/@forge-ui/auth) |
+| [`@blacksmith-ui/react`](./packages/react) | Core UI primitives — 60+ accessible components built on Radix UI | ![npm](https://img.shields.io/npm/v/@blacksmith-ui/react) |
+| [`@blacksmith-ui/forms`](./packages/forms) | Smart form components with react-hook-form + Zod validation | ![npm](https://img.shields.io/npm/v/@blacksmith-ui/forms) |
+| [`@blacksmith-ui/auth`](./packages/auth-ui) | Pre-built authentication flows — login, register, forgot/reset password | ![npm](https://img.shields.io/npm/v/@blacksmith-ui/auth) |
 
 ### Dependency Graph
 
 ```
-@forge-ui/react        (no internal deps)
+@blacksmith-ui/react        (no internal deps)
     ^
     |
-@forge-ui/forms        (peer dep: @forge-ui/react)
+@blacksmith-ui/forms        (peer dep: @blacksmith-ui/react)
     ^
     |
-@forge-ui/auth      (peer dep: @forge-ui/react, dep: @forge-ui/forms)
+@blacksmith-ui/auth      (peer dep: @blacksmith-ui/react, dep: @blacksmith-ui/forms)
 ```
 
 ## Features
@@ -41,13 +41,13 @@ Built as a Yarn workspaces monorepo with three composable packages — core prim
 
 ```bash
 # Core components (required)
-npm install @forge-ui/react
+npm install @blacksmith-ui/react
 
 # Form components (optional)
-npm install @forge-ui/forms
+npm install @blacksmith-ui/forms
 
 # Auth components (optional)
-npm install @forge-ui/auth
+npm install @blacksmith-ui/auth
 ```
 
 #### Peer Dependencies
@@ -58,7 +58,7 @@ Each package requires these peer dependencies:
 npm install react react-dom tailwindcss
 ```
 
-`@forge-ui/react` also requires:
+`@blacksmith-ui/react` also requires:
 ```bash
 npm install lucide-react
 ```
@@ -67,15 +67,15 @@ npm install lucide-react
 
 #### 1. Import the stylesheet
 
-Import the ForgeUI CSS in your app's entry point:
+Import the BlacksmithUI CSS in your app's entry point:
 
 ```tsx
-import '@forge-ui/react/styles.css';
+import '@blacksmith-ui/react/styles.css';
 ```
 
 #### 2. Configure Tailwind
 
-Add the ForgeUI source files to your Tailwind `content` array so utility classes are generated:
+Add the BlacksmithUI source files to your Tailwind `content` array so utility classes are generated:
 
 ```js
 // tailwind.config.js
@@ -83,11 +83,11 @@ module.exports = {
   darkMode: ['class'],
   content: [
     './src/**/*.{ts,tsx}',
-    './node_modules/@forge-ui/react/dist/**/*.{js,mjs}',
-    // If using @forge-ui/forms:
-    './node_modules/@forge-ui/forms/dist/**/*.{js,mjs}',
-    // If using @forge-ui/auth:
-    './node_modules/@forge-ui/auth/dist/**/*.{js,mjs}',
+    './node_modules/@blacksmith-ui/react/dist/**/*.{js,mjs}',
+    // If using @blacksmith-ui/forms:
+    './node_modules/@blacksmith-ui/forms/dist/**/*.{js,mjs}',
+    // If using @blacksmith-ui/auth:
+    './node_modules/@blacksmith-ui/auth/dist/**/*.{js,mjs}',
   ],
   theme: {
     extend: {
@@ -135,7 +135,7 @@ module.exports = {
 #### 3. Use components
 
 ```tsx
-import { Button, Card, Input, Alert } from '@forge-ui/react';
+import { Button, Card, Input, Alert } from '@blacksmith-ui/react';
 
 function App() {
   return (
@@ -150,7 +150,7 @@ function App() {
 
 ## Component Reference
 
-### @forge-ui/react
+### @blacksmith-ui/react
 
 <details>
 <summary><strong>Layout</strong></summary>
@@ -303,9 +303,9 @@ function App() {
 
 </details>
 
-### @forge-ui/forms
+### @blacksmith-ui/forms
 
-Extends `@forge-ui/react` with form-aware components powered by react-hook-form and Zod.
+Extends `@blacksmith-ui/react` with form-aware components powered by react-hook-form and Zod.
 
 | Component | Description |
 |-----------|-------------|
@@ -339,7 +339,7 @@ Extends `@forge-ui/react` with form-aware components powered by react-hook-form 
 **Usage:**
 
 ```tsx
-import { Form, FormInput, FormSelect } from '@forge-ui/forms';
+import { Form, FormInput, FormSelect } from '@blacksmith-ui/forms';
 import { z } from 'zod';
 
 const schema = z.object({
@@ -365,7 +365,7 @@ function CreateUserForm() {
 }
 ```
 
-### @forge-ui/auth
+### @blacksmith-ui/auth
 
 Drop-in authentication UI with configurable providers and adapters.
 
@@ -386,8 +386,8 @@ import {
   AuthProvider,
   LoginForm,
   createMockAdapter,
-} from '@forge-ui/auth';
-import '@forge-ui/react/styles.css';
+} from '@blacksmith-ui/auth';
+import '@blacksmith-ui/react/styles.css';
 
 const adapter = createMockAdapter();
 
@@ -405,7 +405,7 @@ function App() {
 
 ## Theming
 
-ForgeUI uses HSL CSS variables for theming. Override them in your own CSS to customize the look:
+BlacksmithUI uses HSL CSS variables for theming. Override them in your own CSS to customize the look:
 
 ```css
 :root {
@@ -438,7 +438,7 @@ ForgeUI uses HSL CSS variables for theming. Override them in your own CSS to cus
 Dark mode is toggled via the `.dark` class on `<html>`:
 
 ```tsx
-import { ThemeProvider } from '@forge-ui/react';
+import { ThemeProvider } from '@blacksmith-ui/react';
 
 function App() {
   return (
@@ -482,25 +482,25 @@ yarn test:all
 | `yarn build:all` | Build all packages (react -> forms -> auth) |
 | `yarn test:all` | Run all test suites |
 | `yarn lint:all` | Lint all packages |
-| `yarn storybook` | Start @forge-ui/react Storybook (port 6006) |
-| `yarn storybook:forms` | Start @forge-ui/forms Storybook (port 6008) |
-| `yarn storybook:auth-ui` | Start @forge-ui/auth Storybook (port 6007) |
+| `yarn storybook` | Start @blacksmith-ui/react Storybook (port 6006) |
+| `yarn storybook:forms` | Start @blacksmith-ui/forms Storybook (port 6008) |
+| `yarn storybook:auth-ui` | Start @blacksmith-ui/auth Storybook (port 6007) |
 
 ### Per-Package Commands
 
 ```bash
 # Build a single package
-yarn workspace @forge-ui/react build
-yarn workspace @forge-ui/forms build
-yarn workspace @forge-ui/auth build
+yarn workspace @blacksmith-ui/react build
+yarn workspace @blacksmith-ui/forms build
+yarn workspace @blacksmith-ui/auth build
 
 # Test a single package
-yarn workspace @forge-ui/react test
-yarn workspace @forge-ui/forms test
-yarn workspace @forge-ui/auth test
+yarn workspace @blacksmith-ui/react test
+yarn workspace @blacksmith-ui/forms test
+yarn workspace @blacksmith-ui/auth test
 
 # Test with coverage
-yarn workspace @forge-ui/react test:coverage
+yarn workspace @blacksmith-ui/react test:coverage
 ```
 
 ### Build Pipeline
@@ -515,7 +515,7 @@ Each package uses Rollup + TypeScript:
 ```
 libraries-project/
 ├── packages/
-│   ├── react/           # @forge-ui/react — Core UI primitives
+│   ├── react/           # @blacksmith-ui/react — Core UI primitives
 │   │   ├── src/
 │   │   │   ├── components/ui/   # All component source
 │   │   │   ├── hooks/           # Custom hooks
@@ -524,13 +524,13 @@ libraries-project/
 │   │   │   └── index.ts         # Public API
 │   │   ├── rollup.config.mjs
 │   │   └── tailwind.config.ts
-│   ├── forms/           # @forge-ui/forms — Form components
+│   ├── forms/           # @blacksmith-ui/forms — Form components
 │   │   ├── src/
 │   │   │   ├── components/      # Form field components
 │   │   │   ├── hooks/           # useFormMutation, useFormQuery
 │   │   │   └── index.ts
 │   │   └── rollup.config.mjs
-│   └── auth-ui/         # @forge-ui/auth — Auth flows
+│   └── auth-ui/         # @blacksmith-ui/auth — Auth flows
 │       ├── src/
 │       │   ├── components/      # Login, Register, etc.
 │       │   ├── adapters/        # Auth adapters (mock, firebase)
@@ -550,10 +550,10 @@ Tests use **Vitest** with **jsdom**, **@testing-library/react**, and **@testing-
 yarn test:all
 
 # Watch mode (single package)
-yarn workspace @forge-ui/react test:watch
+yarn workspace @blacksmith-ui/react test:watch
 
 # Coverage report
-yarn workspace @forge-ui/react test:coverage
+yarn workspace @blacksmith-ui/react test:coverage
 ```
 
 Coverage thresholds are set at 80% for branches, functions, lines, and statements.
@@ -573,9 +573,9 @@ cd packages/react && npm pack --dry-run
 npm login
 
 # Publish in dependency order
-yarn workspace @forge-ui/react publish --access public
-yarn workspace @forge-ui/forms publish --access public
-yarn workspace @forge-ui/auth publish --access public
+yarn workspace @blacksmith-ui/react publish --access public
+yarn workspace @blacksmith-ui/forms publish --access public
+yarn workspace @blacksmith-ui/auth publish --access public
 ```
 
 Each package has a `prepublishOnly` script that automatically runs the build before publishing.

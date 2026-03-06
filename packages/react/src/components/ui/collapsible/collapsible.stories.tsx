@@ -44,7 +44,7 @@ export const Default: Story = {
   parameters: {
     docs: {
       source: {
-        code: `import { Collapsible, CollapsibleTrigger, CollapsibleContent } from '@forge-ui/react'
+        code: `import { Collapsible, CollapsibleTrigger, CollapsibleContent } from '@blacksmith-ui/react'
 
 const [isOpen, setIsOpen] = React.useState(false)
 

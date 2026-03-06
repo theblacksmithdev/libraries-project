@@ -41,7 +41,7 @@ export const Default: Story = {
   ContextMenuContent,
   ContextMenuItem,
   ContextMenuSeparator,
-} from '@forge-ui/react'
+} from '@blacksmith-ui/react'
 
 <ContextMenu>
   <ContextMenuTrigger>Right click here</ContextMenuTrigger>

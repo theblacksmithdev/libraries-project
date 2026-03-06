@@ -22,7 +22,7 @@ export const Default: Story = {
   parameters: {
     docs: {
       source: {
-        code: `import { Toggle } from '@forge-ui/react'
+        code: `import { Toggle } from '@blacksmith-ui/react'
 
 <Toggle aria-label="Toggle bold">
   <Bold className="h-4 w-4" />

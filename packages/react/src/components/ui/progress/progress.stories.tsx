@@ -22,7 +22,7 @@ export const Default: Story = {
   parameters: {
     docs: {
       source: {
-        code: `import { Progress } from '@forge-ui/react'
+        code: `import { Progress } from '@blacksmith-ui/react'
 
 <Progress value={60} />`,
       },

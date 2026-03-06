@@ -29,7 +29,7 @@ export const Default: Story = {
   parameters: {
     docs: {
       source: {
-        code: `import { Breadcrumb } from '@forge-ui/react'
+        code: `import { Breadcrumb } from '@blacksmith-ui/react'
 
 <Breadcrumb
   items={[

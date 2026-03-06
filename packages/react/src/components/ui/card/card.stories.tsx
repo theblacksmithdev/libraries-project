@@ -38,7 +38,7 @@ export const Default: Story = {
   parameters: {
     docs: {
       source: {
-        code: `import { Card } from '@forge-ui/react'
+        code: `import { Card } from '@blacksmith-ui/react'
 
 <Card
   title="Create project"
@@ -73,7 +73,7 @@ export const Primitives: Story = {
   parameters: {
     docs: {
       source: {
-        code: `import { CardPrimitives } from '@forge-ui/react'
+        code: `import { CardPrimitives } from '@blacksmith-ui/react'
 
 <CardPrimitives.Root>
   <CardPrimitives.Header>

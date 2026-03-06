@@ -37,7 +37,7 @@ export const Default: Story = {
   parameters: {
     docs: {
       source: {
-        code: `import { Grid } from '@forge-ui/react'\n\n<Grid columns={3}>\n  <div>1</div>\n  <div>2</div>\n  <div>3</div>\n</Grid>`,
+        code: `import { Grid } from '@blacksmith-ui/react'\n\n<Grid columns={3}>\n  <div>1</div>\n  <div>2</div>\n  <div>3</div>\n</Grid>`,
       },
     },
   },

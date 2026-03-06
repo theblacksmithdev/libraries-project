@@ -55,7 +55,7 @@ export const Default: Story = {
   parameters: {
     docs: {
       source: {
-        code: `import { DataTable } from '@forge-ui/react'
+        code: `import { DataTable } from '@blacksmith-ui/react'
 
 <DataTable
   columns={[

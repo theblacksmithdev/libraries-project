@@ -30,7 +30,7 @@ export const Default: Story = {
   parameters: {
     docs: {
       source: {
-        code: `import { Stepper } from '@forge-ui/react'\n\n<Stepper\n  steps={[\n    { title: 'Account', description: 'Create your account' },\n    { title: 'Profile', description: 'Set up your profile' },\n    { title: 'Review', description: 'Review and submit' },\n  ]}\n  activeStep={1}\n/>`,
+        code: `import { Stepper } from '@blacksmith-ui/react'\n\n<Stepper\n  steps={[\n    { title: 'Account', description: 'Create your account' },\n    { title: 'Profile', description: 'Set up your profile' },\n    { title: 'Review', description: 'Review and submit' },\n  ]}\n  activeStep={1}\n/>`,
       },
     },
   },

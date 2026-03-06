@@ -33,7 +33,7 @@ export const Default: Story = {
   parameters: {
     docs: {
       source: {
-        code: `import { SearchInput } from '@forge-ui/react'\n\nconst [value, setValue] = useState('')\n<SearchInput\n  value={value}\n  onChange={(e) => setValue(e.target.value)}\n  onClear={() => setValue('')}\n  placeholder="Search..."\n/>`,
+        code: `import { SearchInput } from '@blacksmith-ui/react'\n\nconst [value, setValue] = useState('')\n<SearchInput\n  value={value}\n  onChange={(e) => setValue(e.target.value)}\n  onClear={() => setValue('')}\n  placeholder="Search..."\n/>`,
       },
     },
   },

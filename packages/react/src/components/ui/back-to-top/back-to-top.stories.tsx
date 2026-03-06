@@ -30,7 +30,7 @@ export const Default: Story = {
   parameters: {
     docs: {
       source: {
-        code: `import { BackToTop } from '@forge-ui/react'\n\n<BackToTop />`,
+        code: `import { BackToTop } from '@blacksmith-ui/react'\n\n<BackToTop />`,
       },
     },
   },

@@ -36,7 +36,7 @@ export const Default: Story = {
   parameters: {
     docs: {
       source: {
-        code: `import { Popover } from '@forge-ui/react'
+        code: `import { Popover } from '@blacksmith-ui/react'
 
 <Popover trigger={<Button variant="outline">Open Popover</Button>}>
   <h4>Dimensions</h4>

@@ -23,7 +23,7 @@ export const Default: Story = {
   parameters: {
     docs: {
       source: {
-        code: `import { Typography } from '@forge-ui/react'
+        code: `import { Typography } from '@blacksmith-ui/react'
 
 <Typography>This is a paragraph of text using the default variant.</Typography>`,
       },

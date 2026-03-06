@@ -1,6 +1,6 @@
-# @forge-ui/auth
+# @blacksmith-ui/auth
 
-Authentication UI components. Depends on `@forge-ui/react` + `@forge-ui/forms`.
+Authentication UI components. Depends on `@blacksmith-ui/react` + `@blacksmith-ui/forms`.
 
 ## Key Directories
 
@@ -22,18 +22,18 @@ src/
 ## Commands
 
 ```bash
-yarn workspace @forge-ui/auth build
-yarn workspace @forge-ui/auth test
-yarn workspace @forge-ui/auth storybook    # port 6007
+yarn workspace @blacksmith-ui/auth build
+yarn workspace @blacksmith-ui/auth test
+yarn workspace @blacksmith-ui/auth storybook    # port 6007
 ```
 
 ## Component Pattern
 
 Each form component:
 1. Defines a Zod schema for validation
-2. Uses `<Form schema={...} onSubmit={...} mode="onSubmit">` from `@forge-ui/forms`
+2. Uses `<Form schema={...} onSubmit={...} mode="onSubmit">` from `@blacksmith-ui/forms`
 3. Uses `<FormInput name="..." label="..." />` for form fields
-4. Displays external errors via `<Alert variant="destructive">` from `@forge-ui/react`
+4. Displays external errors via `<Alert variant="destructive">` from `@blacksmith-ui/react`
 5. Footer links use `<Button variant="link" size="sm">`
 6. Social provider section uses `<Divider label="...">` separator
 

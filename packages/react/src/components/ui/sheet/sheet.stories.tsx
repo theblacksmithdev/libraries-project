@@ -35,7 +35,7 @@ export const Default: Story = {
   parameters: {
     docs: {
       source: {
-        code: `import { Sheet } from '@forge-ui/react'
+        code: `import { Sheet } from '@blacksmith-ui/react'
 
 <Sheet
   trigger={<Button>Open Sheet</Button>}

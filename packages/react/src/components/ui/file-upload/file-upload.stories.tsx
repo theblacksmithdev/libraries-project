@@ -26,7 +26,7 @@ export const Default: Story = {
   parameters: {
     docs: {
       source: {
-        code: `import { FileUpload } from '@forge-ui/react'\n\nconst [files, setFiles] = useState<File[]>([])\n<FileUpload value={files} onChange={setFiles} />`,
+        code: `import { FileUpload } from '@blacksmith-ui/react'\n\nconst [files, setFiles] = useState<File[]>([])\n<FileUpload value={files} onChange={setFiles} />`,
       },
     },
   },

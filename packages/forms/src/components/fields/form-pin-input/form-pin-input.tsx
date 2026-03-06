@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { type FieldPath, type FieldValues } from 'react-hook-form'
-import { PinInput } from '@forge-ui/react'
+import { PinInput } from '@blacksmith-ui/react'
 import { FieldWrapper } from '../shared'
 import type { BaseFieldProps } from '../shared'
 

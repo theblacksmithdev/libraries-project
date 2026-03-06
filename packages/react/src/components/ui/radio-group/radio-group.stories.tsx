@@ -36,8 +36,8 @@ export const Default: Story = {
   parameters: {
     docs: {
       source: {
-        code: `import { RadioGroup, RadioGroupItem } from '@forge-ui/react'
-import { Label } from '@forge-ui/react'
+        code: `import { RadioGroup, RadioGroupItem } from '@blacksmith-ui/react'
+import { Label } from '@blacksmith-ui/react'
 
 <RadioGroup defaultValue="comfortable">
   <div className="flex items-center space-x-2">

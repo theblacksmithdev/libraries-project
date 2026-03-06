@@ -50,7 +50,7 @@ export const Default: Story = {
   parameters: {
     docs: {
       source: {
-        code: `import { Tabs } from '@forge-ui/react'
+        code: `import { Tabs } from '@blacksmith-ui/react'
 
 <Tabs
   defaultValue="account"

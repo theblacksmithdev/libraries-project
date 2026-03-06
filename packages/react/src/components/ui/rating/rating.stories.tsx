@@ -23,7 +23,7 @@ export const Default: Story = {
   parameters: {
     docs: {
       source: {
-        code: `import { Rating } from '@forge-ui/react'\n\n<Rating value={3} readOnly />`,
+        code: `import { Rating } from '@blacksmith-ui/react'\n\n<Rating value={3} readOnly />`,
       },
     },
   },

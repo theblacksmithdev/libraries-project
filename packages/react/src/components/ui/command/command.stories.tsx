@@ -47,7 +47,7 @@ export const Default: Story = {
   CommandGroup,
   CommandItem,
   CommandSeparator,
-} from '@forge-ui/react'
+} from '@blacksmith-ui/react'
 
 <Command>
   <CommandInput placeholder="Type a command or search..." />

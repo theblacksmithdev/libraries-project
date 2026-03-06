@@ -22,7 +22,7 @@ export const Default: Story = {
   parameters: {
     docs: {
       source: {
-        code: `import { Slider } from '@forge-ui/react'
+        code: `import { Slider } from '@blacksmith-ui/react'
 
 <Slider defaultValue={[50]} max={100} step={1} />`,
       },

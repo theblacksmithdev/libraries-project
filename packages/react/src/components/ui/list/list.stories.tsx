@@ -33,7 +33,7 @@ export const Default: Story = {
   parameters: {
     docs: {
       source: {
-        code: `import { List } from '@forge-ui/react'
+        code: `import { List } from '@blacksmith-ui/react'
 import { Mail, Star, User } from 'lucide-react'
 
 <List

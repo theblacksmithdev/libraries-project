@@ -27,7 +27,7 @@ export const Default: Story = {
   parameters: {
     docs: {
       source: {
-        code: `import { AlertBanner } from '@forge-ui/react'\n\n<AlertBanner title="New update available">\n  A new version has been released.\n</AlertBanner>`,
+        code: `import { AlertBanner } from '@blacksmith-ui/react'\n\n<AlertBanner title="New update available">\n  A new version has been released.\n</AlertBanner>`,
       },
     },
   },

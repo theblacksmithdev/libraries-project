@@ -26,7 +26,7 @@ export const Default: Story = {
   parameters: {
     docs: {
       source: {
-        code: `import { Alert } from '@forge-ui/react'
+        code: `import { Alert } from '@blacksmith-ui/react'
 
 <Alert title="Heads up!" description="You can add components to your app using the cli." />`,
       },
@@ -45,7 +45,7 @@ export const Destructive: Story = {
   parameters: {
     docs: {
       source: {
-        code: `import { Alert } from '@forge-ui/react'
+        code: `import { Alert } from '@blacksmith-ui/react'
 
 <Alert variant="destructive" title="Error" description="Your session has expired. Please log in again." />`,
       },
@@ -66,7 +66,7 @@ export const Primitives: Story = {
   parameters: {
     docs: {
       source: {
-        code: `import { AlertPrimitives } from '@forge-ui/react'
+        code: `import { AlertPrimitives } from '@blacksmith-ui/react'
 
 <AlertPrimitives.Root>
   <AlertPrimitives.Title>Heads up!</AlertPrimitives.Title>

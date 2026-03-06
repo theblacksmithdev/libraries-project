@@ -37,7 +37,7 @@ export const Default: Story = {
   parameters: {
     docs: {
       source: {
-        code: `import { Table } from '@forge-ui/react'
+        code: `import { Table } from '@blacksmith-ui/react'
 
 <Table
   columns={[

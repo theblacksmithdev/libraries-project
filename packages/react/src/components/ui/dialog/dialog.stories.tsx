@@ -43,7 +43,7 @@ export const Default: Story = {
   parameters: {
     docs: {
       source: {
-        code: `import { Dialog } from '@forge-ui/react'
+        code: `import { Dialog } from '@blacksmith-ui/react'
 
 <Dialog
   trigger={<Button>Edit Profile</Button>}

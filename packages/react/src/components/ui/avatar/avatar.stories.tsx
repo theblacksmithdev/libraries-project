@@ -23,7 +23,7 @@ export const Default: Story = {
   parameters: {
     docs: {
       source: {
-        code: `import { Avatar } from '@forge-ui/react'
+        code: `import { Avatar } from '@blacksmith-ui/react'
 
 <Avatar src="https://github.com/shadcn.png" alt="@shadcn" fallback="CN" />`,
       },
@@ -38,7 +38,7 @@ export const Fallback: Story = {
   parameters: {
     docs: {
       source: {
-        code: `import { Avatar } from '@forge-ui/react'
+        code: `import { Avatar } from '@blacksmith-ui/react'
 
 <Avatar fallback="JD" />`,
       },
@@ -57,7 +57,7 @@ export const Primitives: Story = {
   parameters: {
     docs: {
       source: {
-        code: `import { AvatarPrimitives } from '@forge-ui/react'
+        code: `import { AvatarPrimitives } from '@blacksmith-ui/react'
 
 <AvatarPrimitives.Root>
   <AvatarPrimitives.Image src="https://github.com/shadcn.png" alt="@shadcn" />

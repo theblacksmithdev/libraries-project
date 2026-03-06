@@ -1,5 +1,5 @@
 {
-  "name": "@forge-ui/react",
+  "name": "@blacksmith-ui/react",
   "version": "0.1.2",
   "description": "A React component library with Apple/Anthropic-inspired flat design, powered by Tailwind CSS",
   "main": "dist/cjs/index.js",
@@ -76,7 +76,7 @@
     "tailwind",
     "radix",
     "design-system",
-    "forge-ui"
+    "blacksmith-ui"
   ],
   "repository": {
     "type": "git",

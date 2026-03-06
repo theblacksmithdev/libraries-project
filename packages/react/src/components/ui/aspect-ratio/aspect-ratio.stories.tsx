@@ -27,7 +27,7 @@ export const Default: Story = {
   parameters: {
     docs: {
       source: {
-        code: `import { AspectRatio } from '@forge-ui/react'
+        code: `import { AspectRatio } from '@blacksmith-ui/react'
 
 <AspectRatio ratio={16 / 9} className="bg-muted">
   <img src="..." alt="..." className="object-cover" />

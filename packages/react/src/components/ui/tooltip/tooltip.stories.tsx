@@ -27,7 +27,7 @@ export const Default: Story = {
   parameters: {
     docs: {
       source: {
-        code: `import { Tooltip } from '@forge-ui/react'
+        code: `import { Tooltip } from '@blacksmith-ui/react'
 
 <Tooltip content="Add to library">
   <Button variant="outline">Hover me</Button>
@@ -56,7 +56,7 @@ export const Primitives: Story = {
   parameters: {
     docs: {
       source: {
-        code: `import { TooltipPrimitives } from '@forge-ui/react'
+        code: `import { TooltipPrimitives } from '@blacksmith-ui/react'
 
 <TooltipPrimitives.Provider>
   <TooltipPrimitives.Root>

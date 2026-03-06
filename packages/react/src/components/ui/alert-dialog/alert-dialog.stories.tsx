@@ -33,7 +33,7 @@ export const Default: Story = {
   parameters: {
     docs: {
       source: {
-        code: `import { AlertDialog } from '@forge-ui/react'
+        code: `import { AlertDialog } from '@blacksmith-ui/react'
 
 <AlertDialog
   trigger={<Button variant="destructive">Delete Account</Button>}

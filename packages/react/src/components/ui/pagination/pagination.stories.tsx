@@ -25,7 +25,7 @@ export const Default: Story = {
   parameters: {
     docs: {
       source: {
-        code: `import { Pagination } from '@forge-ui/react'
+        code: `import { Pagination } from '@blacksmith-ui/react'
 
 <Pagination currentPage={3} totalPages={10} onPageChange={setPage} />`,
       },

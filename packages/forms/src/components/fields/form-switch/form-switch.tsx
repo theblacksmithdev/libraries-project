@@ -8,7 +8,7 @@ import {
   FormControl,
   FormDescription,
   FormMessage,
-} from '@forge-ui/react'
+} from '@blacksmith-ui/react'
 import { cn } from '@/lib/utils'
 import type { BaseFieldProps } from '../shared'
 

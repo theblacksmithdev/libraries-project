@@ -27,7 +27,7 @@ export const Default: Story = {
   parameters: {
     docs: {
       source: {
-        code: `import { DatePicker } from '@forge-ui/react'\n\nconst [date, setDate] = useState<Date>()\n<DatePicker value={date} onChange={setDate} />`,
+        code: `import { DatePicker } from '@blacksmith-ui/react'\n\nconst [date, setDate] = useState<Date>()\n<DatePicker value={date} onChange={setDate} />`,
       },
     },
   },

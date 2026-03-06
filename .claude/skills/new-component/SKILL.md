@@ -1,13 +1,13 @@
 ---
 name: new-component
-description: Scaffold a new UI component in @flatui/react. Usage: /new-component ComponentName
+description: Scaffold a new UI component in @blacksmith-ui/react. Usage: /new-component ComponentName
 ---
 
-Create a new component named `$ARGUMENTS` in the `@flatui/react` package.
+Create a new component named `$ARGUMENTS` in the `@blacksmith-ui/react` package.
 
 ## Steps
 
-1. **Create directory**: `packages/flatui/src/components/ui/<kebab-case-name>/`
+1. **Create directory**: `packages/react/src/components/ui/<kebab-case-name>/`
 
 2. **Create component file** (`<kebab-case-name>.tsx`):
    - Use `React.forwardRef` pattern
@@ -31,7 +31,7 @@ Create a new component named `$ARGUMENTS` in the `@flatui/react` package.
 5. **Create index file** (`index.ts`):
    - Re-export everything from the component file
 
-6. **Add export to package index**: Add export line to `packages/flatui/src/index.ts`
+6. **Add export to package index**: Add export line to `packages/react/src/index.ts`
 
 ## Naming Convention
 

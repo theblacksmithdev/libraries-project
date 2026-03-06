@@ -22,7 +22,7 @@ export const Default: Story = {
   parameters: {
     docs: {
       source: {
-        code: `import { Divider } from '@forge-ui/react'\n\n<Divider />`,
+        code: `import { Divider } from '@blacksmith-ui/react'\n\n<Divider />`,
       },
     },
   },

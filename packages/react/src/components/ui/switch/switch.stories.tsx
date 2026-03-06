@@ -26,8 +26,8 @@ export const Default: Story = {
   parameters: {
     docs: {
       source: {
-        code: `import { Switch } from '@forge-ui/react'
-import { Label } from '@forge-ui/react'
+        code: `import { Switch } from '@blacksmith-ui/react'
+import { Label } from '@blacksmith-ui/react'
 
 <div className="flex items-center space-x-2">
   <Switch id="airplane-mode" />

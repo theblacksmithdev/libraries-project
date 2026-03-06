@@ -119,7 +119,7 @@ export const Default: Story = {
   parameters: {
     docs: {
       source: {
-        code: `import { SpotlightTour } from '@forge-ui/react'
+        code: `import { SpotlightTour } from '@blacksmith-ui/react'
 
 const steps = [
   { target: '#logo', title: 'Welcome!', description: 'Your brand area.' },

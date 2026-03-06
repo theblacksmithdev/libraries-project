@@ -31,7 +31,7 @@ export const Default: Story = {
   parameters: {
     docs: {
       source: {
-        code: `import { Image } from '@forge-ui/react'
+        code: `import { Image } from '@blacksmith-ui/react'
 
 <Image
   src="https://images.unsplash.com/photo-1588345921523-c2dcdb7f1dcd?w=800&dpr=2&q=80"
@@ -57,7 +57,7 @@ export const WithAspectRatio: Story = {
   parameters: {
     docs: {
       source: {
-        code: `import { Image } from '@forge-ui/react'
+        code: `import { Image } from '@blacksmith-ui/react'
 
 <Image
   src="https://images.unsplash.com/photo-1588345921523-c2dcdb7f1dcd?w=800&dpr=2&q=80"
@@ -85,7 +85,7 @@ export const WithFallback: Story = {
   parameters: {
     docs: {
       source: {
-        code: `import { Image } from '@forge-ui/react'
+        code: `import { Image } from '@blacksmith-ui/react'
 
 <Image
   src="https://broken.url/does-not-exist.jpg"
@@ -112,7 +112,7 @@ export const Primitives: Story = {
   parameters: {
     docs: {
       source: {
-        code: `import { ImagePrimitives } from '@forge-ui/react'
+        code: `import { ImagePrimitives } from '@blacksmith-ui/react'
 
 <ImagePrimitives.Root className="w-[400px] h-[300px]">
   <ImagePrimitives.Img

@@ -40,7 +40,7 @@ export const Default: Story = {
   InputOTPGroup,
   InputOTPSlot,
   InputOTPSeparator,
-} from '@forge-ui/react'
+} from '@blacksmith-ui/react'
 
 <InputOTP maxLength={6}>
   <InputOTPGroup>

@@ -44,7 +44,7 @@ async def get_user(user_id: str) -> User:
         return User(**response.json())`
 
 const jsonCode = `{
-  "name": "@forge-ui/react",
+  "name": "@blacksmith-ui/react",
   "version": "0.1.0",
   "dependencies": {
     "shiki": "^3.2.0",
@@ -61,7 +61,7 @@ export const Default: Story = {
   parameters: {
     docs: {
       source: {
-        code: `import { CodeBlock } from '@forge-ui/react'
+        code: `import { CodeBlock } from '@blacksmith-ui/react'
 
 <CodeBlock code={code} language="typescript" filename="user.ts" />`,
       },
@@ -156,7 +156,7 @@ export const Primitives: Story = {
   parameters: {
     docs: {
       source: {
-        code: `import { CodeBlockPrimitives } from '@forge-ui/react'
+        code: `import { CodeBlockPrimitives } from '@blacksmith-ui/react'
 
 <CodeBlockPrimitives.Root>
   <CodeBlockPrimitives.Header filename="example.ts">

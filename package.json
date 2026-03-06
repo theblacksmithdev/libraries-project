@@ -1,25 +1,25 @@
 {
-  "name": "forge-ui-workspace",
+  "name": "blacksmith-ui-workspace",
   "private": true,
   "workspaces": [
     "packages/*"
   ],
   "scripts": {
-    "build": "yarn workspace @forge-ui/react build",
-    "build:forms": "yarn workspace @forge-ui/forms build",
-    "build:auth-ui": "yarn workspace @forge-ui/auth-ui build",
-    "build:all": "yarn workspace @forge-ui/react build && yarn workspace @forge-ui/forms build && yarn workspace @forge-ui/auth-ui build",
-    "test": "yarn workspace @forge-ui/react test",
-    "test:forms": "yarn workspace @forge-ui/forms test",
-    "test:auth-ui": "yarn workspace @forge-ui/auth-ui test",
-    "test:all": "yarn workspace @forge-ui/react test && yarn workspace @forge-ui/forms test && yarn workspace @forge-ui/auth-ui test",
-    "test:watch": "yarn workspace @forge-ui/react test:watch",
-    "test:coverage": "yarn workspace @forge-ui/react test:coverage",
-    "lint": "yarn workspace @forge-ui/react lint",
-    "lint:all": "yarn workspace @forge-ui/react lint && yarn workspace @forge-ui/forms lint && yarn workspace @forge-ui/auth-ui lint",
-    "storybook": "yarn workspace @forge-ui/react storybook",
-    "storybook:forms": "yarn workspace @forge-ui/forms storybook",
-    "storybook:auth-ui": "yarn workspace @forge-ui/auth-ui storybook"
+    "build": "yarn workspace @blacksmith-ui/react build",
+    "build:forms": "yarn workspace @blacksmith-ui/forms build",
+    "build:auth-ui": "yarn workspace @blacksmith-ui/auth build",
+    "build:all": "yarn workspace @blacksmith-ui/react build && yarn workspace @blacksmith-ui/forms build && yarn workspace @blacksmith-ui/auth build",
+    "test": "yarn workspace @blacksmith-ui/react test",
+    "test:forms": "yarn workspace @blacksmith-ui/forms test",
+    "test:auth-ui": "yarn workspace @blacksmith-ui/auth test",
+    "test:all": "yarn workspace @blacksmith-ui/react test && yarn workspace @blacksmith-ui/forms test && yarn workspace @blacksmith-ui/auth test",
+    "test:watch": "yarn workspace @blacksmith-ui/react test:watch",
+    "test:coverage": "yarn workspace @blacksmith-ui/react test:coverage",
+    "lint": "yarn workspace @blacksmith-ui/react lint",
+    "lint:all": "yarn workspace @blacksmith-ui/react lint && yarn workspace @blacksmith-ui/forms lint && yarn workspace @blacksmith-ui/auth lint",
+    "storybook": "yarn workspace @blacksmith-ui/react storybook",
+    "storybook:forms": "yarn workspace @blacksmith-ui/forms storybook",
+    "storybook:auth-ui": "yarn workspace @blacksmith-ui/auth storybook"
   },
   "packageManager": "yarn@1.22.22"
 }

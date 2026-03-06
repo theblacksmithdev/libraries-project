@@ -41,7 +41,7 @@ export const Default: Story = {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from '@forge-ui/react'
+} from '@blacksmith-ui/react'
 
 <Carousel className="w-full max-w-xs">
   <CarouselContent>

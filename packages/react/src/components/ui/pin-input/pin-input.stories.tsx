@@ -31,7 +31,7 @@ export const Default: Story = {
   parameters: {
     docs: {
       source: {
-        code: `import { PinInput } from '@forge-ui/react'\n\nconst [value, setValue] = useState('')\n<PinInput value={value} onChange={setValue} />`,
+        code: `import { PinInput } from '@blacksmith-ui/react'\n\nconst [value, setValue] = useState('')\n<PinInput value={value} onChange={setValue} />`,
       },
     },
   },

@@ -37,7 +37,7 @@ export const Default: Story = {
   parameters: {
     docs: {
       source: {
-        code: `import { DropdownMenu } from '@forge-ui/react'
+        code: `import { DropdownMenu } from '@blacksmith-ui/react'
 
 <DropdownMenu
   trigger={<Button variant="outline">Open Menu</Button>}

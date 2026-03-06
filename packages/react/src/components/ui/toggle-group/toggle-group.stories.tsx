@@ -30,7 +30,7 @@ export const Default: Story = {
   parameters: {
     docs: {
       source: {
-        code: `import { ToggleGroup } from '@forge-ui/react'
+        code: `import { ToggleGroup } from '@blacksmith-ui/react'
 
 <ToggleGroup
   type="multiple"

@@ -31,7 +31,7 @@ export const Default: Story = {
   parameters: {
     docs: {
       source: {
-        code: `import { VideoPlayer } from '@forge-ui/react'
+        code: `import { VideoPlayer } from '@blacksmith-ui/react'
 
 <VideoPlayer src="https://example.com/video.mp4" aspectRatio={16 / 9} />`,
       },
@@ -52,7 +52,7 @@ export const WithPoster: Story = {
   parameters: {
     docs: {
       source: {
-        code: `import { VideoPlayer } from '@forge-ui/react'
+        code: `import { VideoPlayer } from '@blacksmith-ui/react'
 
 <VideoPlayer
   src="https://example.com/video.mp4"
@@ -73,7 +73,7 @@ export const Autoplay: Story = {
   parameters: {
     docs: {
       source: {
-        code: `import { VideoPlayer } from '@forge-ui/react'
+        code: `import { VideoPlayer } from '@blacksmith-ui/react'
 
 <VideoPlayer src="https://example.com/video.mp4" autoPlay muted aspectRatio={16 / 9} />`,
       },
@@ -94,7 +94,7 @@ export const NoControls: Story = {
   parameters: {
     docs: {
       source: {
-        code: `import { VideoPlayer } from '@forge-ui/react'
+        code: `import { VideoPlayer } from '@blacksmith-ui/react'
 
 <VideoPlayer src="https://example.com/video.mp4" controls={false} aspectRatio={16 / 9} />`,
       },
@@ -121,7 +121,7 @@ export const Primitives: Story = {
   parameters: {
     docs: {
       source: {
-        code: `import { VideoPlayerPrimitives } from '@forge-ui/react'
+        code: `import { VideoPlayerPrimitives } from '@blacksmith-ui/react'
 
 <VideoPlayerPrimitives.Root>
   <VideoPlayerPrimitives.Video src="https://example.com/video.mp4" />

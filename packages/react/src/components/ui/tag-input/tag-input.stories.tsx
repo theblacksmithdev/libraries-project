@@ -26,7 +26,7 @@ export const Default: Story = {
   parameters: {
     docs: {
       source: {
-        code: `import { TagInput } from '@forge-ui/react'\n\nconst [tags, setTags] = useState(['React', 'TypeScript'])\n<TagInput value={tags} onChange={setTags} />`,
+        code: `import { TagInput } from '@blacksmith-ui/react'\n\nconst [tags, setTags] = useState(['React', 'TypeScript'])\n<TagInput value={tags} onChange={setTags} />`,
       },
     },
   },

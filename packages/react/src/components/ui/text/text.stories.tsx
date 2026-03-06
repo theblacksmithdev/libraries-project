@@ -22,7 +22,7 @@ export const Default: Story = {
   parameters: {
     docs: {
       source: {
-        code: `import { Text } from '@forge-ui/react'
+        code: `import { Text } from '@blacksmith-ui/react'
 
 <Text>Default body text</Text>`,
       },

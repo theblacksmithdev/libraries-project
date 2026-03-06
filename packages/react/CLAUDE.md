@@ -1,4 +1,4 @@
-# @forge-ui/react
+# @blacksmith-ui/react
 
 Core UI component library. No internal package dependencies.
 
@@ -17,9 +17,9 @@ src/
 ## Commands
 
 ```bash
-yarn workspace @forge-ui/react build
-yarn workspace @forge-ui/react test
-yarn workspace @forge-ui/react storybook    # port 6006
+yarn workspace @blacksmith-ui/react build
+yarn workspace @blacksmith-ui/react test
+yarn workspace @blacksmith-ui/react storybook    # port 6006
 ```
 
 ## Component Patterns

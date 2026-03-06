@@ -31,7 +31,7 @@ export const Default: Story = {
   parameters: {
     docs: {
       source: {
-        code: `import { Timeline } from '@forge-ui/react'
+        code: `import { Timeline } from '@blacksmith-ui/react'
 
 <Timeline
   items={[

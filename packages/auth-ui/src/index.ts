@@ -1,4 +1,4 @@
-// @forge-ui/auth-ui — Configurable authentication UI components
+// @blacksmith-ui/auth — Configurable authentication UI components
 
 // Types
 export type {

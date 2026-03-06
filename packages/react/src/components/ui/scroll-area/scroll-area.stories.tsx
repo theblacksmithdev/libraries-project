@@ -32,7 +32,7 @@ export const Default: Story = {
   parameters: {
     docs: {
       source: {
-        code: `import { ScrollArea } from '@forge-ui/react'
+        code: `import { ScrollArea } from '@blacksmith-ui/react'
 
 <ScrollArea className="h-72 w-48 rounded-md border">
   <div className="p-4">

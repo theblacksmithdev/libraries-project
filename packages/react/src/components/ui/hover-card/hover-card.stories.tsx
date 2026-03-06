@@ -33,7 +33,7 @@ export const Default: Story = {
   parameters: {
     docs: {
       source: {
-        code: `import { HoverCard } from '@forge-ui/react'
+        code: `import { HoverCard } from '@blacksmith-ui/react'
 
 <HoverCard trigger={<a href="#">@nextjs</a>}>
   <h4>@nextjs</h4>

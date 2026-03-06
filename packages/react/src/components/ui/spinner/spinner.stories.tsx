@@ -21,7 +21,7 @@ export const Default: Story = {
   parameters: {
     docs: {
       source: {
-        code: `import { Spinner } from '@forge-ui/react'\n\n<Spinner />`,
+        code: `import { Spinner } from '@blacksmith-ui/react'\n\n<Spinner />`,
       },
     },
   },

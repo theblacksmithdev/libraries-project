@@ -23,9 +23,9 @@ For each package being checked:
 
 ## Package order (for `all`)
 
-1. `@flatui/react` — test then build
-2. `@flatui/forms` — test then build
-3. `@flatui/auth-ui` — test then build
+1. `@blacksmith-ui/react` — test then build
+2. `@blacksmith-ui/forms` — test then build
+3. `@blacksmith-ui/auth` — test then build
 
 ## On Failure
 

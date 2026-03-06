@@ -1,9 +1,9 @@
 ---
 name: new-form-field
-description: Scaffold a new form field component in @flatui/forms. Usage: /new-form-field FieldName
+description: Scaffold a new form field component in @blacksmith-ui/forms. Usage: /new-form-field FieldName
 ---
 
-Create a new form field named `Form$ARGUMENTS` in the `@flatui/forms` package.
+Create a new form field named `Form$ARGUMENTS` in the `@blacksmith-ui/forms` package.
 
 ## Steps
 
@@ -11,7 +11,7 @@ Create a new form field named `Form$ARGUMENTS` in the `@flatui/forms` package.
 
 2. **Create field component** (`form-<kebab-case-name>.tsx`):
    - Import `FieldWrapper` and `BaseFieldProps` from `../shared`
-   - Import the underlying UI component from `@flatui/react`
+   - Import the underlying UI component from `@blacksmith-ui/react`
    - Define `Form$ARGUMENTSProps` extending `BaseFieldProps` with field-specific props
    - Use `FieldWrapper` with a `render` prop that passes `field` to the UI component
 
@@ -34,7 +34,7 @@ Create a new form field named `Form$ARGUMENTS` in the `@flatui/forms` package.
 ```tsx
 import * as React from 'react'
 import { type FieldPath, type FieldValues } from 'react-hook-form'
-import { ComponentName } from '@flatui/react'
+import { ComponentName } from '@blacksmith-ui/react'
 import { FieldWrapper } from '../shared'
 import type { BaseFieldProps } from '../shared'
 

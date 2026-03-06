@@ -1,7 +1,7 @@
 {
-  "name": "@forge-ui/forms",
+  "name": "@blacksmith-ui/forms",
   "version": "0.1.0",
-  "description": "Smart form components with Zod validation, react-hook-form integration, and React Query hooks — built on @forge-ui/react",
+  "description": "Smart form components with Zod validation, react-hook-form integration, and React Query hooks — built on @blacksmith-ui/react",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/types/index.d.ts",
@@ -31,7 +31,7 @@
     "prepublishOnly": "rollup -c rollup.config.mjs && tsc --project tsconfig.build.json --emitDeclarationOnly"
   },
   "peerDependencies": {
-    "@forge-ui/react": "^0.1.0",
+    "@blacksmith-ui/react": "^0.1.0",
     "react": "^18.0.0 || ^19.0.0",
     "react-dom": "^18.0.0 || ^19.0.0",
     "tailwindcss": "^3.3.0"
@@ -66,7 +66,7 @@
     "tslib": "^2.8.0",
     "typescript": "^5.7.0",
     "vitest": "^2.1.0",
-    "@forge-ui/react": "^0.1.0"
+    "@blacksmith-ui/react": "^0.1.0"
   },
   "dependencies": {
     "@tanstack/react-query": "^5.0.0",

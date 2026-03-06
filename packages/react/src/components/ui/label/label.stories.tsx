@@ -22,7 +22,7 @@ export const Default: Story = {
   parameters: {
     docs: {
       source: {
-        code: `import { Label } from '@forge-ui/react'
+        code: `import { Label } from '@blacksmith-ui/react'
 
 <Label htmlFor="email">Your email address</Label>`,
       },

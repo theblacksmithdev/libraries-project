@@ -48,7 +48,7 @@ export const Default: Story = {
   MenubarItem,
   MenubarSeparator,
   MenubarShortcut,
-} from '@forge-ui/react'
+} from '@blacksmith-ui/react'
 
 <Menubar>
   <MenubarMenu>

@@ -26,7 +26,7 @@ export const Default: Story = {
   parameters: {
     docs: {
       source: {
-        code: `import { Box } from '@forge-ui/react'
+        code: `import { Box } from '@blacksmith-ui/react'
 
 <Box p="md" bg="primary" color="primary-foreground" rounded="lg" shadow="md">
   Styled with props, not className

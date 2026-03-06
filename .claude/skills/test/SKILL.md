@@ -10,21 +10,21 @@ Argument: `$ARGUMENTS`
 ## Rules
 
 - If argument is empty or `all`, run tests for all 3 packages in order
-- If argument is `react` or `flatui`, test `@flatui/react`
-- If argument is `forms`, test `@flatui/forms`
-- If argument is `auth-ui` or `auth`, test `@flatui/auth-ui`
+- If argument is `react`, test `@blacksmith-ui/react`
+- If argument is `forms`, test `@blacksmith-ui/forms`
+- If argument is `auth-ui` or `auth`, test `@blacksmith-ui/auth`
 - Use `source ~/.nvm/nvm.sh && nvm use 20` before running commands
 
 ## Commands
 
 ```bash
 # Single package
-yarn workspace @flatui/react test
-yarn workspace @flatui/forms test
-yarn workspace @flatui/auth-ui test
+yarn workspace @blacksmith-ui/react test
+yarn workspace @blacksmith-ui/forms test
+yarn workspace @blacksmith-ui/auth test
 
 # All
-yarn workspace @flatui/react test && yarn workspace @flatui/forms test && yarn workspace @flatui/auth-ui test
+yarn workspace @blacksmith-ui/react test && yarn workspace @blacksmith-ui/forms test && yarn workspace @blacksmith-ui/auth test
 ```
 
 ## On Failure

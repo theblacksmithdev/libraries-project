@@ -28,7 +28,7 @@ export const Default: Story = {
   parameters: {
     docs: {
       source: {
-        code: `import { Container } from '@forge-ui/react'\n\n<Container>\n  Content goes here\n</Container>`,
+        code: `import { Container } from '@blacksmith-ui/react'\n\n<Container>\n  Content goes here\n</Container>`,
       },
     },
   },

@@ -35,7 +35,7 @@ export const Default: Story = {
   parameters: {
     docs: {
       source: {
-        code: `import { Calendar } from '@forge-ui/react'
+        code: `import { Calendar } from '@blacksmith-ui/react'
 
 const [date, setDate] = React.useState<Date | undefined>(new Date())
 

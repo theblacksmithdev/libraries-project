@@ -29,7 +29,7 @@ export const Default: Story = {
   parameters: {
     docs: {
       source: {
-        code: `import { Flex, Box } from '@forge-ui/react'
+        code: `import { Flex, Box } from '@blacksmith-ui/react'
 
 <Flex align="center" gap="md" p="md">
   <Box p="sm" bg="primary" color="primary-foreground" rounded="md">Item 1</Box>

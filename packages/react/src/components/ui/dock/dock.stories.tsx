@@ -41,7 +41,7 @@ export const Default: Story = {
   parameters: {
     docs: {
       source: {
-        code: `import { Dock } from '@forge-ui/react'\nimport { Home, Search, Mail } from 'lucide-react'\n\n<Dock items={[\n  { icon: <Home />, label: 'Home', active: true, onClick: () => {} },\n  { icon: <Search />, label: 'Search', onClick: () => {} },\n  { icon: <Mail />, label: 'Mail', onClick: () => {} },\n]} />`,
+        code: `import { Dock } from '@blacksmith-ui/react'\nimport { Home, Search, Mail } from 'lucide-react'\n\n<Dock items={[\n  { icon: <Home />, label: 'Home', active: true, onClick: () => {} },\n  { icon: <Search />, label: 'Search', onClick: () => {} },\n  { icon: <Mail />, label: 'Mail', onClick: () => {} },\n]} />`,
       },
     },
   },
