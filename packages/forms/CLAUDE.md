@@ -1,6 +1,6 @@
-# @flatui/forms
+# @forge-ui/forms
 
-Smart form components with Zod validation, react-hook-form integration, and React Query hooks. Depends on `@flatui/react`.
+Smart form components with Zod validation, react-hook-form integration, and React Query hooks. Depends on `@forge-ui/react`.
 
 ## Key Directories
 
@@ -31,9 +31,9 @@ src/
 ## Commands
 
 ```bash
-yarn workspace @flatui/forms build
-yarn workspace @flatui/forms test
-yarn workspace @flatui/forms storybook    # port 6008
+yarn workspace @forge-ui/forms build
+yarn workspace @forge-ui/forms test
+yarn workspace @forge-ui/forms storybook    # port 6008
 ```
 
 ## Form Component API

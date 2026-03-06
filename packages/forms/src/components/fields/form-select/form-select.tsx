@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { type FieldPath, type FieldValues } from 'react-hook-form'
-import { Select } from '@flatui/react'
+import { Select } from '@forge-ui/react'
 import { FieldWrapper } from '../shared'
 import type { BaseFieldProps } from '../shared'
 
@@ -17,7 +17,7 @@ export interface SelectGroupDef {
 
 export type SelectOptionOrGroup = SelectOptionDef | SelectGroupDef
 
-// The @flatui/react simple Select accepts `options` at runtime but its type
+// The @forge-ui/react simple Select accepts `options` at runtime but its type
 // declarations may not include the simple variant. Cast to bridge the gap.
 const SimpleSelect = Select as React.ComponentType<{
   options: SelectOptionOrGroup[]

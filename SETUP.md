@@ -1,6 +1,6 @@
-# FlatUI — Project Setup & Developer Guide
+# ForgeUI — Project Setup & Developer Guide
 
-Complete setup guide for the FlatUI component library monorepo, including tooling, Claude Code integration, and AI-assisted development workflows.
+Complete setup guide for the ForgeUI component library monorepo, including tooling, Claude Code integration, and AI-assisted development workflows.
 
 ---
 
@@ -113,15 +113,15 @@ libraries-project/
 │           ├── scripts/         # Python search engine
 │           └── data/            # 12 CSV databases
 └── packages/
-    ├── flatui/                  # @flatui/react — core primitives
+    ├── react/                   # @forge-ui/react — core primitives
     │   ├── CLAUDE.md
     │   ├── src/components/ui/   # 60+ UI components
     │   └── ...
-    ├── forms/                   # @flatui/forms — form components
+    ├── forms/                   # @forge-ui/forms — form components
     │   ├── CLAUDE.md
     │   ├── src/components/      # Form, FormInput, 14+ field types
     │   └── ...
-    └── auth-ui/                 # @flatui/auth-ui — auth flows
+    └── auth-ui/                 # @forge-ui/auth — auth flows
         ├── CLAUDE.md
         ├── src/components/      # Login, Register, Forgot/Reset Password
         └── ...
@@ -134,27 +134,27 @@ libraries-project/
 ### Dependency Graph
 
 ```
-@flatui/react       ← no internal dependencies (core)
+@forge-ui/react       ← no internal dependencies (core)
      ↑
-@flatui/forms        ← depends on @flatui/react
+@forge-ui/forms        ← depends on @forge-ui/react
      ↑
-@flatui/auth-ui      ← depends on @flatui/react + @flatui/forms
+@forge-ui/auth      ← depends on @forge-ui/react + @forge-ui/forms
 ```
 
 **Build order must follow this graph.** Always build upstream packages first.
 
-### @flatui/react (Core)
+### @forge-ui/react (Core)
 
 | | |
 |---|---|
-| **Path** | `packages/flatui` |
+| **Path** | `packages/react` |
 | **Description** | UI primitives — Button, Card, Alert, Input, Dialog, Tabs, etc. |
 | **Built on** | Radix UI + Tailwind CSS + class-variance-authority |
 | **Exports** | 60+ components, ThemeProvider, presets |
 | **Tests** | 514 across 83 test files |
 | **Stories** | 50+ Storybook stories |
 
-### @flatui/forms (Forms)
+### @forge-ui/forms (Forms)
 
 | | |
 |---|---|
@@ -164,13 +164,13 @@ libraries-project/
 | **Exports** | Form, 17 field components (FormInput, FormSelect, FormCheckbox, etc.), hooks |
 | **Tests** | 48 across 20 test files |
 
-### @flatui/auth-ui (Auth)
+### @forge-ui/auth (Auth)
 
 | | |
 |---|---|
 | **Path** | `packages/auth-ui` |
 | **Description** | Authentication flows — Login, Register, Forgot/Reset Password, Social Login |
-| **Built on** | @flatui/react + @flatui/forms + Zod schemas |
+| **Built on** | @forge-ui/react + @forge-ui/forms + Zod schemas |
 | **Exports** | 5 auth components + types |
 | **Tests** | 38 across 6 test files |
 
@@ -190,12 +190,12 @@ libraries-project/
 
 | Command | Package |
 |---------|---------|
-| `yarn workspace @flatui/react build` | Build core |
-| `yarn workspace @flatui/react test` | Test core |
-| `yarn workspace @flatui/forms build` | Build forms |
-| `yarn workspace @flatui/forms test` | Test forms |
-| `yarn workspace @flatui/auth-ui build` | Build auth-ui |
-| `yarn workspace @flatui/auth-ui test` | Test auth-ui |
+| `yarn workspace @forge-ui/react build` | Build core |
+| `yarn workspace @forge-ui/react test` | Test core |
+| `yarn workspace @forge-ui/forms build` | Build forms |
+| `yarn workspace @forge-ui/forms test` | Test forms |
+| `yarn workspace @forge-ui/auth build` | Build auth-ui |
+| `yarn workspace @forge-ui/auth test` | Test auth-ui |
 
 ### Build Pipeline (per package)
 
@@ -225,9 +225,9 @@ Each package has its own Storybook instance on a dedicated port:
 
 | Package | Port | Command |
 |---------|------|---------|
-| @flatui/react | 6006 | `yarn workspace @flatui/react storybook` |
-| @flatui/auth-ui | 6007 | `yarn workspace @flatui/auth-ui storybook` |
-| @flatui/forms | 6008 | `yarn workspace @flatui/forms storybook` |
+| @forge-ui/react | 6006 | `yarn workspace @forge-ui/react storybook` |
+| @forge-ui/auth | 6007 | `yarn workspace @forge-ui/auth storybook` |
+| @forge-ui/forms | 6008 | `yarn workspace @forge-ui/forms storybook` |
 
 All Storybook instances include:
 - Auto-docs generation via `react-docgen-typescript`
@@ -284,9 +284,9 @@ Claude Code reads these on every session start for project context.
 | File | Scope | Contents |
 |------|-------|---------|
 | `CLAUDE.md` (root) | Whole project | Dependency graph, all commands, build pipeline, testing patterns, 6 documented gotchas |
-| `packages/flatui/CLAUDE.md` | @flatui/react | Directory structure, component patterns, theme system, exports catalog |
-| `packages/forms/CLAUDE.md` | @flatui/forms | Form API with code examples, FieldWrapper architecture, async testing pattern |
-| `packages/auth-ui/CLAUDE.md` | @flatui/auth-ui | Component pattern, props convention, Tailwind content config, testing notes |
+| `packages/react/CLAUDE.md` | @forge-ui/react | Directory structure, component patterns, theme system, exports catalog |
+| `packages/forms/CLAUDE.md` | @forge-ui/forms | Form API with code examples, FieldWrapper architecture, async testing pattern |
+| `packages/auth-ui/CLAUDE.md` | @forge-ui/auth | Component pattern, props convention, Tailwind content config, testing notes |
 
 ### Skills (Slash Commands)
 
@@ -297,8 +297,8 @@ Claude Code reads these on every session start for project context.
 | `/build [react\|forms\|auth-ui\|all]` | Build one or all packages in dependency order. Auto-fixes failures. |
 | `/test [react\|forms\|auth-ui\|all]` | Run tests for one or all packages. Auto-fixes failures. |
 | `/check [react\|forms\|auth-ui\|all]` | Full verification — tests then build, stops on first failure. |
-| `/new-component ComponentName` | Scaffold a new component in `@flatui/react` with component + test + story + index + package export. |
-| `/new-form-field FieldName` | Scaffold a new form field in `@flatui/forms` using the FieldWrapper pattern. |
+| `/new-component ComponentName` | Scaffold a new component in `@forge-ui/react` with component + test + story + index + package export. |
+| `/new-form-field FieldName` | Scaffold a new form field in `@forge-ui/forms` using the FieldWrapper pattern. |
 | `/storybook [react\|forms\|auth-ui]` | Launch Storybook for a specific package. |
 | `/ui-ux-pro-max` | Design intelligence — see [UI/UX Pro Max section](#uiux-pro-max-skill) below. |
 
@@ -411,7 +411,7 @@ The skill searches across 12 CSV databases:
 
 ## Development Workflows
 
-### Adding a New Component to @flatui/react
+### Adding a New Component to @forge-ui/react
 
 ```
 /new-component Breadcrumb
@@ -419,15 +419,15 @@ The skill searches across 12 CSV databases:
 
 Or manually:
 
-1. Create `packages/flatui/src/components/ui/breadcrumb/`
+1. Create `packages/react/src/components/ui/breadcrumb/`
 2. Add `breadcrumb.tsx` (use `React.forwardRef` + `cn()` + `cva` for variants)
 3. Add `breadcrumb.spec.tsx` (Vitest + Testing Library)
 4. Add `breadcrumb.stories.tsx` (Storybook with controls)
 5. Add `index.ts` re-export
-6. Export from `packages/flatui/src/index.ts`
+6. Export from `packages/react/src/index.ts`
 7. Run `/check react` to verify
 
-### Adding a New Form Field to @flatui/forms
+### Adding a New Form Field to @forge-ui/forms
 
 ```
 /new-form-field PhoneInput
@@ -441,11 +441,11 @@ Or manually:
 4. Export from `packages/forms/src/index.ts`
 5. Run `/check forms` to verify
 
-### Adding a New Auth Flow to @flatui/auth-ui
+### Adding a New Auth Flow to @forge-ui/auth
 
 1. Create component in `packages/auth-ui/src/components/`
 2. Define Zod schema for form validation
-3. Use `<Form schema={...} mode="onSubmit">` + `<FormInput>` from `@flatui/forms`
+3. Use `<Form schema={...} mode="onSubmit">` + `<FormInput>` from `@forge-ui/forms`
 4. Use `<Alert variant="destructive">` for error display
 5. Use `<Button variant="link">` for navigation links
 6. Add labels to `types/auth.ts` `defaultLabels`
@@ -523,8 +523,8 @@ Downstream packages must include upstream source in their `content` array:
 // packages/auth-ui/tailwind.config.ts
 content: [
   './src/**/*.{ts,tsx}',           // own source
-  '../flatui/src/**/*.{ts,tsx}',   // @flatui/react source
-  '../forms/src/**/*.{ts,tsx}',    // @flatui/forms source
+  '../react/src/**/*.{ts,tsx}',   // @forge-ui/react source
+  '../forms/src/**/*.{ts,tsx}',    // @forge-ui/forms source
 ]
 ```
 
@@ -538,7 +538,7 @@ Without this, Tailwind won't generate utility classes used by imported component
 |---|-------|----------|
 | 1 | **Node 16 crashes** with `crypto.getRandomValues` | Use Node >= 20 (`nvm use`) |
 | 2 | **Tailwind classes missing** in downstream packages | Add upstream package paths to `content` array in `tailwind.config.ts` |
-| 3 | **`Flex`/`Box`/`Text` type errors** in auth-ui/forms | `@flatui/react` `.d.ts` files use `@/` path aliases that don't resolve cross-package. Use `<div className="flex ...">` instead |
+| 3 | **`Flex`/`Box`/`Text` type errors** in auth-ui/forms | `@forge-ui/react` `.d.ts` files use `@/` path aliases that don't resolve cross-package. Use `<div className="flex ...">` instead |
 | 4 | **Form submit assertions flaky** | react-hook-form validation is async. Wrap `onSubmit` expectations in `waitFor()` |
 | 5 | **Zod errors not found by `getByRole('alert')`** | Zod field errors render as `<FormMessage>` (`<p>` tag), not `<Alert>`. Use `findByText()` instead |
 | 6 | **`clsx`/`tailwind-merge` rollup warnings** | "Unresolved dependencies" warnings during auth-ui build are harmless — these are bundled deps |
@@ -560,12 +560,12 @@ Check that the package's `tailwind.config.ts` includes content paths for all ups
 
 ### TypeScript errors on Flex/Box/Text children
 
-Use plain `<div>` with Tailwind classes instead of `Flex`/`Box`/`Text` from `@flatui/react` in downstream packages. This is a known type declaration issue.
+Use plain `<div>` with Tailwind classes instead of `Flex`/`Box`/`Text` from `@forge-ui/react` in downstream packages. This is a known type declaration issue.
 
 ### Tests pass locally but build fails
 
-Run in order: `yarn workspace @flatui/react build` first, since downstream packages depend on its compiled output for types.
+Run in order: `yarn workspace @forge-ui/react build` first, since downstream packages depend on its compiled output for types.
 
-### "Module not found: @flatui/forms"
+### "Module not found: @forge-ui/forms"
 
 Run `yarn install --ignore-engines` from root to link workspace packages.

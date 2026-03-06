@@ -1,4 +1,4 @@
-# FlatUI
+# ForgeUI
 
 A modern React component library with Apple/Anthropic-inspired flat design, powered by Tailwind CSS and Radix UI.
 
@@ -8,20 +8,20 @@ Built as a Yarn workspaces monorepo with three composable packages — core prim
 
 | Package | Description | Version |
 |---------|-------------|---------|
-| [`@flatui/react`](./packages/flatui) | Core UI primitives — 60+ accessible components built on Radix UI | ![npm](https://img.shields.io/npm/v/@flatui/react) |
-| [`@flatui/forms`](./packages/forms) | Smart form components with react-hook-form + Zod validation | ![npm](https://img.shields.io/npm/v/@flatui/forms) |
-| [`@flatui/auth-ui`](./packages/auth-ui) | Pre-built authentication flows — login, register, forgot/reset password | ![npm](https://img.shields.io/npm/v/@flatui/auth-ui) |
+| [`@forge-ui/react`](./packages/react) | Core UI primitives — 60+ accessible components built on Radix UI | ![npm](https://img.shields.io/npm/v/@forge-ui/react) |
+| [`@forge-ui/forms`](./packages/forms) | Smart form components with react-hook-form + Zod validation | ![npm](https://img.shields.io/npm/v/@forge-ui/forms) |
+| [`@forge-ui/auth`](./packages/auth-ui) | Pre-built authentication flows — login, register, forgot/reset password | ![npm](https://img.shields.io/npm/v/@forge-ui/auth) |
 
 ### Dependency Graph
 
 ```
-@flatui/react        (no internal deps)
+@forge-ui/react        (no internal deps)
     ^
     |
-@flatui/forms        (peer dep: @flatui/react)
+@forge-ui/forms        (peer dep: @forge-ui/react)
     ^
     |
-@flatui/auth-ui      (peer dep: @flatui/react, dep: @flatui/forms)
+@forge-ui/auth      (peer dep: @forge-ui/react, dep: @forge-ui/forms)
 ```
 
 ## Features
@@ -41,13 +41,13 @@ Built as a Yarn workspaces monorepo with three composable packages — core prim
 
 ```bash
 # Core components (required)
-npm install @flatui/react
+npm install @forge-ui/react
 
 # Form components (optional)
-npm install @flatui/forms
+npm install @forge-ui/forms
 
 # Auth components (optional)
-npm install @flatui/auth-ui
+npm install @forge-ui/auth
 ```
 
 #### Peer Dependencies
@@ -58,7 +58,7 @@ Each package requires these peer dependencies:
 npm install react react-dom tailwindcss
 ```
 
-`@flatui/react` also requires:
+`@forge-ui/react` also requires:
 ```bash
 npm install lucide-react
 ```
@@ -67,15 +67,15 @@ npm install lucide-react
 
 #### 1. Import the stylesheet
 
-Import the FlatUI CSS in your app's entry point:
+Import the ForgeUI CSS in your app's entry point:
 
 ```tsx
-import '@flatui/react/styles.css';
+import '@forge-ui/react/styles.css';
 ```
 
 #### 2. Configure Tailwind
 
-Add the FlatUI source files to your Tailwind `content` array so utility classes are generated:
+Add the ForgeUI source files to your Tailwind `content` array so utility classes are generated:
 
 ```js
 // tailwind.config.js
@@ -83,11 +83,11 @@ module.exports = {
   darkMode: ['class'],
   content: [
     './src/**/*.{ts,tsx}',
-    './node_modules/@flatui/react/dist/**/*.{js,mjs}',
-    // If using @flatui/forms:
-    './node_modules/@flatui/forms/dist/**/*.{js,mjs}',
-    // If using @flatui/auth-ui:
-    './node_modules/@flatui/auth-ui/dist/**/*.{js,mjs}',
+    './node_modules/@forge-ui/react/dist/**/*.{js,mjs}',
+    // If using @forge-ui/forms:
+    './node_modules/@forge-ui/forms/dist/**/*.{js,mjs}',
+    // If using @forge-ui/auth:
+    './node_modules/@forge-ui/auth/dist/**/*.{js,mjs}',
   ],
   theme: {
     extend: {
@@ -135,7 +135,7 @@ module.exports = {
 #### 3. Use components
 
 ```tsx
-import { Button, Card, Input, Alert } from '@flatui/react';
+import { Button, Card, Input, Alert } from '@forge-ui/react';
 
 function App() {
   return (
@@ -150,7 +150,7 @@ function App() {
 
 ## Component Reference
 
-### @flatui/react
+### @forge-ui/react
 
 <details>
 <summary><strong>Layout</strong></summary>
@@ -303,9 +303,9 @@ function App() {
 
 </details>
 
-### @flatui/forms
+### @forge-ui/forms
 
-Extends `@flatui/react` with form-aware components powered by react-hook-form and Zod.
+Extends `@forge-ui/react` with form-aware components powered by react-hook-form and Zod.
 
 | Component | Description |
 |-----------|-------------|
@@ -339,7 +339,7 @@ Extends `@flatui/react` with form-aware components powered by react-hook-form an
 **Usage:**
 
 ```tsx
-import { Form, FormInput, FormSelect } from '@flatui/forms';
+import { Form, FormInput, FormSelect } from '@forge-ui/forms';
 import { z } from 'zod';
 
 const schema = z.object({
@@ -365,7 +365,7 @@ function CreateUserForm() {
 }
 ```
 
-### @flatui/auth-ui
+### @forge-ui/auth
 
 Drop-in authentication UI with configurable providers and adapters.
 
@@ -386,8 +386,8 @@ import {
   AuthProvider,
   LoginForm,
   createMockAdapter,
-} from '@flatui/auth-ui';
-import '@flatui/react/styles.css';
+} from '@forge-ui/auth';
+import '@forge-ui/react/styles.css';
 
 const adapter = createMockAdapter();
 
@@ -405,7 +405,7 @@ function App() {
 
 ## Theming
 
-FlatUI uses HSL CSS variables for theming. Override them in your own CSS to customize the look:
+ForgeUI uses HSL CSS variables for theming. Override them in your own CSS to customize the look:
 
 ```css
 :root {
@@ -438,7 +438,7 @@ FlatUI uses HSL CSS variables for theming. Override them in your own CSS to cust
 Dark mode is toggled via the `.dark` class on `<html>`:
 
 ```tsx
-import { ThemeProvider } from '@flatui/react';
+import { ThemeProvider } from '@forge-ui/react';
 
 function App() {
   return (
@@ -479,28 +479,28 @@ yarn test:all
 
 | Command | Description |
 |---------|-------------|
-| `yarn build:all` | Build all packages (flatui -> forms -> auth-ui) |
+| `yarn build:all` | Build all packages (react -> forms -> auth) |
 | `yarn test:all` | Run all test suites |
 | `yarn lint:all` | Lint all packages |
-| `yarn storybook` | Start @flatui/react Storybook (port 6006) |
-| `yarn storybook:forms` | Start @flatui/forms Storybook (port 6008) |
-| `yarn storybook:auth-ui` | Start @flatui/auth-ui Storybook (port 6007) |
+| `yarn storybook` | Start @forge-ui/react Storybook (port 6006) |
+| `yarn storybook:forms` | Start @forge-ui/forms Storybook (port 6008) |
+| `yarn storybook:auth-ui` | Start @forge-ui/auth Storybook (port 6007) |
 
 ### Per-Package Commands
 
 ```bash
 # Build a single package
-yarn workspace @flatui/react build
-yarn workspace @flatui/forms build
-yarn workspace @flatui/auth-ui build
+yarn workspace @forge-ui/react build
+yarn workspace @forge-ui/forms build
+yarn workspace @forge-ui/auth build
 
 # Test a single package
-yarn workspace @flatui/react test
-yarn workspace @flatui/forms test
-yarn workspace @flatui/auth-ui test
+yarn workspace @forge-ui/react test
+yarn workspace @forge-ui/forms test
+yarn workspace @forge-ui/auth test
 
 # Test with coverage
-yarn workspace @flatui/react test:coverage
+yarn workspace @forge-ui/react test:coverage
 ```
 
 ### Build Pipeline
@@ -515,7 +515,7 @@ Each package uses Rollup + TypeScript:
 ```
 libraries-project/
 ├── packages/
-│   ├── flatui/          # @flatui/react — Core UI primitives
+│   ├── react/           # @forge-ui/react — Core UI primitives
 │   │   ├── src/
 │   │   │   ├── components/ui/   # All component source
 │   │   │   ├── hooks/           # Custom hooks
@@ -524,13 +524,13 @@ libraries-project/
 │   │   │   └── index.ts         # Public API
 │   │   ├── rollup.config.mjs
 │   │   └── tailwind.config.ts
-│   ├── forms/           # @flatui/forms — Form components
+│   ├── forms/           # @forge-ui/forms — Form components
 │   │   ├── src/
 │   │   │   ├── components/      # Form field components
 │   │   │   ├── hooks/           # useFormMutation, useFormQuery
 │   │   │   └── index.ts
 │   │   └── rollup.config.mjs
-│   └── auth-ui/         # @flatui/auth-ui — Auth flows
+│   └── auth-ui/         # @forge-ui/auth — Auth flows
 │       ├── src/
 │       │   ├── components/      # Login, Register, etc.
 │       │   ├── adapters/        # Auth adapters (mock, firebase)
@@ -550,10 +550,10 @@ Tests use **Vitest** with **jsdom**, **@testing-library/react**, and **@testing-
 yarn test:all
 
 # Watch mode (single package)
-yarn workspace @flatui/react test:watch
+yarn workspace @forge-ui/react test:watch
 
 # Coverage report
-yarn workspace @flatui/react test:coverage
+yarn workspace @forge-ui/react test:coverage
 ```
 
 Coverage thresholds are set at 80% for branches, functions, lines, and statements.
@@ -567,15 +567,15 @@ All packages are configured for npm publication with public access.
 yarn build:all
 
 # Verify package contents
-cd packages/flatui && npm pack --dry-run
+cd packages/react && npm pack --dry-run
 
 # Login to npm
 npm login
 
 # Publish in dependency order
-yarn workspace @flatui/react publish --access public
-yarn workspace @flatui/forms publish --access public
-yarn workspace @flatui/auth-ui publish --access public
+yarn workspace @forge-ui/react publish --access public
+yarn workspace @forge-ui/forms publish --access public
+yarn workspace @forge-ui/auth publish --access public
 ```
 
 Each package has a `prepublishOnly` script that automatically runs the build before publishing.

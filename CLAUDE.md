@@ -1,26 +1,26 @@
-# FlatUI Component Library
+# ForgeUI Component Library
 
 Yarn workspaces monorepo with 3 packages. **Requires Node >= 20** (use `nvm use` — `.nvmrc` is set to 20).
 
 ## Package Dependency Graph
 
 ```
-@flatui/react  (core primitives, no internal deps)
+@forge-ui/react  (core primitives, no internal deps)
     ↑
-@flatui/forms  (depends on @flatui/react)
+@forge-ui/forms  (depends on @forge-ui/react)
     ↑
-@flatui/auth-ui (depends on @flatui/react + @flatui/forms)
+@forge-ui/auth (depends on @forge-ui/react + @forge-ui/forms)
 ```
 
-Build order must follow this graph: `flatui → forms → auth-ui`.
+Build order must follow this graph: `react → forms → auth`.
 
 ## Packages
 
 | Package | Path | Port | Description |
 |---------|------|------|-------------|
-| `@flatui/react` | `packages/flatui` | 6006 | Core UI primitives (Button, Card, Alert, Input, etc.) built on Radix UI + Tailwind |
-| `@flatui/forms` | `packages/forms` | 6008 | Form components (Form, FormInput, etc.) with react-hook-form + Zod validation |
-| `@flatui/auth-ui` | `packages/auth-ui` | 6007 | Auth flows (Login, Register, Forgot/Reset Password) built on forms + react primitives |
+| `@forge-ui/react` | `packages/react` | 6006 | Core UI primitives (Button, Card, Alert, Input, etc.) built on Radix UI + Tailwind |
+| `@forge-ui/forms` | `packages/forms` | 6008 | Form components (Form, FormInput, etc.) with react-hook-form + Zod validation |
+| `@forge-ui/auth` | `packages/auth-ui` | 6007 | Auth flows (Login, Register, Forgot/Reset Password) built on forms + react primitives |
 
 ## Common Commands
 
@@ -32,17 +32,17 @@ yarn build:all
 yarn test:all
 
 # Single package
-yarn workspace @flatui/react build
-yarn workspace @flatui/react test
-yarn workspace @flatui/forms build
-yarn workspace @flatui/forms test
-yarn workspace @flatui/auth-ui build
-yarn workspace @flatui/auth-ui test
+yarn workspace @forge-ui/react build
+yarn workspace @forge-ui/react test
+yarn workspace @forge-ui/forms build
+yarn workspace @forge-ui/forms test
+yarn workspace @forge-ui/auth build
+yarn workspace @forge-ui/auth test
 
 # Storybook
-yarn workspace @flatui/react storybook      # port 6006
-yarn workspace @flatui/forms storybook      # port 6008
-yarn workspace @flatui/auth-ui storybook    # port 6007
+yarn workspace @forge-ui/react storybook      # port 6006
+yarn workspace @forge-ui/forms storybook      # port 6008
+yarn workspace @forge-ui/auth storybook    # port 6007
 ```
 
 ## Build Pipeline (per package)
@@ -71,11 +71,11 @@ Each package uses: `rollup -c rollup.config.mjs && tsc --project tsconfig.build.
 
 1. **Node version**: Must use Node >= 20. Node 16 fails with `crypto.getRandomValues is not a function`. Run `nvm use` before any command.
 
-2. **Tailwind content paths**: Downstream packages must include upstream package source in their Tailwind `content` array, otherwise classes used by imported components won't be generated. Example: auth-ui's config includes `../flatui/src/**/*.{ts,tsx}` and `../forms/src/**/*.{ts,tsx}`.
+2. **Tailwind content paths**: Downstream packages must include upstream package source in their Tailwind `content` array, otherwise classes used by imported components won't be generated. Example: auth-ui's config includes `../react/src/**/*.{ts,tsx}` and `../forms/src/**/*.{ts,tsx}`.
 
-3. **`@flatui/react` type declarations use `@/` path aliases** in `.d.ts` files. This causes type errors when consuming packages try to resolve `Box`, `Flex`, `Text` (whose types depend on `@/lib/style-props` or `@/components/ui/box`). Workaround: use plain `<div className="flex ...">` instead of `<Flex>` in downstream packages.
+3. **`@forge-ui/react` type declarations use `@/` path aliases** in `.d.ts` files. This causes type errors when consuming packages try to resolve `Box`, `Flex`, `Text` (whose types depend on `@/lib/style-props` or `@/components/ui/box`). Workaround: use plain `<div className="flex ...">` instead of `<Flex>` in downstream packages.
 
-4. **Form submission in tests is async**: When using `<Form>` from `@flatui/forms`, wrap `onSubmit` assertions in `waitFor()` because react-hook-form validation is asynchronous.
+4. **Form submission in tests is async**: When using `<Form>` from `@forge-ui/forms`, wrap `onSubmit` assertions in `waitFor()` because react-hook-form validation is asynchronous.
 
 5. **Zod validation errors render as `<FormMessage>`** (a `<p>` element), not as `<Alert role="alert">`. In tests, use `findByText()` for Zod field errors, `getByRole('alert')` for external error props displayed via `<Alert>`.
 

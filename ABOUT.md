@@ -1,4 +1,4 @@
-**FlatUI**
+**ForgeUI**
 
 React Component Library
 
@@ -12,11 +12,11 @@ Version 1.0 · March 2026
 
 # Executive Summary
 
-FlatUI is an open-source React component library that brings Anthropic's warm minimalist design language to web applications. It provides 15 production-ready, fully accessible UI components styled entirely with Tailwind CSS utility classes, giving frontend developers a fast, elegant, and deeply customizable foundation for building modern interfaces.
+ForgeUI is an open-source React component library that brings Anthropic's warm minimalist design language to web applications. It provides 15 production-ready, fully accessible UI components styled entirely with Tailwind CSS utility classes, giving frontend developers a fast, elegant, and deeply customizable foundation for building modern interfaces.
 
-Inspired by the design philosophy behind claude.ai and anthropic.com — warm neutrals, terracotta accents, whisper-quiet shadows, and purposeful restraint — FlatUI rejects the cold, clinical aesthetic typical of tech UI libraries in favor of something that feels human, approachable, and refined.
+Inspired by the design philosophy behind claude.ai and anthropic.com — warm neutrals, terracotta accents, whisper-quiet shadows, and purposeful restraint — ForgeUI rejects the cold, clinical aesthetic typical of tech UI libraries in favor of something that feels human, approachable, and refined.
 
-Unlike traditional component libraries that bundle opinionated CSS or require complex build configurations, FlatUI works directly with Tailwind's existing utility-first workflow. Every component accepts a className prop, making it trivial to override colors, spacing, borders, and animations using the Tailwind classes developers already know.
+Unlike traditional component libraries that bundle opinionated CSS or require complex build configurations, ForgeUI works directly with Tailwind's existing utility-first workflow. Every component accepts a className prop, making it trivial to override colors, spacing, borders, and animations using the Tailwind classes developers already know.
 
 The library targets teams and solo developers who want a cohesive design system that looks refined out of the box but bends to any brand or aesthetic through simple class overrides and a centralized theme context.
 
@@ -24,7 +24,7 @@ The library targets teams and solo developers who want a cohesive design system 
 
 |                     |                                                        |
 |---------------------|--------------------------------------------------------|
-| **Project Name**    | FlatUI — React Component Library                       |
+| **Project Name**    | ForgeUI — React Component Library                       |
 | **Version**         | 1.0.0                                                  |
 | **License**         | MIT (open source)                                      |
 | **Framework**       | React 18+                                              |
@@ -44,15 +44,15 @@ Frontend developers face a recurring tension when choosing UI libraries:
 
 - Tailwind-based libraries exist but many default to generic aesthetics—cold gray-on-white layouts, overused font stacks, and cookie-cutter component patterns that make every project look the same.
 
-FlatUI occupies the sweet spot: a library that ships with a distinctive, warm Anthropic-inspired design language while being trivially customizable through the Tailwind classes developers already use every day. No new APIs to learn. No CSS-in-JS overhead. No fighting the framework.
+ForgeUI occupies the sweet spot: a library that ships with a distinctive, warm Anthropic-inspired design language while being trivially customizable through the Tailwind classes developers already use every day. No new APIs to learn. No CSS-in-JS overhead. No fighting the framework.
 
 # Design Philosophy
 
 ## Warm Minimalism
 
-FlatUI's visual language is inspired by Anthropic's design system: warm surfaces, generous whitespace, whisper-quiet borders, and restrained use of color. The design is intentionally opinionated—it should look polished and cohesive out of the box—while remaining flexible enough to adapt to any brand.
+ForgeUI's visual language is inspired by Anthropic's design system: warm surfaces, generous whitespace, whisper-quiet borders, and restrained use of color. The design is intentionally opinionated—it should look polished and cohesive out of the box—while remaining flexible enough to adapt to any brand.
 
-The core philosophy is that technology should feel human. Where most UI libraries default to cold whites and saturated blues, FlatUI uses warm cream backgrounds, terracotta accents, and soft neutral tones that make interfaces feel approachable rather than clinical.
+The core philosophy is that technology should feel human. Where most UI libraries default to cold whites and saturated blues, ForgeUI uses warm cream backgrounds, terracotta accents, and soft neutral tones that make interfaces feel approachable rather than clinical.
 
 Key visual principles include:
 
@@ -100,7 +100,7 @@ Key visual principles include:
 
 ## Tailwind-Native Architecture
 
-Every style in FlatUI is expressed as a Tailwind utility class. There is no CSS-in-JS runtime, no separate stylesheet to import, and no build-time CSS extraction step. This means:
+Every style in ForgeUI is expressed as a Tailwind utility class. There is no CSS-in-JS runtime, no separate stylesheet to import, and no build-time CSS extraction step. This means:
 
 - The library integrates into any existing Tailwind project with zero configuration changes
 
@@ -114,7 +114,7 @@ Every style in FlatUI is expressed as a Tailwind utility class. There is no CSS-
 
 ## Theme Context System
 
-For app-wide customization, FlatUI provides a React context-based theme system. The theme object contains only Tailwind class strings—no hex codes, no design tokens to translate. Changing your primary color from terracotta to indigo is a one-line change:
+For app-wide customization, ForgeUI provides a React context-based theme system. The theme object contains only Tailwind class strings—no hex codes, no design tokens to translate. Changing your primary color from terracotta to indigo is a one-line change:
 
 primary.base: **"bg-indigo-600"**
 
@@ -124,7 +124,7 @@ The default theme ships with Anthropic's warm palette pre-configured — warm cr
 
 # Component Library
 
-FlatUI ships with 15 components organized into four categories. Every component is a pure functional React component with no required props (sensible defaults for everything), full keyboard accessibility, and className override support.
+ForgeUI ships with 15 components organized into four categories. Every component is a pure functional React component with no required props (sensible defaults for everything), full keyboard accessibility, and className override support.
 
 ## Form Components
 
@@ -171,7 +171,7 @@ FlatUI ships with 15 components organized into four categories. Every component 
 
 Getting started requires three steps:
 
-1.  Install the package: npm install flatui-react
+1.  Install the package: npm install @forge-ui/react
 
 2.  Add the library to your tailwind.config.js content array so Tailwind scans its classes
 
@@ -205,7 +205,7 @@ The library ships with a Storybook-powered documentation site that serves as bot
 
 # Tailwind CSS Integration
 
-FlatUI is designed from the ground up to feel like a natural extension of Tailwind CSS, not a separate system layered on top of it.
+ForgeUI is designed from the ground up to feel like a natural extension of Tailwind CSS, not a separate system layered on top of it.
 
 ## How Customization Works
 
@@ -221,7 +221,7 @@ Every component accepts className. Because Tailwind utilities are atomic and las
 
 **3. Tailwind Config (project-wide)**
 
-Since FlatUI uses standard Tailwind classes, any changes to your tailwind.config.js (custom colors, extended spacing, custom fonts) automatically flow into the components. There is no separate design token layer to keep in sync.
+Since ForgeUI uses standard Tailwind classes, any changes to your tailwind.config.js (custom colors, extended spacing, custom fonts) automatically flow into the components. There is no separate design token layer to keep in sync.
 
 ## Tailwind Class Reference
 
@@ -249,7 +249,7 @@ The library uses a focused subset of Tailwind utilities to keep the API surface 
 
 - AI-powered applications that want to echo the approachable aesthetic of modern AI products
 
-- Design system bootstrapping—teams can fork FlatUI's theme and components as a starting point for their own system
+- Design system bootstrapping—teams can fork ForgeUI's theme and components as a starting point for their own system
 
 - Freelance projects where consistency across different clients' brands is achieved through theme swaps rather than rewrites
 
@@ -308,10 +308,10 @@ The library uses a focused subset of Tailwind utilities to keep the API surface 
 
 # Summary
 
-FlatUI makes Tailwind CSS component development faster and more beautiful. It gives developers a refined, Anthropic-inspired warm minimalist design language that works out of the box, while respecting the Tailwind philosophy of utility-first customization. No new abstractions to learn. No build tools to configure. No CSS specificity to fight.
+ForgeUI makes Tailwind CSS component development faster and more beautiful. It gives developers a refined, Anthropic-inspired warm minimalist design language that works out of the box, while respecting the Tailwind philosophy of utility-first customization. No new abstractions to learn. No build tools to configure. No CSS specificity to fight.
 
 Warm surfaces. Terracotta accents. Whisper-quiet shadows. Technology that feels human.
 
 Import a component, use it, and customize it with the same Tailwind classes you use for everything else. That's the entire API.
 
-**FlatUI** — Warm, human React components, powered by Tailwind.
+**ForgeUI** — Warm, human React components, powered by Tailwind.

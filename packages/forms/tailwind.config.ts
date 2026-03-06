@@ -1,5 +1,5 @@
 import type { Config } from 'tailwindcss';
-import flatuiConfig from '../flatui/tailwind.config';
+import flatuiConfig from '../react/tailwind.config';
 
 const config: Config = {
   ...flatuiConfig,

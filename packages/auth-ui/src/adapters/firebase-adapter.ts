@@ -11,7 +11,7 @@ import type { AuthAdapter, AuthUser, AuthResult, SocialProvider } from '../types
  * ```ts
  * import { initializeApp } from 'firebase/app'
  * import { getAuth } from 'firebase/auth'
- * import { createFirebaseAdapter } from '@flatui/auth-ui'
+ * import { createFirebaseAdapter } from '@forge-ui/auth-ui'
  *
  * const app = initializeApp({ ... })
  * const auth = getAuth(app)

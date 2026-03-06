@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, Text } from '@flatui/react'
+import { Button, Text } from '@forge-ui/react'
 import type { SocialProvider } from '../../types/auth'
 import { cn } from '../../lib/utils'
 

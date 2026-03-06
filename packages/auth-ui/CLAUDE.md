@@ -1,6 +1,6 @@
-# @flatui/auth-ui
+# @forge-ui/auth
 
-Authentication UI components. Depends on `@flatui/react` + `@flatui/forms`.
+Authentication UI components. Depends on `@forge-ui/react` + `@forge-ui/forms`.
 
 ## Key Directories
 
@@ -22,18 +22,18 @@ src/
 ## Commands
 
 ```bash
-yarn workspace @flatui/auth-ui build
-yarn workspace @flatui/auth-ui test
-yarn workspace @flatui/auth-ui storybook    # port 6007
+yarn workspace @forge-ui/auth build
+yarn workspace @forge-ui/auth test
+yarn workspace @forge-ui/auth storybook    # port 6007
 ```
 
 ## Component Pattern
 
 Each form component:
 1. Defines a Zod schema for validation
-2. Uses `<Form schema={...} onSubmit={...} mode="onSubmit">` from `@flatui/forms`
+2. Uses `<Form schema={...} onSubmit={...} mode="onSubmit">` from `@forge-ui/forms`
 3. Uses `<FormInput name="..." label="..." />` for form fields
-4. Displays external errors via `<Alert variant="destructive">` from `@flatui/react`
+4. Displays external errors via `<Alert variant="destructive">` from `@forge-ui/react`
 5. Footer links use `<Button variant="link" size="sm">`
 6. Social provider section uses `<Divider label="...">` separator
 
@@ -52,7 +52,7 @@ Content paths include upstream packages to ensure all utility classes are genera
 ```ts
 content: [
   './src/**/*.{ts,tsx}',
-  '../flatui/src/**/*.{ts,tsx}',
+  '../react/src/**/*.{ts,tsx}',
   '../forms/src/**/*.{ts,tsx}',
 ]
 ```

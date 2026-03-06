@@ -8,7 +8,7 @@ import {
   FormControl,
   FormDescription,
   FormMessage,
-} from '@flatui/react'
+} from '@forge-ui/react'
 import { cn } from '@/lib/utils'
 import type { BaseFieldProps } from '../shared'
 

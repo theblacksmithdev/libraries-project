@@ -58,7 +58,7 @@ export default {
     'react',
     'react-dom',
     'react/jsx-runtime',
-    '@flatui/react',
+    '@forge-ui/react',
     'zod',
     'lucide-react',
     '@tanstack/react-query',

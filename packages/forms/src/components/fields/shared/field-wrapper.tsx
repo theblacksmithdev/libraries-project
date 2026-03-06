@@ -7,7 +7,7 @@ import {
   FormControl,
   FormDescription,
   FormMessage,
-} from '@flatui/react'
+} from '@forge-ui/react'
 import { cn } from '@/lib/utils'
 
 export interface FieldWrapperProps<

@@ -1,4 +1,4 @@
-// @flatui/auth-ui — Configurable authentication UI components
+// @forge-ui/auth-ui — Configurable authentication UI components
 
 // Types
 export type {
