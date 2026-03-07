@@ -1,0 +1,28 @@
+{
+  "id": "hooks/state-data/use-queue",
+  "title": "useQueue",
+  "description": "Manages a FIFO (first-in, first-out) queue state with enqueue, dequeue, and peek operations.",
+  "source": "@site/docs/hooks/state-data/use-queue.md",
+  "sourceDirName": "hooks/state-data",
+  "slug": "/hooks/state-data/use-queue",
+  "permalink": "/docs/hooks/state-data/use-queue",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/oluwatobimaxwell/libraries-project/tree/master/packages/docs/docs/hooks/state-data/use-queue.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar_label": "useQueue",
+    "title": "useQueue",
+    "description": "Manages a FIFO (first-in, first-out) queue state with enqueue, dequeue, and peek operations."
+  },
+  "sidebar": "hooksSidebar",
+  "previous": {
+    "title": "useDefault",
+    "permalink": "/docs/hooks/state-data/use-default"
+  },
+  "next": {
+    "title": "useStack",
+    "permalink": "/docs/hooks/state-data/use-stack"
+  }
+}

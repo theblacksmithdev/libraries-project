@@ -1,0 +1,28 @@
+{
+  "id": "hooks/state-data/use-default",
+  "title": "useDefault",
+  "description": "Manages state that falls back to a default value when set to null or undefined.",
+  "source": "@site/docs/hooks/state-data/use-default.md",
+  "sourceDirName": "hooks/state-data",
+  "slug": "/hooks/state-data/use-default",
+  "permalink": "/docs/hooks/state-data/use-default",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/oluwatobimaxwell/libraries-project/tree/master/packages/docs/docs/hooks/state-data/use-default.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar_label": "useDefault",
+    "title": "useDefault",
+    "description": "Manages state that falls back to a default value when set to null or undefined."
+  },
+  "sidebar": "hooksSidebar",
+  "previous": {
+    "title": "useHistoryState",
+    "permalink": "/docs/hooks/state-data/use-history-state"
+  },
+  "next": {
+    "title": "useQueue",
+    "permalink": "/docs/hooks/state-data/use-queue"
+  }
+}

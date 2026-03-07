@@ -1,0 +1,28 @@
+{
+  "id": "hooks/state-data/use-list",
+  "title": "useList",
+  "description": "Manages an array state with convenient methods for pushing, removing, updating, inserting, filtering, and clearing items.",
+  "source": "@site/docs/hooks/state-data/use-list.md",
+  "sourceDirName": "hooks/state-data",
+  "slug": "/hooks/state-data/use-list",
+  "permalink": "/docs/hooks/state-data/use-list",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/oluwatobimaxwell/libraries-project/tree/master/packages/docs/docs/hooks/state-data/use-list.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar_label": "useList",
+    "title": "useList",
+    "description": "Manages an array state with convenient methods for pushing, removing, updating, inserting, filtering, and clearing items."
+  },
+  "sidebar": "hooksSidebar",
+  "previous": {
+    "title": "useCounter",
+    "permalink": "/docs/hooks/state-data/use-counter"
+  },
+  "next": {
+    "title": "useMap",
+    "permalink": "/docs/hooks/state-data/use-map"
+  }
+}

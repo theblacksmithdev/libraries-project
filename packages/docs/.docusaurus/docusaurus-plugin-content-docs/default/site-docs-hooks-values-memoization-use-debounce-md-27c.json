@@ -1,0 +1,28 @@
+{
+  "id": "hooks/values-memoization/use-debounce",
+  "title": "useDebounce",
+  "description": "Debounces a value, only updating after a specified delay has passed since the last change.",
+  "source": "@site/docs/hooks/values-memoization/use-debounce.md",
+  "sourceDirName": "hooks/values-memoization",
+  "slug": "/hooks/values-memoization/use-debounce",
+  "permalink": "/docs/hooks/values-memoization/use-debounce",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/oluwatobimaxwell/libraries-project/tree/master/packages/docs/docs/hooks/values-memoization/use-debounce.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar_label": "useDebounce",
+    "title": "useDebounce",
+    "description": "Debounces a value, only updating after a specified delay has passed since the last change."
+  },
+  "sidebar": "hooksSidebar",
+  "previous": {
+    "title": "useUncontrolled",
+    "permalink": "/docs/hooks/state-data/use-uncontrolled"
+  },
+  "next": {
+    "title": "useDebouncedCallback",
+    "permalink": "/docs/hooks/values-memoization/use-debounced-callback"
+  }
+}

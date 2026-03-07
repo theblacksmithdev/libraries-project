@@ -1,0 +1,28 @@
+{
+  "id": "hooks/browser-apis/use-page-visibility",
+  "title": "usePageVisibility",
+  "description": "Tracks whether the current page/tab is visible to the user.",
+  "source": "@site/docs/hooks/browser-apis/use-page-visibility.md",
+  "sourceDirName": "hooks/browser-apis",
+  "slug": "/hooks/browser-apis/use-page-visibility",
+  "permalink": "/docs/hooks/browser-apis/use-page-visibility",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/oluwatobimaxwell/libraries-project/tree/master/packages/docs/docs/hooks/browser-apis/use-page-visibility.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar_label": "usePageVisibility",
+    "title": "usePageVisibility",
+    "description": "Tracks whether the current page/tab is visible to the user."
+  },
+  "sidebar": "hooksSidebar",
+  "previous": {
+    "title": "useWindowSize",
+    "permalink": "/docs/hooks/browser-apis/use-window-size"
+  },
+  "next": {
+    "title": "usePageLeave",
+    "permalink": "/docs/hooks/browser-apis/use-page-leave"
+  }
+}

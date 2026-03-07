@@ -1,0 +1,28 @@
+{
+  "id": "hooks/state-data/use-stack",
+  "title": "useStack",
+  "description": "Manages a LIFO (last-in, first-out) stack state with push, pop, and peek operations.",
+  "source": "@site/docs/hooks/state-data/use-stack.md",
+  "sourceDirName": "hooks/state-data",
+  "slug": "/hooks/state-data/use-stack",
+  "permalink": "/docs/hooks/state-data/use-stack",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/oluwatobimaxwell/libraries-project/tree/master/packages/docs/docs/hooks/state-data/use-stack.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar_label": "useStack",
+    "title": "useStack",
+    "description": "Manages a LIFO (last-in, first-out) stack state with push, pop, and peek operations."
+  },
+  "sidebar": "hooksSidebar",
+  "previous": {
+    "title": "useQueue",
+    "permalink": "/docs/hooks/state-data/use-queue"
+  },
+  "next": {
+    "title": "useLocalStorage",
+    "permalink": "/docs/hooks/state-data/use-local-storage"
+  }
+}

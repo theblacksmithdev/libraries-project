@@ -1,0 +1,28 @@
+{
+  "id": "hooks/dom-browser/use-text-selection",
+  "title": "useTextSelection",
+  "description": "Tracks the currently selected text in the document.",
+  "source": "@site/docs/hooks/dom-browser/use-text-selection.md",
+  "sourceDirName": "hooks/dom-browser",
+  "slug": "/hooks/dom-browser/use-text-selection",
+  "permalink": "/docs/hooks/dom-browser/use-text-selection",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/oluwatobimaxwell/libraries-project/tree/master/packages/docs/docs/hooks/dom-browser/use-text-selection.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar_label": "useTextSelection",
+    "title": "useTextSelection",
+    "description": "Tracks the currently selected text in the document."
+  },
+  "sidebar": "hooksSidebar",
+  "previous": {
+    "title": "useFullscreen",
+    "permalink": "/docs/hooks/dom-browser/use-fullscreen"
+  },
+  "next": {
+    "title": "useFocusWithin",
+    "permalink": "/docs/hooks/dom-browser/use-focus-within"
+  }
+}

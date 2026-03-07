@@ -1,0 +1,29 @@
+{
+  "id": "hooks/getting-started",
+  "title": "Getting Started",
+  "description": "Learn how to use @blacksmith-ui/hooks in your React projects.",
+  "source": "@site/docs/hooks/getting-started.md",
+  "sourceDirName": "hooks",
+  "slug": "/hooks/getting-started",
+  "permalink": "/docs/hooks/getting-started",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/oluwatobimaxwell/libraries-project/tree/master/packages/docs/docs/hooks/getting-started.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "sidebar_position": 2,
+    "title": "Getting Started",
+    "description": "Learn how to use @blacksmith-ui/hooks in your React projects."
+  },
+  "sidebar": "hooksSidebar",
+  "previous": {
+    "title": "Introduction",
+    "permalink": "/docs/intro"
+  },
+  "next": {
+    "title": "useToggle",
+    "permalink": "/docs/hooks/state-data/use-toggle"
+  }
+}

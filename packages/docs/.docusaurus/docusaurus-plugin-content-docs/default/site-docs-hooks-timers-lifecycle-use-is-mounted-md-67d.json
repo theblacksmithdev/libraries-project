@@ -1,0 +1,28 @@
+{
+  "id": "hooks/timers-lifecycle/use-is-mounted",
+  "title": "useIsMounted",
+  "description": "Returns a stable callback that reports whether the component is currently mounted.",
+  "source": "@site/docs/hooks/timers-lifecycle/use-is-mounted.md",
+  "sourceDirName": "hooks/timers-lifecycle",
+  "slug": "/hooks/timers-lifecycle/use-is-mounted",
+  "permalink": "/docs/hooks/timers-lifecycle/use-is-mounted",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/oluwatobimaxwell/libraries-project/tree/master/packages/docs/docs/hooks/timers-lifecycle/use-is-mounted.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar_label": "useIsMounted",
+    "title": "useIsMounted",
+    "description": "Returns a stable callback that reports whether the component is currently mounted."
+  },
+  "sidebar": "hooksSidebar",
+  "previous": {
+    "title": "useIsomorphicLayoutEffect",
+    "permalink": "/docs/hooks/timers-lifecycle/use-isomorphic-layout-effect"
+  },
+  "next": {
+    "title": "useIsFirstRender",
+    "permalink": "/docs/hooks/timers-lifecycle/use-is-first-render"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "hooks/state-data/use-toggle",
+  "title": "useToggle",
+  "description": "Manages a boolean state with convenience methods to toggle, set on, or set off.",
+  "source": "@site/docs/hooks/state-data/use-toggle.md",
+  "sourceDirName": "hooks/state-data",
+  "slug": "/hooks/state-data/use-toggle",
+  "permalink": "/docs/hooks/state-data/use-toggle",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/oluwatobimaxwell/libraries-project/tree/master/packages/docs/docs/hooks/state-data/use-toggle.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar_label": "useToggle",
+    "title": "useToggle",
+    "description": "Manages a boolean state with convenience methods to toggle, set on, or set off."
+  },
+  "sidebar": "hooksSidebar",
+  "previous": {
+    "title": "Getting Started",
+    "permalink": "/docs/hooks/getting-started"
+  },
+  "next": {
+    "title": "useDisclosure",
+    "permalink": "/docs/hooks/state-data/use-disclosure"
+  }
+}

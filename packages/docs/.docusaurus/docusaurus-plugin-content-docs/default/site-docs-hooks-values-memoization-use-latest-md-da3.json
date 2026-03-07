@@ -1,0 +1,28 @@
+{
+  "id": "hooks/values-memoization/use-latest",
+  "title": "useLatest",
+  "description": "Returns a ref object that always points to the latest value, updated synchronously on every render.",
+  "source": "@site/docs/hooks/values-memoization/use-latest.md",
+  "sourceDirName": "hooks/values-memoization",
+  "slug": "/hooks/values-memoization/use-latest",
+  "permalink": "/docs/hooks/values-memoization/use-latest",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/oluwatobimaxwell/libraries-project/tree/master/packages/docs/docs/hooks/values-memoization/use-latest.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar_label": "useLatest",
+    "title": "useLatest",
+    "description": "Returns a ref object that always points to the latest value, updated synchronously on every render."
+  },
+  "sidebar": "hooksSidebar",
+  "previous": {
+    "title": "usePrevious",
+    "permalink": "/docs/hooks/values-memoization/use-previous"
+  },
+  "next": {
+    "title": "useConst",
+    "permalink": "/docs/hooks/values-memoization/use-const"
+  }
+}

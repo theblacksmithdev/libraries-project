@@ -1,0 +1,28 @@
+{
+  "id": "hooks/state-data/use-counter",
+  "title": "useCounter",
+  "description": "Manages a numeric counter state with increment, decrement, and optional min/max clamping.",
+  "source": "@site/docs/hooks/state-data/use-counter.md",
+  "sourceDirName": "hooks/state-data",
+  "slug": "/hooks/state-data/use-counter",
+  "permalink": "/docs/hooks/state-data/use-counter",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/oluwatobimaxwell/libraries-project/tree/master/packages/docs/docs/hooks/state-data/use-counter.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar_label": "useCounter",
+    "title": "useCounter",
+    "description": "Manages a numeric counter state with increment, decrement, and optional min/max clamping."
+  },
+  "sidebar": "hooksSidebar",
+  "previous": {
+    "title": "useDisclosure",
+    "permalink": "/docs/hooks/state-data/use-disclosure"
+  },
+  "next": {
+    "title": "useList",
+    "permalink": "/docs/hooks/state-data/use-list"
+  }
+}

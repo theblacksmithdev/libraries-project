@@ -1,0 +1,28 @@
+{
+  "id": "hooks/async-network/use-web-socket",
+  "title": "useWebSocket",
+  "description": "Manages a WebSocket connection with automatic reconnection support.",
+  "source": "@site/docs/hooks/async-network/use-web-socket.md",
+  "sourceDirName": "hooks/async-network",
+  "slug": "/hooks/async-network/use-web-socket",
+  "permalink": "/docs/hooks/async-network/use-web-socket",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/oluwatobimaxwell/libraries-project/tree/master/packages/docs/docs/hooks/async-network/use-web-socket.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar_label": "useWebSocket",
+    "title": "useWebSocket",
+    "description": "Manages a WebSocket connection with automatic reconnection support."
+  },
+  "sidebar": "hooksSidebar",
+  "previous": {
+    "title": "useScript",
+    "permalink": "/docs/hooks/async-network/use-script"
+  },
+  "next": {
+    "title": "useSSE",
+    "permalink": "/docs/hooks/async-network/use-sse"
+  }
+}

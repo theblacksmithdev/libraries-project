@@ -1,0 +1,28 @@
+{
+  "id": "hooks/dom-browser/use-click-outside",
+  "title": "useClickOutside",
+  "description": "Detects clicks outside a referenced element and invokes a callback.",
+  "source": "@site/docs/hooks/dom-browser/use-click-outside.md",
+  "sourceDirName": "hooks/dom-browser",
+  "slug": "/hooks/dom-browser/use-click-outside",
+  "permalink": "/docs/hooks/dom-browser/use-click-outside",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/oluwatobimaxwell/libraries-project/tree/master/packages/docs/docs/hooks/dom-browser/use-click-outside.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar_label": "useClickOutside",
+    "title": "useClickOutside",
+    "description": "Detects clicks outside a referenced element and invokes a callback."
+  },
+  "sidebar": "hooksSidebar",
+  "previous": {
+    "title": "useSyncedRef",
+    "permalink": "/docs/hooks/values-memoization/use-synced-ref"
+  },
+  "next": {
+    "title": "useEventListener",
+    "permalink": "/docs/hooks/dom-browser/use-event-listener"
+  }
+}

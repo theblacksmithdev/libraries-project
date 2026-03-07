@@ -1,0 +1,28 @@
+{
+  "id": "hooks/async-network/use-sse",
+  "title": "useSSE",
+  "description": "Subscribes to a server-sent events (SSE) stream and tracks connection state.",
+  "source": "@site/docs/hooks/async-network/use-sse.md",
+  "sourceDirName": "hooks/async-network",
+  "slug": "/hooks/async-network/use-sse",
+  "permalink": "/docs/hooks/async-network/use-sse",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/oluwatobimaxwell/libraries-project/tree/master/packages/docs/docs/hooks/async-network/use-sse.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar_label": "useSSE",
+    "title": "useSSE",
+    "description": "Subscribes to a server-sent events (SSE) stream and tracks connection state."
+  },
+  "sidebar": "hooksSidebar",
+  "previous": {
+    "title": "useWebSocket",
+    "permalink": "/docs/hooks/async-network/use-web-socket"
+  },
+  "next": {
+    "title": "usePolling",
+    "permalink": "/docs/hooks/async-network/use-polling"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "hooks/async-network/use-polling",
+  "title": "usePolling",
+  "description": "Repeatedly executes an async function at a fixed interval with start/stop controls.",
+  "source": "@site/docs/hooks/async-network/use-polling.md",
+  "sourceDirName": "hooks/async-network",
+  "slug": "/hooks/async-network/use-polling",
+  "permalink": "/docs/hooks/async-network/use-polling",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/oluwatobimaxwell/libraries-project/tree/master/packages/docs/docs/hooks/async-network/use-polling.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar_label": "usePolling",
+    "title": "usePolling",
+    "description": "Repeatedly executes an async function at a fixed interval with start/stop controls."
+  },
+  "sidebar": "hooksSidebar",
+  "previous": {
+    "title": "useSSE",
+    "permalink": "/docs/hooks/async-network/use-sse"
+  },
+  "next": {
+    "title": "useAbortController",
+    "permalink": "/docs/hooks/async-network/use-abort-controller"
+  }
+}

@@ -21,7 +21,11 @@
     "lint:all": "yarn workspace @blacksmith-ui/react lint && yarn workspace @blacksmith-ui/forms lint && yarn workspace @blacksmith-ui/auth lint",
     "storybook": "yarn workspace @blacksmith-ui/react storybook",
     "storybook:forms": "yarn workspace @blacksmith-ui/forms storybook",
-    "storybook:auth-ui": "yarn workspace @blacksmith-ui/auth storybook"
+    "storybook:auth-ui": "yarn workspace @blacksmith-ui/auth storybook",
+    "docs": "yarn workspace @blacksmith-ui/docs start",
+    "docs:build": "yarn workspace @blacksmith-ui/docs build",
+    "docs:serve": "yarn workspace @blacksmith-ui/docs serve",
+    "docs:clear": "yarn workspace @blacksmith-ui/docs clear"
   },
   "packageManager": "yarn@1.22.22"
 }

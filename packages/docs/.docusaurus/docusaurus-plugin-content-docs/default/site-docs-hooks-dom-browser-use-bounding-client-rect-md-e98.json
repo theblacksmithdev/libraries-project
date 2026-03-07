@@ -1,0 +1,28 @@
+{
+  "id": "hooks/dom-browser/use-bounding-client-rect",
+  "title": "useBoundingClientRect",
+  "description": "Tracks the full bounding client rect of a DOM element, updating on resize.",
+  "source": "@site/docs/hooks/dom-browser/use-bounding-client-rect.md",
+  "sourceDirName": "hooks/dom-browser",
+  "slug": "/hooks/dom-browser/use-bounding-client-rect",
+  "permalink": "/docs/hooks/dom-browser/use-bounding-client-rect",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/oluwatobimaxwell/libraries-project/tree/master/packages/docs/docs/hooks/dom-browser/use-bounding-client-rect.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar_label": "useBoundingClientRect",
+    "title": "useBoundingClientRect",
+    "description": "Tracks the full bounding client rect of a DOM element, updating on resize."
+  },
+  "sidebar": "hooksSidebar",
+  "previous": {
+    "title": "useFocusTrap",
+    "permalink": "/docs/hooks/dom-browser/use-focus-trap"
+  },
+  "next": {
+    "title": "useSwipe",
+    "permalink": "/docs/hooks/dom-browser/use-swipe"
+  }
+}

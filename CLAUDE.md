@@ -1,6 +1,6 @@
 # BlacksmithUI Component Library
 
-Yarn workspaces monorepo with 4 packages. **Requires Node >= 20** (use `nvm use` — `.nvmrc` is set to 20).
+Yarn workspaces monorepo with 5 packages. **Requires Node >= 20** (use `nvm use` — `.nvmrc` is set to 20).
 
 ## Package Dependency Graph
 
@@ -23,6 +23,7 @@ Build order must follow this graph: `hooks (independent) | react → forms → a
 | `@blacksmith-ui/react` | `packages/react` | 6006 | Core UI primitives (Button, Card, Alert, Input, etc.) built on Radix UI + Tailwind |
 | `@blacksmith-ui/forms` | `packages/forms` | 6008 | Form components (Form, FormInput, etc.) with react-hook-form + Zod validation |
 | `@blacksmith-ui/auth` | `packages/auth-ui` | 6007 | Auth flows (Login, Register, Forgot/Reset Password) built on forms + react primitives |
+| `@blacksmith-ui/docs` | `packages/docs` | 3000 | Docusaurus documentation site for hooks (private, not published) |
 
 ## Common Commands
 
@@ -47,6 +48,11 @@ yarn workspace @blacksmith-ui/auth test
 yarn workspace @blacksmith-ui/react storybook      # port 6006
 yarn workspace @blacksmith-ui/forms storybook      # port 6008
 yarn workspace @blacksmith-ui/auth storybook    # port 6007
+
+# Documentation site
+yarn docs            # start dev server on port 3000
+yarn docs:build      # production build
+yarn docs:serve      # serve production build
 ```
 
 ## Build Pipeline (per package)

@@ -1,0 +1,28 @@
+{
+  "id": "hooks/dom-browser/use-element-visibility",
+  "title": "useElementVisibility",
+  "description": "Tracks whether a DOM element is visible in the viewport using IntersectionObserver.",
+  "source": "@site/docs/hooks/dom-browser/use-element-visibility.md",
+  "sourceDirName": "hooks/dom-browser",
+  "slug": "/hooks/dom-browser/use-element-visibility",
+  "permalink": "/docs/hooks/dom-browser/use-element-visibility",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/oluwatobimaxwell/libraries-project/tree/master/packages/docs/docs/hooks/dom-browser/use-element-visibility.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar_label": "useElementVisibility",
+    "title": "useElementVisibility",
+    "description": "Tracks whether a DOM element is visible in the viewport using IntersectionObserver."
+  },
+  "sidebar": "hooksSidebar",
+  "previous": {
+    "title": "useDrag",
+    "permalink": "/docs/hooks/dom-browser/use-drag"
+  },
+  "next": {
+    "title": "useScrollPosition",
+    "permalink": "/docs/hooks/dom-browser/use-scroll-position"
+  }
+}

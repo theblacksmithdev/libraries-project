@@ -1,0 +1,28 @@
+{
+  "id": "hooks/timers-lifecycle/use-is-first-render",
+  "title": "useIsFirstRender",
+  "description": "Returns true on the first render and false on every subsequent render.",
+  "source": "@site/docs/hooks/timers-lifecycle/use-is-first-render.md",
+  "sourceDirName": "hooks/timers-lifecycle",
+  "slug": "/hooks/timers-lifecycle/use-is-first-render",
+  "permalink": "/docs/hooks/timers-lifecycle/use-is-first-render",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/oluwatobimaxwell/libraries-project/tree/master/packages/docs/docs/hooks/timers-lifecycle/use-is-first-render.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar_label": "useIsFirstRender",
+    "title": "useIsFirstRender",
+    "description": "Returns true on the first render and false on every subsequent render."
+  },
+  "sidebar": "hooksSidebar",
+  "previous": {
+    "title": "useIsMounted",
+    "permalink": "/docs/hooks/timers-lifecycle/use-is-mounted"
+  },
+  "next": {
+    "title": "useFetch",
+    "permalink": "/docs/hooks/async-network/use-fetch"
+  }
+}

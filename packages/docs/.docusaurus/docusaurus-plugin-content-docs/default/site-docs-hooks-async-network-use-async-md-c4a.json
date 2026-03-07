@@ -1,0 +1,28 @@
+{
+  "id": "hooks/async-network/use-async",
+  "title": "useAsync",
+  "description": "Wraps an async function with reactive state tracking for loading, success, and error states.",
+  "source": "@site/docs/hooks/async-network/use-async.md",
+  "sourceDirName": "hooks/async-network",
+  "slug": "/hooks/async-network/use-async",
+  "permalink": "/docs/hooks/async-network/use-async",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/oluwatobimaxwell/libraries-project/tree/master/packages/docs/docs/hooks/async-network/use-async.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar_label": "useAsync",
+    "title": "useAsync",
+    "description": "Wraps an async function with reactive state tracking for loading, success, and error states."
+  },
+  "sidebar": "hooksSidebar",
+  "previous": {
+    "title": "useFetch",
+    "permalink": "/docs/hooks/async-network/use-fetch"
+  },
+  "next": {
+    "title": "useScript",
+    "permalink": "/docs/hooks/async-network/use-script"
+  }
+}

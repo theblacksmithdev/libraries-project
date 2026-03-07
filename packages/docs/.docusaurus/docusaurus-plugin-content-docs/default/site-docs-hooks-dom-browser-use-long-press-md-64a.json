@@ -1,0 +1,28 @@
+{
+  "id": "hooks/dom-browser/use-long-press",
+  "title": "useLongPress",
+  "description": "Detects long press gestures on both mouse and touch devices and invokes a callback after a configurable delay.",
+  "source": "@site/docs/hooks/dom-browser/use-long-press.md",
+  "sourceDirName": "hooks/dom-browser",
+  "slug": "/hooks/dom-browser/use-long-press",
+  "permalink": "/docs/hooks/dom-browser/use-long-press",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/oluwatobimaxwell/libraries-project/tree/master/packages/docs/docs/hooks/dom-browser/use-long-press.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar_label": "useLongPress",
+    "title": "useLongPress",
+    "description": "Detects long press gestures on both mouse and touch devices and invokes a callback after a configurable delay."
+  },
+  "sidebar": "hooksSidebar",
+  "previous": {
+    "title": "useKeyCombo",
+    "permalink": "/docs/hooks/dom-browser/use-key-combo"
+  },
+  "next": {
+    "title": "useFullscreen",
+    "permalink": "/docs/hooks/dom-browser/use-fullscreen"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "hooks/dom-browser/use-scroll-lock",
+  "title": "useScrollLock",
+  "description": "Locks body scroll when active, preventing background scrolling behind modals or overlays.",
+  "source": "@site/docs/hooks/dom-browser/use-scroll-lock.md",
+  "sourceDirName": "hooks/dom-browser",
+  "slug": "/hooks/dom-browser/use-scroll-lock",
+  "permalink": "/docs/hooks/dom-browser/use-scroll-lock",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/oluwatobimaxwell/libraries-project/tree/master/packages/docs/docs/hooks/dom-browser/use-scroll-lock.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar_label": "useScrollLock",
+    "title": "useScrollLock",
+    "description": "Locks body scroll when active, preventing background scrolling behind modals or overlays."
+  },
+  "sidebar": "hooksSidebar",
+  "previous": {
+    "title": "useScrollPosition",
+    "permalink": "/docs/hooks/dom-browser/use-scroll-position"
+  },
+  "next": {
+    "title": "useMutationObserver",
+    "permalink": "/docs/hooks/dom-browser/use-mutation-observer"
+  }
+}

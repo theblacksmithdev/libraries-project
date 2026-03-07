@@ -1,0 +1,28 @@
+{
+  "id": "hooks/dom-browser/use-key-press",
+  "title": "useKeyPress",
+  "description": "Listens for a specific keyboard key press and invokes a callback.",
+  "source": "@site/docs/hooks/dom-browser/use-key-press.md",
+  "sourceDirName": "hooks/dom-browser",
+  "slug": "/hooks/dom-browser/use-key-press",
+  "permalink": "/docs/hooks/dom-browser/use-key-press",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/oluwatobimaxwell/libraries-project/tree/master/packages/docs/docs/hooks/dom-browser/use-key-press.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar_label": "useKeyPress",
+    "title": "useKeyPress",
+    "description": "Listens for a specific keyboard key press and invokes a callback."
+  },
+  "sidebar": "hooksSidebar",
+  "previous": {
+    "title": "useHover",
+    "permalink": "/docs/hooks/dom-browser/use-hover"
+  },
+  "next": {
+    "title": "useKeyCombo",
+    "permalink": "/docs/hooks/dom-browser/use-key-combo"
+  }
+}

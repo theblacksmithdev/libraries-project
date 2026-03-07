@@ -1,0 +1,28 @@
+{
+  "id": "hooks/layout-ui/use-collapse",
+  "title": "useCollapse",
+  "description": "Manages expand/collapse state and provides prop getters for accessible collapsible sections.",
+  "source": "@site/docs/hooks/layout-ui/use-collapse.md",
+  "sourceDirName": "hooks/layout-ui",
+  "slug": "/hooks/layout-ui/use-collapse",
+  "permalink": "/docs/hooks/layout-ui/use-collapse",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/oluwatobimaxwell/libraries-project/tree/master/packages/docs/docs/hooks/layout-ui/use-collapse.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar_label": "useCollapse",
+    "title": "useCollapse",
+    "description": "Manages expand/collapse state and provides prop getters for accessible collapsible sections."
+  },
+  "sidebar": "hooksSidebar",
+  "previous": {
+    "title": "useInfiniteScroll",
+    "permalink": "/docs/hooks/layout-ui/use-infinite-scroll"
+  },
+  "next": {
+    "title": "useSteps",
+    "permalink": "/docs/hooks/layout-ui/use-steps"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "hooks/values-memoization/use-synced-ref",
+  "title": "useSyncedRef",
+  "description": "Returns a ref object that stays synchronized with the provided value on every render.",
+  "source": "@site/docs/hooks/values-memoization/use-synced-ref.md",
+  "sourceDirName": "hooks/values-memoization",
+  "slug": "/hooks/values-memoization/use-synced-ref",
+  "permalink": "/docs/hooks/values-memoization/use-synced-ref",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/oluwatobimaxwell/libraries-project/tree/master/packages/docs/docs/hooks/values-memoization/use-synced-ref.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar_label": "useSyncedRef",
+    "title": "useSyncedRef",
+    "description": "Returns a ref object that stays synchronized with the provided value on every render."
+  },
+  "sidebar": "hooksSidebar",
+  "previous": {
+    "title": "useConst",
+    "permalink": "/docs/hooks/values-memoization/use-const"
+  },
+  "next": {
+    "title": "useClickOutside",
+    "permalink": "/docs/hooks/dom-browser/use-click-outside"
+  }
+}

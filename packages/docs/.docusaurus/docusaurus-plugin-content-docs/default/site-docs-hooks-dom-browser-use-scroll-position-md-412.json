@@ -1,0 +1,28 @@
+{
+  "id": "hooks/dom-browser/use-scroll-position",
+  "title": "useScrollPosition",
+  "description": "Tracks the current window scroll position (x and y coordinates).",
+  "source": "@site/docs/hooks/dom-browser/use-scroll-position.md",
+  "sourceDirName": "hooks/dom-browser",
+  "slug": "/hooks/dom-browser/use-scroll-position",
+  "permalink": "/docs/hooks/dom-browser/use-scroll-position",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/oluwatobimaxwell/libraries-project/tree/master/packages/docs/docs/hooks/dom-browser/use-scroll-position.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar_label": "useScrollPosition",
+    "title": "useScrollPosition",
+    "description": "Tracks the current window scroll position (x and y coordinates)."
+  },
+  "sidebar": "hooksSidebar",
+  "previous": {
+    "title": "useElementVisibility",
+    "permalink": "/docs/hooks/dom-browser/use-element-visibility"
+  },
+  "next": {
+    "title": "useScrollLock",
+    "permalink": "/docs/hooks/dom-browser/use-scroll-lock"
+  }
+}

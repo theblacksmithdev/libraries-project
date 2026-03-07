@@ -1,0 +1,28 @@
+{
+  "id": "hooks/timers-lifecycle/use-idle-timer",
+  "title": "useIdleTimer",
+  "description": "Detects user inactivity by monitoring mouse, keyboard, touch, and scroll events.",
+  "source": "@site/docs/hooks/timers-lifecycle/use-idle-timer.md",
+  "sourceDirName": "hooks/timers-lifecycle",
+  "slug": "/hooks/timers-lifecycle/use-idle-timer",
+  "permalink": "/docs/hooks/timers-lifecycle/use-idle-timer",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/oluwatobimaxwell/libraries-project/tree/master/packages/docs/docs/hooks/timers-lifecycle/use-idle-timer.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar_label": "useIdleTimer",
+    "title": "useIdleTimer",
+    "description": "Detects user inactivity by monitoring mouse, keyboard, touch, and scroll events."
+  },
+  "sidebar": "hooksSidebar",
+  "previous": {
+    "title": "useStopwatch",
+    "permalink": "/docs/hooks/timers-lifecycle/use-stopwatch"
+  },
+  "next": {
+    "title": "useUpdateEffect",
+    "permalink": "/docs/hooks/timers-lifecycle/use-update-effect"
+  }
+}

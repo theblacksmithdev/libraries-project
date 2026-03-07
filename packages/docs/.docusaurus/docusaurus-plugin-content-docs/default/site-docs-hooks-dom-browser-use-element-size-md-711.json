@@ -1,0 +1,28 @@
+{
+  "id": "hooks/dom-browser/use-element-size",
+  "title": "useElementSize",
+  "description": "Tracks the width and height of a DOM element using ResizeObserver.",
+  "source": "@site/docs/hooks/dom-browser/use-element-size.md",
+  "sourceDirName": "hooks/dom-browser",
+  "slug": "/hooks/dom-browser/use-element-size",
+  "permalink": "/docs/hooks/dom-browser/use-element-size",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/oluwatobimaxwell/libraries-project/tree/master/packages/docs/docs/hooks/dom-browser/use-element-size.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar_label": "useElementSize",
+    "title": "useElementSize",
+    "description": "Tracks the width and height of a DOM element using ResizeObserver."
+  },
+  "sidebar": "hooksSidebar",
+  "previous": {
+    "title": "useEventListener",
+    "permalink": "/docs/hooks/dom-browser/use-event-listener"
+  },
+  "next": {
+    "title": "useHover",
+    "permalink": "/docs/hooks/dom-browser/use-hover"
+  }
+}

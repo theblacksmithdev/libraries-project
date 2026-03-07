@@ -1,0 +1,28 @@
+{
+  "id": "hooks/async-network/use-retry",
+  "title": "useRetry",
+  "description": "Retries a failed async function with configurable attempt limits and exponential backoff.",
+  "source": "@site/docs/hooks/async-network/use-retry.md",
+  "sourceDirName": "hooks/async-network",
+  "slug": "/hooks/async-network/use-retry",
+  "permalink": "/docs/hooks/async-network/use-retry",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/oluwatobimaxwell/libraries-project/tree/master/packages/docs/docs/hooks/async-network/use-retry.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar_label": "useRetry",
+    "title": "useRetry",
+    "description": "Retries a failed async function with configurable attempt limits and exponential backoff."
+  },
+  "sidebar": "hooksSidebar",
+  "previous": {
+    "title": "useAbortController",
+    "permalink": "/docs/hooks/async-network/use-abort-controller"
+  },
+  "next": {
+    "title": "useSearch",
+    "permalink": "/docs/hooks/async-network/use-search"
+  }
+}

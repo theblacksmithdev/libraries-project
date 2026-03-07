@@ -1,0 +1,28 @@
+{
+  "id": "hooks/layout-ui/use-sticky-header",
+  "title": "useStickyHeader",
+  "description": "Tracks whether the page has scrolled past a threshold to trigger a sticky header state.",
+  "source": "@site/docs/hooks/layout-ui/use-sticky-header.md",
+  "sourceDirName": "hooks/layout-ui",
+  "slug": "/hooks/layout-ui/use-sticky-header",
+  "permalink": "/docs/hooks/layout-ui/use-sticky-header",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/oluwatobimaxwell/libraries-project/tree/master/packages/docs/docs/hooks/layout-ui/use-sticky-header.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar_label": "useStickyHeader",
+    "title": "useStickyHeader",
+    "description": "Tracks whether the page has scrolled past a threshold to trigger a sticky header state."
+  },
+  "sidebar": "hooksSidebar",
+  "previous": {
+    "title": "useIsClient",
+    "permalink": "/docs/hooks/browser-apis/use-is-client"
+  },
+  "next": {
+    "title": "useVirtualList",
+    "permalink": "/docs/hooks/layout-ui/use-virtual-list"
+  }
+}

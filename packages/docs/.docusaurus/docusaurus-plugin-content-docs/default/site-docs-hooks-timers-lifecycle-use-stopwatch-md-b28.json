@@ -1,0 +1,28 @@
+{
+  "id": "hooks/timers-lifecycle/use-stopwatch",
+  "title": "useStopwatch",
+  "description": "An elapsed-time stopwatch hook with lap recording, start, pause, and reset controls.",
+  "source": "@site/docs/hooks/timers-lifecycle/use-stopwatch.md",
+  "sourceDirName": "hooks/timers-lifecycle",
+  "slug": "/hooks/timers-lifecycle/use-stopwatch",
+  "permalink": "/docs/hooks/timers-lifecycle/use-stopwatch",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/oluwatobimaxwell/libraries-project/tree/master/packages/docs/docs/hooks/timers-lifecycle/use-stopwatch.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar_label": "useStopwatch",
+    "title": "useStopwatch",
+    "description": "An elapsed-time stopwatch hook with lap recording, start, pause, and reset controls."
+  },
+  "sidebar": "hooksSidebar",
+  "previous": {
+    "title": "useCountdown",
+    "permalink": "/docs/hooks/timers-lifecycle/use-countdown"
+  },
+  "next": {
+    "title": "useIdleTimer",
+    "permalink": "/docs/hooks/timers-lifecycle/use-idle-timer"
+  }
+}

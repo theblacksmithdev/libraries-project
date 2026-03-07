@@ -1,0 +1,28 @@
+{
+  "id": "hooks/state-data/use-map",
+  "title": "useMap",
+  "description": "Manages a Map state with methods to set, remove, clear, and reset key-value pairs.",
+  "source": "@site/docs/hooks/state-data/use-map.md",
+  "sourceDirName": "hooks/state-data",
+  "slug": "/hooks/state-data/use-map",
+  "permalink": "/docs/hooks/state-data/use-map",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/oluwatobimaxwell/libraries-project/tree/master/packages/docs/docs/hooks/state-data/use-map.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar_label": "useMap",
+    "title": "useMap",
+    "description": "Manages a Map state with methods to set, remove, clear, and reset key-value pairs."
+  },
+  "sidebar": "hooksSidebar",
+  "previous": {
+    "title": "useList",
+    "permalink": "/docs/hooks/state-data/use-list"
+  },
+  "next": {
+    "title": "useSet",
+    "permalink": "/docs/hooks/state-data/use-set"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "hooks/timers-lifecycle/use-update-effect",
+  "title": "useUpdateEffect",
+  "description": "A useEffect variant that skips execution on the initial mount render.",
+  "source": "@site/docs/hooks/timers-lifecycle/use-update-effect.md",
+  "sourceDirName": "hooks/timers-lifecycle",
+  "slug": "/hooks/timers-lifecycle/use-update-effect",
+  "permalink": "/docs/hooks/timers-lifecycle/use-update-effect",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/oluwatobimaxwell/libraries-project/tree/master/packages/docs/docs/hooks/timers-lifecycle/use-update-effect.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar_label": "useUpdateEffect",
+    "title": "useUpdateEffect",
+    "description": "A useEffect variant that skips execution on the initial mount render."
+  },
+  "sidebar": "hooksSidebar",
+  "previous": {
+    "title": "useIdleTimer",
+    "permalink": "/docs/hooks/timers-lifecycle/use-idle-timer"
+  },
+  "next": {
+    "title": "useIsomorphicLayoutEffect",
+    "permalink": "/docs/hooks/timers-lifecycle/use-isomorphic-layout-effect"
+  }
+}

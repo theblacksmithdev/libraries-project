@@ -1,0 +1,28 @@
+{
+  "id": "hooks/dom-browser/use-focus-trap",
+  "title": "useFocusTrap",
+  "description": "Traps keyboard focus within a container element, cycling through focusable children on Tab/Shift+Tab.",
+  "source": "@site/docs/hooks/dom-browser/use-focus-trap.md",
+  "sourceDirName": "hooks/dom-browser",
+  "slug": "/hooks/dom-browser/use-focus-trap",
+  "permalink": "/docs/hooks/dom-browser/use-focus-trap",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/oluwatobimaxwell/libraries-project/tree/master/packages/docs/docs/hooks/dom-browser/use-focus-trap.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar_label": "useFocusTrap",
+    "title": "useFocusTrap",
+    "description": "Traps keyboard focus within a container element, cycling through focusable children on Tab/Shift+Tab."
+  },
+  "sidebar": "hooksSidebar",
+  "previous": {
+    "title": "useFocusWithin",
+    "permalink": "/docs/hooks/dom-browser/use-focus-within"
+  },
+  "next": {
+    "title": "useBoundingClientRect",
+    "permalink": "/docs/hooks/dom-browser/use-bounding-client-rect"
+  }
+}

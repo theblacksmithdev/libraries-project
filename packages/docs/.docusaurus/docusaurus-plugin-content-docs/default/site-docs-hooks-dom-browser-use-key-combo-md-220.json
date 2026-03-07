@@ -1,0 +1,28 @@
+{
+  "id": "hooks/dom-browser/use-key-combo",
+  "title": "useKeyCombo",
+  "description": "Listens for keyboard shortcuts with modifier keys (Ctrl, Shift, Alt, Meta) and invokes a callback.",
+  "source": "@site/docs/hooks/dom-browser/use-key-combo.md",
+  "sourceDirName": "hooks/dom-browser",
+  "slug": "/hooks/dom-browser/use-key-combo",
+  "permalink": "/docs/hooks/dom-browser/use-key-combo",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/oluwatobimaxwell/libraries-project/tree/master/packages/docs/docs/hooks/dom-browser/use-key-combo.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar_label": "useKeyCombo",
+    "title": "useKeyCombo",
+    "description": "Listens for keyboard shortcuts with modifier keys (Ctrl, Shift, Alt, Meta) and invokes a callback."
+  },
+  "sidebar": "hooksSidebar",
+  "previous": {
+    "title": "useKeyPress",
+    "permalink": "/docs/hooks/dom-browser/use-key-press"
+  },
+  "next": {
+    "title": "useLongPress",
+    "permalink": "/docs/hooks/dom-browser/use-long-press"
+  }
+}

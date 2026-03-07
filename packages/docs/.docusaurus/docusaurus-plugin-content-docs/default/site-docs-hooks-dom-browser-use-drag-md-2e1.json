@@ -1,0 +1,28 @@
+{
+  "id": "hooks/dom-browser/use-drag",
+  "title": "useDrag",
+  "description": "Tracks mouse drag interactions, providing current position and delta values.",
+  "source": "@site/docs/hooks/dom-browser/use-drag.md",
+  "sourceDirName": "hooks/dom-browser",
+  "slug": "/hooks/dom-browser/use-drag",
+  "permalink": "/docs/hooks/dom-browser/use-drag",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/oluwatobimaxwell/libraries-project/tree/master/packages/docs/docs/hooks/dom-browser/use-drag.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar_label": "useDrag",
+    "title": "useDrag",
+    "description": "Tracks mouse drag interactions, providing current position and delta values."
+  },
+  "sidebar": "hooksSidebar",
+  "previous": {
+    "title": "useSwipe",
+    "permalink": "/docs/hooks/dom-browser/use-swipe"
+  },
+  "next": {
+    "title": "useElementVisibility",
+    "permalink": "/docs/hooks/dom-browser/use-element-visibility"
+  }
+}

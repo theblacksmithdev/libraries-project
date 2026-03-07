@@ -1,0 +1,28 @@
+{
+  "id": "hooks/dom-browser/use-hover",
+  "title": "useHover",
+  "description": "Tracks whether a DOM element is currently being hovered by the mouse.",
+  "source": "@site/docs/hooks/dom-browser/use-hover.md",
+  "sourceDirName": "hooks/dom-browser",
+  "slug": "/hooks/dom-browser/use-hover",
+  "permalink": "/docs/hooks/dom-browser/use-hover",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/oluwatobimaxwell/libraries-project/tree/master/packages/docs/docs/hooks/dom-browser/use-hover.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar_label": "useHover",
+    "title": "useHover",
+    "description": "Tracks whether a DOM element is currently being hovered by the mouse."
+  },
+  "sidebar": "hooksSidebar",
+  "previous": {
+    "title": "useElementSize",
+    "permalink": "/docs/hooks/dom-browser/use-element-size"
+  },
+  "next": {
+    "title": "useKeyPress",
+    "permalink": "/docs/hooks/dom-browser/use-key-press"
+  }
+}

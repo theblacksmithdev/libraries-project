@@ -1,0 +1,28 @@
+{
+  "id": "hooks/values-memoization/use-throttle",
+  "title": "useThrottle",
+  "description": "Throttles a value, ensuring it updates at most once per specified interval.",
+  "source": "@site/docs/hooks/values-memoization/use-throttle.md",
+  "sourceDirName": "hooks/values-memoization",
+  "slug": "/hooks/values-memoization/use-throttle",
+  "permalink": "/docs/hooks/values-memoization/use-throttle",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/oluwatobimaxwell/libraries-project/tree/master/packages/docs/docs/hooks/values-memoization/use-throttle.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar_label": "useThrottle",
+    "title": "useThrottle",
+    "description": "Throttles a value, ensuring it updates at most once per specified interval."
+  },
+  "sidebar": "hooksSidebar",
+  "previous": {
+    "title": "useDebouncedCallback",
+    "permalink": "/docs/hooks/values-memoization/use-debounced-callback"
+  },
+  "next": {
+    "title": "useThrottledCallback",
+    "permalink": "/docs/hooks/values-memoization/use-throttled-callback"
+  }
+}

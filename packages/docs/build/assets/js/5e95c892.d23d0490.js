@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunk_blacksmith_ui_docs=globalThis.webpackChunk_blacksmith_ui_docs||[]).push([[9647],{3531(s,e,a){a.r(e),a.d(e,{default:()=>t});a(4041);var c=a(4357),r=a(7473),u=a(8582),i=a(8150),l=a(3712),h=a(1085);function t(s){return(0,h.jsx)(u.e3,{className:(0,c.A)(r.G.wrapper.docsPages),children:(0,h.jsx)(l.A,{children:(0,i.v)(s.route.routes)})})}}}]);

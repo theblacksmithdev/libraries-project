@@ -1,0 +1,28 @@
+{
+  "id": "hooks/state-data/use-history-state",
+  "title": "useHistoryState",
+  "description": "Manages state with undo/redo history, allowing navigation through previous values.",
+  "source": "@site/docs/hooks/state-data/use-history-state.md",
+  "sourceDirName": "hooks/state-data",
+  "slug": "/hooks/state-data/use-history-state",
+  "permalink": "/docs/hooks/state-data/use-history-state",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/oluwatobimaxwell/libraries-project/tree/master/packages/docs/docs/hooks/state-data/use-history-state.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar_label": "useHistoryState",
+    "title": "useHistoryState",
+    "description": "Manages state with undo/redo history, allowing navigation through previous values."
+  },
+  "sidebar": "hooksSidebar",
+  "previous": {
+    "title": "useSet",
+    "permalink": "/docs/hooks/state-data/use-set"
+  },
+  "next": {
+    "title": "useDefault",
+    "permalink": "/docs/hooks/state-data/use-default"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "hooks/dom-browser/use-fullscreen",
+  "title": "useFullscreen",
+  "description": "Manages the Fullscreen API for a referenced element, providing enter, exit, and toggle controls.",
+  "source": "@site/docs/hooks/dom-browser/use-fullscreen.md",
+  "sourceDirName": "hooks/dom-browser",
+  "slug": "/hooks/dom-browser/use-fullscreen",
+  "permalink": "/docs/hooks/dom-browser/use-fullscreen",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/oluwatobimaxwell/libraries-project/tree/master/packages/docs/docs/hooks/dom-browser/use-fullscreen.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar_label": "useFullscreen",
+    "title": "useFullscreen",
+    "description": "Manages the Fullscreen API for a referenced element, providing enter, exit, and toggle controls."
+  },
+  "sidebar": "hooksSidebar",
+  "previous": {
+    "title": "useLongPress",
+    "permalink": "/docs/hooks/dom-browser/use-long-press"
+  },
+  "next": {
+    "title": "useTextSelection",
+    "permalink": "/docs/hooks/dom-browser/use-text-selection"
+  }
+}

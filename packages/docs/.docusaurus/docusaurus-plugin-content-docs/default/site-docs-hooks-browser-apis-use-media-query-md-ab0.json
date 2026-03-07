@@ -1,0 +1,28 @@
+{
+  "id": "hooks/browser-apis/use-media-query",
+  "title": "useMediaQuery",
+  "description": "Subscribes to a CSS media query and returns whether it currently matches.",
+  "source": "@site/docs/hooks/browser-apis/use-media-query.md",
+  "sourceDirName": "hooks/browser-apis",
+  "slug": "/hooks/browser-apis/use-media-query",
+  "permalink": "/docs/hooks/browser-apis/use-media-query",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/oluwatobimaxwell/libraries-project/tree/master/packages/docs/docs/hooks/browser-apis/use-media-query.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar_label": "useMediaQuery",
+    "title": "useMediaQuery",
+    "description": "Subscribes to a CSS media query and returns whether it currently matches."
+  },
+  "sidebar": "hooksSidebar",
+  "previous": {
+    "title": "useSearch",
+    "permalink": "/docs/hooks/async-network/use-search"
+  },
+  "next": {
+    "title": "useDarkMode",
+    "permalink": "/docs/hooks/browser-apis/use-dark-mode"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "hooks/dom-browser/use-mutation-observer",
+  "title": "useMutationObserver",
+  "description": "Observes DOM mutations on a referenced element using MutationObserver.",
+  "source": "@site/docs/hooks/dom-browser/use-mutation-observer.md",
+  "sourceDirName": "hooks/dom-browser",
+  "slug": "/hooks/dom-browser/use-mutation-observer",
+  "permalink": "/docs/hooks/dom-browser/use-mutation-observer",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/oluwatobimaxwell/libraries-project/tree/master/packages/docs/docs/hooks/dom-browser/use-mutation-observer.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar_label": "useMutationObserver",
+    "title": "useMutationObserver",
+    "description": "Observes DOM mutations on a referenced element using MutationObserver."
+  },
+  "sidebar": "hooksSidebar",
+  "previous": {
+    "title": "useScrollLock",
+    "permalink": "/docs/hooks/dom-browser/use-scroll-lock"
+  },
+  "next": {
+    "title": "useIntersectionObserver",
+    "permalink": "/docs/hooks/dom-browser/use-intersection-observer"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "hooks/state-data/use-session-storage",
+  "title": "useSessionStorage",
+  "description": "Persists state to sessionStorage with automatic JSON serialization and SSR safety.",
+  "source": "@site/docs/hooks/state-data/use-session-storage.md",
+  "sourceDirName": "hooks/state-data",
+  "slug": "/hooks/state-data/use-session-storage",
+  "permalink": "/docs/hooks/state-data/use-session-storage",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/oluwatobimaxwell/libraries-project/tree/master/packages/docs/docs/hooks/state-data/use-session-storage.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar_label": "useSessionStorage",
+    "title": "useSessionStorage",
+    "description": "Persists state to sessionStorage with automatic JSON serialization and SSR safety."
+  },
+  "sidebar": "hooksSidebar",
+  "previous": {
+    "title": "useLocalStorage",
+    "permalink": "/docs/hooks/state-data/use-local-storage"
+  },
+  "next": {
+    "title": "useUncontrolled",
+    "permalink": "/docs/hooks/state-data/use-uncontrolled"
+  }
+}

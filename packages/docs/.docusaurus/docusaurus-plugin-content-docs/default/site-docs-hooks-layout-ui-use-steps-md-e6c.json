@@ -1,0 +1,24 @@
+{
+  "id": "hooks/layout-ui/use-steps",
+  "title": "useSteps",
+  "description": "Manages step-based navigation state for wizards, multi-step forms, and stepper components.",
+  "source": "@site/docs/hooks/layout-ui/use-steps.md",
+  "sourceDirName": "hooks/layout-ui",
+  "slug": "/hooks/layout-ui/use-steps",
+  "permalink": "/docs/hooks/layout-ui/use-steps",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/oluwatobimaxwell/libraries-project/tree/master/packages/docs/docs/hooks/layout-ui/use-steps.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar_label": "useSteps",
+    "title": "useSteps",
+    "description": "Manages step-based navigation state for wizards, multi-step forms, and stepper components."
+  },
+  "sidebar": "hooksSidebar",
+  "previous": {
+    "title": "useCollapse",
+    "permalink": "/docs/hooks/layout-ui/use-collapse"
+  }
+}

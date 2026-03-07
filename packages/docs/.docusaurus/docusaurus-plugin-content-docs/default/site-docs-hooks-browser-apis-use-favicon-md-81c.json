@@ -1,0 +1,28 @@
+{
+  "id": "hooks/browser-apis/use-favicon",
+  "title": "useFavicon",
+  "description": "Dynamically sets the page favicon to a given URL.",
+  "source": "@site/docs/hooks/browser-apis/use-favicon.md",
+  "sourceDirName": "hooks/browser-apis",
+  "slug": "/hooks/browser-apis/use-favicon",
+  "permalink": "/docs/hooks/browser-apis/use-favicon",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/oluwatobimaxwell/libraries-project/tree/master/packages/docs/docs/hooks/browser-apis/use-favicon.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar_label": "useFavicon",
+    "title": "useFavicon",
+    "description": "Dynamically sets the page favicon to a given URL."
+  },
+  "sidebar": "hooksSidebar",
+  "previous": {
+    "title": "usePageLeave",
+    "permalink": "/docs/hooks/browser-apis/use-page-leave"
+  },
+  "next": {
+    "title": "useReducedMotion",
+    "permalink": "/docs/hooks/browser-apis/use-reduced-motion"
+  }
+}

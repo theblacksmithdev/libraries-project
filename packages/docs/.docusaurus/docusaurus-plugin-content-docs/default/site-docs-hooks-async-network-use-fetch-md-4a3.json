@@ -1,0 +1,28 @@
+{
+  "id": "hooks/async-network/use-fetch",
+  "title": "useFetch",
+  "description": "Declarative hook for fetching data from a URL with automatic abort handling.",
+  "source": "@site/docs/hooks/async-network/use-fetch.md",
+  "sourceDirName": "hooks/async-network",
+  "slug": "/hooks/async-network/use-fetch",
+  "permalink": "/docs/hooks/async-network/use-fetch",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/oluwatobimaxwell/libraries-project/tree/master/packages/docs/docs/hooks/async-network/use-fetch.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar_label": "useFetch",
+    "title": "useFetch",
+    "description": "Declarative hook for fetching data from a URL with automatic abort handling."
+  },
+  "sidebar": "hooksSidebar",
+  "previous": {
+    "title": "useIsFirstRender",
+    "permalink": "/docs/hooks/timers-lifecycle/use-is-first-render"
+  },
+  "next": {
+    "title": "useAsync",
+    "permalink": "/docs/hooks/async-network/use-async"
+  }
+}

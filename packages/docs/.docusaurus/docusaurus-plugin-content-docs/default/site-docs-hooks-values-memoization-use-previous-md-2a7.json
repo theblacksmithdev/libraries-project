@@ -1,0 +1,28 @@
+{
+  "id": "hooks/values-memoization/use-previous",
+  "title": "usePrevious",
+  "description": "Returns the value from the previous render cycle.",
+  "source": "@site/docs/hooks/values-memoization/use-previous.md",
+  "sourceDirName": "hooks/values-memoization",
+  "slug": "/hooks/values-memoization/use-previous",
+  "permalink": "/docs/hooks/values-memoization/use-previous",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/oluwatobimaxwell/libraries-project/tree/master/packages/docs/docs/hooks/values-memoization/use-previous.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar_label": "usePrevious",
+    "title": "usePrevious",
+    "description": "Returns the value from the previous render cycle."
+  },
+  "sidebar": "hooksSidebar",
+  "previous": {
+    "title": "useThrottledCallback",
+    "permalink": "/docs/hooks/values-memoization/use-throttled-callback"
+  },
+  "next": {
+    "title": "useLatest",
+    "permalink": "/docs/hooks/values-memoization/use-latest"
+  }
+}

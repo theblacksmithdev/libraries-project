@@ -1,0 +1,28 @@
+{
+  "id": "hooks/state-data/use-local-storage",
+  "title": "useLocalStorage",
+  "description": "Persists state to localStorage with automatic JSON serialization, cross-tab sync, and SSR safety.",
+  "source": "@site/docs/hooks/state-data/use-local-storage.md",
+  "sourceDirName": "hooks/state-data",
+  "slug": "/hooks/state-data/use-local-storage",
+  "permalink": "/docs/hooks/state-data/use-local-storage",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/oluwatobimaxwell/libraries-project/tree/master/packages/docs/docs/hooks/state-data/use-local-storage.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar_label": "useLocalStorage",
+    "title": "useLocalStorage",
+    "description": "Persists state to localStorage with automatic JSON serialization, cross-tab sync, and SSR safety."
+  },
+  "sidebar": "hooksSidebar",
+  "previous": {
+    "title": "useStack",
+    "permalink": "/docs/hooks/state-data/use-stack"
+  },
+  "next": {
+    "title": "useSessionStorage",
+    "permalink": "/docs/hooks/state-data/use-session-storage"
+  }
+}

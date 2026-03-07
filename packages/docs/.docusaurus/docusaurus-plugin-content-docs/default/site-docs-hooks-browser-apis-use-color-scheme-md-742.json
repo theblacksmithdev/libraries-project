@@ -1,0 +1,28 @@
+{
+  "id": "hooks/browser-apis/use-color-scheme",
+  "title": "useColorScheme",
+  "description": "Returns the user's OS-level color scheme preference (light or dark).",
+  "source": "@site/docs/hooks/browser-apis/use-color-scheme.md",
+  "sourceDirName": "hooks/browser-apis",
+  "slug": "/hooks/browser-apis/use-color-scheme",
+  "permalink": "/docs/hooks/browser-apis/use-color-scheme",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/oluwatobimaxwell/libraries-project/tree/master/packages/docs/docs/hooks/browser-apis/use-color-scheme.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar_label": "useColorScheme",
+    "title": "useColorScheme",
+    "description": "Returns the user's OS-level color scheme preference (light or dark)."
+  },
+  "sidebar": "hooksSidebar",
+  "previous": {
+    "title": "useDarkMode",
+    "permalink": "/docs/hooks/browser-apis/use-dark-mode"
+  },
+  "next": {
+    "title": "useCopyToClipboard",
+    "permalink": "/docs/hooks/browser-apis/use-copy-to-clipboard"
+  }
+}

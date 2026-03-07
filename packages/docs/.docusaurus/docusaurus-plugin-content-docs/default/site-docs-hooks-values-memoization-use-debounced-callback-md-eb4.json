@@ -1,0 +1,28 @@
+{
+  "id": "hooks/values-memoization/use-debounced-callback",
+  "title": "useDebouncedCallback",
+  "description": "Returns a debounced version of a callback function that delays invocation until after a specified delay.",
+  "source": "@site/docs/hooks/values-memoization/use-debounced-callback.md",
+  "sourceDirName": "hooks/values-memoization",
+  "slug": "/hooks/values-memoization/use-debounced-callback",
+  "permalink": "/docs/hooks/values-memoization/use-debounced-callback",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/oluwatobimaxwell/libraries-project/tree/master/packages/docs/docs/hooks/values-memoization/use-debounced-callback.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar_label": "useDebouncedCallback",
+    "title": "useDebouncedCallback",
+    "description": "Returns a debounced version of a callback function that delays invocation until after a specified delay."
+  },
+  "sidebar": "hooksSidebar",
+  "previous": {
+    "title": "useDebounce",
+    "permalink": "/docs/hooks/values-memoization/use-debounce"
+  },
+  "next": {
+    "title": "useThrottle",
+    "permalink": "/docs/hooks/values-memoization/use-throttle"
+  }
+}

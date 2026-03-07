@@ -1,0 +1,28 @@
+{
+  "id": "hooks/dom-browser/use-swipe",
+  "title": "useSwipe",
+  "description": "Detects swipe gestures on touch devices, reporting direction and delta values.",
+  "source": "@site/docs/hooks/dom-browser/use-swipe.md",
+  "sourceDirName": "hooks/dom-browser",
+  "slug": "/hooks/dom-browser/use-swipe",
+  "permalink": "/docs/hooks/dom-browser/use-swipe",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/oluwatobimaxwell/libraries-project/tree/master/packages/docs/docs/hooks/dom-browser/use-swipe.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar_label": "useSwipe",
+    "title": "useSwipe",
+    "description": "Detects swipe gestures on touch devices, reporting direction and delta values."
+  },
+  "sidebar": "hooksSidebar",
+  "previous": {
+    "title": "useBoundingClientRect",
+    "permalink": "/docs/hooks/dom-browser/use-bounding-client-rect"
+  },
+  "next": {
+    "title": "useDrag",
+    "permalink": "/docs/hooks/dom-browser/use-drag"
+  }
+}

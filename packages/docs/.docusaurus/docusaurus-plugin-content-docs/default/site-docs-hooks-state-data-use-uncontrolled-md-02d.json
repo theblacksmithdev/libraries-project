@@ -1,0 +1,28 @@
+{
+  "id": "hooks/state-data/use-uncontrolled",
+  "title": "useUncontrolled",
+  "description": "Enables a component to work in both controlled and uncontrolled modes with a single API.",
+  "source": "@site/docs/hooks/state-data/use-uncontrolled.md",
+  "sourceDirName": "hooks/state-data",
+  "slug": "/hooks/state-data/use-uncontrolled",
+  "permalink": "/docs/hooks/state-data/use-uncontrolled",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/oluwatobimaxwell/libraries-project/tree/master/packages/docs/docs/hooks/state-data/use-uncontrolled.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar_label": "useUncontrolled",
+    "title": "useUncontrolled",
+    "description": "Enables a component to work in both controlled and uncontrolled modes with a single API."
+  },
+  "sidebar": "hooksSidebar",
+  "previous": {
+    "title": "useSessionStorage",
+    "permalink": "/docs/hooks/state-data/use-session-storage"
+  },
+  "next": {
+    "title": "useDebounce",
+    "permalink": "/docs/hooks/values-memoization/use-debounce"
+  }
+}

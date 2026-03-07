@@ -1,0 +1,28 @@
+{
+  "id": "hooks/layout-ui/use-infinite-scroll",
+  "title": "useInfiniteScroll",
+  "description": "Triggers a callback when a scrollable element is near its bottom, enabling infinite scroll pagination.",
+  "source": "@site/docs/hooks/layout-ui/use-infinite-scroll.md",
+  "sourceDirName": "hooks/layout-ui",
+  "slug": "/hooks/layout-ui/use-infinite-scroll",
+  "permalink": "/docs/hooks/layout-ui/use-infinite-scroll",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/oluwatobimaxwell/libraries-project/tree/master/packages/docs/docs/hooks/layout-ui/use-infinite-scroll.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar_label": "useInfiniteScroll",
+    "title": "useInfiniteScroll",
+    "description": "Triggers a callback when a scrollable element is near its bottom, enabling infinite scroll pagination."
+  },
+  "sidebar": "hooksSidebar",
+  "previous": {
+    "title": "useVirtualList",
+    "permalink": "/docs/hooks/layout-ui/use-virtual-list"
+  },
+  "next": {
+    "title": "useCollapse",
+    "permalink": "/docs/hooks/layout-ui/use-collapse"
+  }
+}

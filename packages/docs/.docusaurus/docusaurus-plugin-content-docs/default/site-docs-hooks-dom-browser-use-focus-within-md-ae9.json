@@ -1,0 +1,28 @@
+{
+  "id": "hooks/dom-browser/use-focus-within",
+  "title": "useFocusWithin",
+  "description": "Tracks whether focus is currently within a container element or any of its descendants.",
+  "source": "@site/docs/hooks/dom-browser/use-focus-within.md",
+  "sourceDirName": "hooks/dom-browser",
+  "slug": "/hooks/dom-browser/use-focus-within",
+  "permalink": "/docs/hooks/dom-browser/use-focus-within",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/oluwatobimaxwell/libraries-project/tree/master/packages/docs/docs/hooks/dom-browser/use-focus-within.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar_label": "useFocusWithin",
+    "title": "useFocusWithin",
+    "description": "Tracks whether focus is currently within a container element or any of its descendants."
+  },
+  "sidebar": "hooksSidebar",
+  "previous": {
+    "title": "useTextSelection",
+    "permalink": "/docs/hooks/dom-browser/use-text-selection"
+  },
+  "next": {
+    "title": "useFocusTrap",
+    "permalink": "/docs/hooks/dom-browser/use-focus-trap"
+  }
+}

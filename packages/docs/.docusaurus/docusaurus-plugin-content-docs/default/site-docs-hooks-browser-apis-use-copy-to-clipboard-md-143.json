@@ -1,0 +1,28 @@
+{
+  "id": "hooks/browser-apis/use-copy-to-clipboard",
+  "title": "useCopyToClipboard",
+  "description": "Copies text to the clipboard using the Clipboard API and tracks the copy status.",
+  "source": "@site/docs/hooks/browser-apis/use-copy-to-clipboard.md",
+  "sourceDirName": "hooks/browser-apis",
+  "slug": "/hooks/browser-apis/use-copy-to-clipboard",
+  "permalink": "/docs/hooks/browser-apis/use-copy-to-clipboard",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/oluwatobimaxwell/libraries-project/tree/master/packages/docs/docs/hooks/browser-apis/use-copy-to-clipboard.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar_label": "useCopyToClipboard",
+    "title": "useCopyToClipboard",
+    "description": "Copies text to the clipboard using the Clipboard API and tracks the copy status."
+  },
+  "sidebar": "hooksSidebar",
+  "previous": {
+    "title": "useColorScheme",
+    "permalink": "/docs/hooks/browser-apis/use-color-scheme"
+  },
+  "next": {
+    "title": "useOnline",
+    "permalink": "/docs/hooks/browser-apis/use-online"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "hooks/state-data/use-set",
+  "title": "useSet",
+  "description": "Manages a Set state with methods to add, remove, toggle, and check membership of unique values.",
+  "source": "@site/docs/hooks/state-data/use-set.md",
+  "sourceDirName": "hooks/state-data",
+  "slug": "/hooks/state-data/use-set",
+  "permalink": "/docs/hooks/state-data/use-set",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/oluwatobimaxwell/libraries-project/tree/master/packages/docs/docs/hooks/state-data/use-set.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar_label": "useSet",
+    "title": "useSet",
+    "description": "Manages a Set state with methods to add, remove, toggle, and check membership of unique values."
+  },
+  "sidebar": "hooksSidebar",
+  "previous": {
+    "title": "useMap",
+    "permalink": "/docs/hooks/state-data/use-map"
+  },
+  "next": {
+    "title": "useHistoryState",
+    "permalink": "/docs/hooks/state-data/use-history-state"
+  }
+}

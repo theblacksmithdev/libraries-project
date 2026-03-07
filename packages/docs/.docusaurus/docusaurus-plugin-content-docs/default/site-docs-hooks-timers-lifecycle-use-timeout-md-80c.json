@@ -1,0 +1,28 @@
+{
+  "id": "hooks/timers-lifecycle/use-timeout",
+  "title": "useTimeout",
+  "description": "A declarative hook for scheduling a one-shot timeout with a clear handle.",
+  "source": "@site/docs/hooks/timers-lifecycle/use-timeout.md",
+  "sourceDirName": "hooks/timers-lifecycle",
+  "slug": "/hooks/timers-lifecycle/use-timeout",
+  "permalink": "/docs/hooks/timers-lifecycle/use-timeout",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/oluwatobimaxwell/libraries-project/tree/master/packages/docs/docs/hooks/timers-lifecycle/use-timeout.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar_label": "useTimeout",
+    "title": "useTimeout",
+    "description": "A declarative hook for scheduling a one-shot timeout with a clear handle."
+  },
+  "sidebar": "hooksSidebar",
+  "previous": {
+    "title": "useInterval",
+    "permalink": "/docs/hooks/timers-lifecycle/use-interval"
+  },
+  "next": {
+    "title": "useCountdown",
+    "permalink": "/docs/hooks/timers-lifecycle/use-countdown"
+  }
+}

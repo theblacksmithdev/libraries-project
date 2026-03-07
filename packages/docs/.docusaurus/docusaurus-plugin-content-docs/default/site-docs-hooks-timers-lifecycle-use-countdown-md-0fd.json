@@ -1,0 +1,28 @@
+{
+  "id": "hooks/timers-lifecycle/use-countdown",
+  "title": "useCountdown",
+  "description": "A countdown timer hook with start, pause, and reset controls.",
+  "source": "@site/docs/hooks/timers-lifecycle/use-countdown.md",
+  "sourceDirName": "hooks/timers-lifecycle",
+  "slug": "/hooks/timers-lifecycle/use-countdown",
+  "permalink": "/docs/hooks/timers-lifecycle/use-countdown",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/oluwatobimaxwell/libraries-project/tree/master/packages/docs/docs/hooks/timers-lifecycle/use-countdown.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar_label": "useCountdown",
+    "title": "useCountdown",
+    "description": "A countdown timer hook with start, pause, and reset controls."
+  },
+  "sidebar": "hooksSidebar",
+  "previous": {
+    "title": "useTimeout",
+    "permalink": "/docs/hooks/timers-lifecycle/use-timeout"
+  },
+  "next": {
+    "title": "useStopwatch",
+    "permalink": "/docs/hooks/timers-lifecycle/use-stopwatch"
+  }
+}

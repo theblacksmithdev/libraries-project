@@ -1,0 +1,28 @@
+{
+  "id": "hooks/timers-lifecycle/use-isomorphic-layout-effect",
+  "title": "useIsomorphicLayoutEffect",
+  "description": "An SSR-safe drop-in replacement that uses useLayoutEffect in the browser and useEffect on the server.",
+  "source": "@site/docs/hooks/timers-lifecycle/use-isomorphic-layout-effect.md",
+  "sourceDirName": "hooks/timers-lifecycle",
+  "slug": "/hooks/timers-lifecycle/use-isomorphic-layout-effect",
+  "permalink": "/docs/hooks/timers-lifecycle/use-isomorphic-layout-effect",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/oluwatobimaxwell/libraries-project/tree/master/packages/docs/docs/hooks/timers-lifecycle/use-isomorphic-layout-effect.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar_label": "useIsomorphicLayoutEffect",
+    "title": "useIsomorphicLayoutEffect",
+    "description": "An SSR-safe drop-in replacement that uses useLayoutEffect in the browser and useEffect on the server."
+  },
+  "sidebar": "hooksSidebar",
+  "previous": {
+    "title": "useUpdateEffect",
+    "permalink": "/docs/hooks/timers-lifecycle/use-update-effect"
+  },
+  "next": {
+    "title": "useIsMounted",
+    "permalink": "/docs/hooks/timers-lifecycle/use-is-mounted"
+  }
+}

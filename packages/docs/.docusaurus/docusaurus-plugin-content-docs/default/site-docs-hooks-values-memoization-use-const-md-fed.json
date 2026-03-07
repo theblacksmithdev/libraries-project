@@ -1,0 +1,28 @@
+{
+  "id": "hooks/values-memoization/use-const",
+  "title": "useConst",
+  "description": "Initializes and returns a constant value that is computed once and never changes across re-renders.",
+  "source": "@site/docs/hooks/values-memoization/use-const.md",
+  "sourceDirName": "hooks/values-memoization",
+  "slug": "/hooks/values-memoization/use-const",
+  "permalink": "/docs/hooks/values-memoization/use-const",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/oluwatobimaxwell/libraries-project/tree/master/packages/docs/docs/hooks/values-memoization/use-const.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar_label": "useConst",
+    "title": "useConst",
+    "description": "Initializes and returns a constant value that is computed once and never changes across re-renders."
+  },
+  "sidebar": "hooksSidebar",
+  "previous": {
+    "title": "useLatest",
+    "permalink": "/docs/hooks/values-memoization/use-latest"
+  },
+  "next": {
+    "title": "useSyncedRef",
+    "permalink": "/docs/hooks/values-memoization/use-synced-ref"
+  }
+}

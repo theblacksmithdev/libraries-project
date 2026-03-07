@@ -1,0 +1,28 @@
+{
+  "id": "hooks/browser-apis/use-online",
+  "title": "useOnline",
+  "description": "Tracks the browser's online/offline network status.",
+  "source": "@site/docs/hooks/browser-apis/use-online.md",
+  "sourceDirName": "hooks/browser-apis",
+  "slug": "/hooks/browser-apis/use-online",
+  "permalink": "/docs/hooks/browser-apis/use-online",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/oluwatobimaxwell/libraries-project/tree/master/packages/docs/docs/hooks/browser-apis/use-online.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar_label": "useOnline",
+    "title": "useOnline",
+    "description": "Tracks the browser's online/offline network status."
+  },
+  "sidebar": "hooksSidebar",
+  "previous": {
+    "title": "useCopyToClipboard",
+    "permalink": "/docs/hooks/browser-apis/use-copy-to-clipboard"
+  },
+  "next": {
+    "title": "useWindowSize",
+    "permalink": "/docs/hooks/browser-apis/use-window-size"
+  }
+}

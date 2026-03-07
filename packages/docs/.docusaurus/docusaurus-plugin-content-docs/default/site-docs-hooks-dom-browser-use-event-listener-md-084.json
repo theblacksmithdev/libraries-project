@@ -1,0 +1,28 @@
+{
+  "id": "hooks/dom-browser/use-event-listener",
+  "title": "useEventListener",
+  "description": "Attaches an event listener to the window or a specific HTML element with automatic cleanup.",
+  "source": "@site/docs/hooks/dom-browser/use-event-listener.md",
+  "sourceDirName": "hooks/dom-browser",
+  "slug": "/hooks/dom-browser/use-event-listener",
+  "permalink": "/docs/hooks/dom-browser/use-event-listener",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/oluwatobimaxwell/libraries-project/tree/master/packages/docs/docs/hooks/dom-browser/use-event-listener.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar_label": "useEventListener",
+    "title": "useEventListener",
+    "description": "Attaches an event listener to the window or a specific HTML element with automatic cleanup."
+  },
+  "sidebar": "hooksSidebar",
+  "previous": {
+    "title": "useClickOutside",
+    "permalink": "/docs/hooks/dom-browser/use-click-outside"
+  },
+  "next": {
+    "title": "useElementSize",
+    "permalink": "/docs/hooks/dom-browser/use-element-size"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "hooks/layout-ui/use-virtual-list",
+  "title": "useVirtualList",
+  "description": "Virtualizes a large list by only rendering the visible items plus an overscan buffer.",
+  "source": "@site/docs/hooks/layout-ui/use-virtual-list.md",
+  "sourceDirName": "hooks/layout-ui",
+  "slug": "/hooks/layout-ui/use-virtual-list",
+  "permalink": "/docs/hooks/layout-ui/use-virtual-list",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/oluwatobimaxwell/libraries-project/tree/master/packages/docs/docs/hooks/layout-ui/use-virtual-list.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar_label": "useVirtualList",
+    "title": "useVirtualList",
+    "description": "Virtualizes a large list by only rendering the visible items plus an overscan buffer."
+  },
+  "sidebar": "hooksSidebar",
+  "previous": {
+    "title": "useStickyHeader",
+    "permalink": "/docs/hooks/layout-ui/use-sticky-header"
+  },
+  "next": {
+    "title": "useInfiniteScroll",
+    "permalink": "/docs/hooks/layout-ui/use-infinite-scroll"
+  }
+}

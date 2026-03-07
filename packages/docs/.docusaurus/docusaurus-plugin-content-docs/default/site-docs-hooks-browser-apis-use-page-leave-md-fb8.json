@@ -1,0 +1,28 @@
+{
+  "id": "hooks/browser-apis/use-page-leave",
+  "title": "usePageLeave",
+  "description": "Fires a callback when the user's cursor leaves the page viewport (moves above the top of the document).",
+  "source": "@site/docs/hooks/browser-apis/use-page-leave.md",
+  "sourceDirName": "hooks/browser-apis",
+  "slug": "/hooks/browser-apis/use-page-leave",
+  "permalink": "/docs/hooks/browser-apis/use-page-leave",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/oluwatobimaxwell/libraries-project/tree/master/packages/docs/docs/hooks/browser-apis/use-page-leave.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar_label": "usePageLeave",
+    "title": "usePageLeave",
+    "description": "Fires a callback when the user's cursor leaves the page viewport (moves above the top of the document)."
+  },
+  "sidebar": "hooksSidebar",
+  "previous": {
+    "title": "usePageVisibility",
+    "permalink": "/docs/hooks/browser-apis/use-page-visibility"
+  },
+  "next": {
+    "title": "useFavicon",
+    "permalink": "/docs/hooks/browser-apis/use-favicon"
+  }
+}

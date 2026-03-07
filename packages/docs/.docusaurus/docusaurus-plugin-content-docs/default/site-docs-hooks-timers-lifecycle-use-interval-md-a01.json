@@ -1,0 +1,28 @@
+{
+  "id": "hooks/timers-lifecycle/use-interval",
+  "title": "useInterval",
+  "description": "A declarative hook for setting up recurring intervals that auto-cleans on unmount.",
+  "source": "@site/docs/hooks/timers-lifecycle/use-interval.md",
+  "sourceDirName": "hooks/timers-lifecycle",
+  "slug": "/hooks/timers-lifecycle/use-interval",
+  "permalink": "/docs/hooks/timers-lifecycle/use-interval",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/oluwatobimaxwell/libraries-project/tree/master/packages/docs/docs/hooks/timers-lifecycle/use-interval.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar_label": "useInterval",
+    "title": "useInterval",
+    "description": "A declarative hook for setting up recurring intervals that auto-cleans on unmount."
+  },
+  "sidebar": "hooksSidebar",
+  "previous": {
+    "title": "useIntersectionObserver",
+    "permalink": "/docs/hooks/dom-browser/use-intersection-observer"
+  },
+  "next": {
+    "title": "useTimeout",
+    "permalink": "/docs/hooks/timers-lifecycle/use-timeout"
+  }
+}

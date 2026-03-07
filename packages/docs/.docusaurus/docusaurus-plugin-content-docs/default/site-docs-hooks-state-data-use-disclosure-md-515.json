@@ -1,0 +1,28 @@
+{
+  "id": "hooks/state-data/use-disclosure",
+  "title": "useDisclosure",
+  "description": "Manages open/close boolean state for UI elements like modals, drawers, and popovers.",
+  "source": "@site/docs/hooks/state-data/use-disclosure.md",
+  "sourceDirName": "hooks/state-data",
+  "slug": "/hooks/state-data/use-disclosure",
+  "permalink": "/docs/hooks/state-data/use-disclosure",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/oluwatobimaxwell/libraries-project/tree/master/packages/docs/docs/hooks/state-data/use-disclosure.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar_label": "useDisclosure",
+    "title": "useDisclosure",
+    "description": "Manages open/close boolean state for UI elements like modals, drawers, and popovers."
+  },
+  "sidebar": "hooksSidebar",
+  "previous": {
+    "title": "useToggle",
+    "permalink": "/docs/hooks/state-data/use-toggle"
+  },
+  "next": {
+    "title": "useCounter",
+    "permalink": "/docs/hooks/state-data/use-counter"
+  }
+}

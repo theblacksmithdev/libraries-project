@@ -1,0 +1,25 @@
+{
+  "id": "intro",
+  "title": "Introduction",
+  "description": "Get started with @blacksmith-ui/hooks — 75 production-ready React hooks.",
+  "source": "@site/docs/intro.md",
+  "sourceDirName": ".",
+  "slug": "/intro",
+  "permalink": "/docs/intro",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/oluwatobimaxwell/libraries-project/tree/master/packages/docs/docs/intro.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "sidebar_position": 1,
+    "title": "Introduction",
+    "description": "Get started with @blacksmith-ui/hooks — 75 production-ready React hooks."
+  },
+  "sidebar": "hooksSidebar",
+  "next": {
+    "title": "Getting Started",
+    "permalink": "/docs/hooks/getting-started"
+  }
+}

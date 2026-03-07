@@ -1,0 +1,28 @@
+{
+  "id": "hooks/async-network/use-abort-controller",
+  "title": "useAbortController",
+  "description": "Provides a managed AbortController that automatically aborts on unmount and supports request cancellation.",
+  "source": "@site/docs/hooks/async-network/use-abort-controller.md",
+  "sourceDirName": "hooks/async-network",
+  "slug": "/hooks/async-network/use-abort-controller",
+  "permalink": "/docs/hooks/async-network/use-abort-controller",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/oluwatobimaxwell/libraries-project/tree/master/packages/docs/docs/hooks/async-network/use-abort-controller.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar_label": "useAbortController",
+    "title": "useAbortController",
+    "description": "Provides a managed AbortController that automatically aborts on unmount and supports request cancellation."
+  },
+  "sidebar": "hooksSidebar",
+  "previous": {
+    "title": "usePolling",
+    "permalink": "/docs/hooks/async-network/use-polling"
+  },
+  "next": {
+    "title": "useRetry",
+    "permalink": "/docs/hooks/async-network/use-retry"
+  }
+}

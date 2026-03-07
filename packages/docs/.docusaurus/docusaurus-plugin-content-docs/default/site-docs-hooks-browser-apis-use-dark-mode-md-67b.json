@@ -1,0 +1,28 @@
+{
+  "id": "hooks/browser-apis/use-dark-mode",
+  "title": "useDarkMode",
+  "description": "Manages dark mode state with localStorage persistence and class-based toggling on the document root.",
+  "source": "@site/docs/hooks/browser-apis/use-dark-mode.md",
+  "sourceDirName": "hooks/browser-apis",
+  "slug": "/hooks/browser-apis/use-dark-mode",
+  "permalink": "/docs/hooks/browser-apis/use-dark-mode",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/oluwatobimaxwell/libraries-project/tree/master/packages/docs/docs/hooks/browser-apis/use-dark-mode.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar_label": "useDarkMode",
+    "title": "useDarkMode",
+    "description": "Manages dark mode state with localStorage persistence and class-based toggling on the document root."
+  },
+  "sidebar": "hooksSidebar",
+  "previous": {
+    "title": "useMediaQuery",
+    "permalink": "/docs/hooks/browser-apis/use-media-query"
+  },
+  "next": {
+    "title": "useColorScheme",
+    "permalink": "/docs/hooks/browser-apis/use-color-scheme"
+  }
+}

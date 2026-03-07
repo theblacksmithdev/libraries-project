@@ -1,0 +1,28 @@
+{
+  "id": "hooks/async-network/use-script",
+  "title": "useScript",
+  "description": "Dynamically loads an external script tag and tracks its loading status.",
+  "source": "@site/docs/hooks/async-network/use-script.md",
+  "sourceDirName": "hooks/async-network",
+  "slug": "/hooks/async-network/use-script",
+  "permalink": "/docs/hooks/async-network/use-script",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/oluwatobimaxwell/libraries-project/tree/master/packages/docs/docs/hooks/async-network/use-script.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar_label": "useScript",
+    "title": "useScript",
+    "description": "Dynamically loads an external script tag and tracks its loading status."
+  },
+  "sidebar": "hooksSidebar",
+  "previous": {
+    "title": "useAsync",
+    "permalink": "/docs/hooks/async-network/use-async"
+  },
+  "next": {
+    "title": "useWebSocket",
+    "permalink": "/docs/hooks/async-network/use-web-socket"
+  }
+}

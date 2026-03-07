@@ -1,0 +1,413 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "path": "/docs",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/docs",
+          "mainDocId": "intro",
+          "docs": [
+            {
+              "id": "hooks/async-network/use-abort-controller",
+              "path": "/docs/hooks/async-network/use-abort-controller",
+              "sidebar": "hooksSidebar"
+            },
+            {
+              "id": "hooks/async-network/use-async",
+              "path": "/docs/hooks/async-network/use-async",
+              "sidebar": "hooksSidebar"
+            },
+            {
+              "id": "hooks/async-network/use-fetch",
+              "path": "/docs/hooks/async-network/use-fetch",
+              "sidebar": "hooksSidebar"
+            },
+            {
+              "id": "hooks/async-network/use-polling",
+              "path": "/docs/hooks/async-network/use-polling",
+              "sidebar": "hooksSidebar"
+            },
+            {
+              "id": "hooks/async-network/use-retry",
+              "path": "/docs/hooks/async-network/use-retry",
+              "sidebar": "hooksSidebar"
+            },
+            {
+              "id": "hooks/async-network/use-script",
+              "path": "/docs/hooks/async-network/use-script",
+              "sidebar": "hooksSidebar"
+            },
+            {
+              "id": "hooks/async-network/use-search",
+              "path": "/docs/hooks/async-network/use-search",
+              "sidebar": "hooksSidebar"
+            },
+            {
+              "id": "hooks/async-network/use-sse",
+              "path": "/docs/hooks/async-network/use-sse",
+              "sidebar": "hooksSidebar"
+            },
+            {
+              "id": "hooks/async-network/use-web-socket",
+              "path": "/docs/hooks/async-network/use-web-socket",
+              "sidebar": "hooksSidebar"
+            },
+            {
+              "id": "hooks/browser-apis/use-breakpoint",
+              "path": "/docs/hooks/browser-apis/use-breakpoint",
+              "sidebar": "hooksSidebar"
+            },
+            {
+              "id": "hooks/browser-apis/use-color-scheme",
+              "path": "/docs/hooks/browser-apis/use-color-scheme",
+              "sidebar": "hooksSidebar"
+            },
+            {
+              "id": "hooks/browser-apis/use-copy-to-clipboard",
+              "path": "/docs/hooks/browser-apis/use-copy-to-clipboard",
+              "sidebar": "hooksSidebar"
+            },
+            {
+              "id": "hooks/browser-apis/use-dark-mode",
+              "path": "/docs/hooks/browser-apis/use-dark-mode",
+              "sidebar": "hooksSidebar"
+            },
+            {
+              "id": "hooks/browser-apis/use-favicon",
+              "path": "/docs/hooks/browser-apis/use-favicon",
+              "sidebar": "hooksSidebar"
+            },
+            {
+              "id": "hooks/browser-apis/use-is-client",
+              "path": "/docs/hooks/browser-apis/use-is-client",
+              "sidebar": "hooksSidebar"
+            },
+            {
+              "id": "hooks/browser-apis/use-media-query",
+              "path": "/docs/hooks/browser-apis/use-media-query",
+              "sidebar": "hooksSidebar"
+            },
+            {
+              "id": "hooks/browser-apis/use-online",
+              "path": "/docs/hooks/browser-apis/use-online",
+              "sidebar": "hooksSidebar"
+            },
+            {
+              "id": "hooks/browser-apis/use-page-leave",
+              "path": "/docs/hooks/browser-apis/use-page-leave",
+              "sidebar": "hooksSidebar"
+            },
+            {
+              "id": "hooks/browser-apis/use-page-visibility",
+              "path": "/docs/hooks/browser-apis/use-page-visibility",
+              "sidebar": "hooksSidebar"
+            },
+            {
+              "id": "hooks/browser-apis/use-reduced-motion",
+              "path": "/docs/hooks/browser-apis/use-reduced-motion",
+              "sidebar": "hooksSidebar"
+            },
+            {
+              "id": "hooks/browser-apis/use-window-size",
+              "path": "/docs/hooks/browser-apis/use-window-size",
+              "sidebar": "hooksSidebar"
+            },
+            {
+              "id": "hooks/dom-browser/use-bounding-client-rect",
+              "path": "/docs/hooks/dom-browser/use-bounding-client-rect",
+              "sidebar": "hooksSidebar"
+            },
+            {
+              "id": "hooks/dom-browser/use-click-outside",
+              "path": "/docs/hooks/dom-browser/use-click-outside",
+              "sidebar": "hooksSidebar"
+            },
+            {
+              "id": "hooks/dom-browser/use-drag",
+              "path": "/docs/hooks/dom-browser/use-drag",
+              "sidebar": "hooksSidebar"
+            },
+            {
+              "id": "hooks/dom-browser/use-element-size",
+              "path": "/docs/hooks/dom-browser/use-element-size",
+              "sidebar": "hooksSidebar"
+            },
+            {
+              "id": "hooks/dom-browser/use-element-visibility",
+              "path": "/docs/hooks/dom-browser/use-element-visibility",
+              "sidebar": "hooksSidebar"
+            },
+            {
+              "id": "hooks/dom-browser/use-event-listener",
+              "path": "/docs/hooks/dom-browser/use-event-listener",
+              "sidebar": "hooksSidebar"
+            },
+            {
+              "id": "hooks/dom-browser/use-focus-trap",
+              "path": "/docs/hooks/dom-browser/use-focus-trap",
+              "sidebar": "hooksSidebar"
+            },
+            {
+              "id": "hooks/dom-browser/use-focus-within",
+              "path": "/docs/hooks/dom-browser/use-focus-within",
+              "sidebar": "hooksSidebar"
+            },
+            {
+              "id": "hooks/dom-browser/use-fullscreen",
+              "path": "/docs/hooks/dom-browser/use-fullscreen",
+              "sidebar": "hooksSidebar"
+            },
+            {
+              "id": "hooks/dom-browser/use-hover",
+              "path": "/docs/hooks/dom-browser/use-hover",
+              "sidebar": "hooksSidebar"
+            },
+            {
+              "id": "hooks/dom-browser/use-intersection-observer",
+              "path": "/docs/hooks/dom-browser/use-intersection-observer",
+              "sidebar": "hooksSidebar"
+            },
+            {
+              "id": "hooks/dom-browser/use-key-combo",
+              "path": "/docs/hooks/dom-browser/use-key-combo",
+              "sidebar": "hooksSidebar"
+            },
+            {
+              "id": "hooks/dom-browser/use-key-press",
+              "path": "/docs/hooks/dom-browser/use-key-press",
+              "sidebar": "hooksSidebar"
+            },
+            {
+              "id": "hooks/dom-browser/use-long-press",
+              "path": "/docs/hooks/dom-browser/use-long-press",
+              "sidebar": "hooksSidebar"
+            },
+            {
+              "id": "hooks/dom-browser/use-mutation-observer",
+              "path": "/docs/hooks/dom-browser/use-mutation-observer",
+              "sidebar": "hooksSidebar"
+            },
+            {
+              "id": "hooks/dom-browser/use-scroll-lock",
+              "path": "/docs/hooks/dom-browser/use-scroll-lock",
+              "sidebar": "hooksSidebar"
+            },
+            {
+              "id": "hooks/dom-browser/use-scroll-position",
+              "path": "/docs/hooks/dom-browser/use-scroll-position",
+              "sidebar": "hooksSidebar"
+            },
+            {
+              "id": "hooks/dom-browser/use-swipe",
+              "path": "/docs/hooks/dom-browser/use-swipe",
+              "sidebar": "hooksSidebar"
+            },
+            {
+              "id": "hooks/dom-browser/use-text-selection",
+              "path": "/docs/hooks/dom-browser/use-text-selection",
+              "sidebar": "hooksSidebar"
+            },
+            {
+              "id": "hooks/getting-started",
+              "path": "/docs/hooks/getting-started",
+              "sidebar": "hooksSidebar"
+            },
+            {
+              "id": "hooks/layout-ui/use-collapse",
+              "path": "/docs/hooks/layout-ui/use-collapse",
+              "sidebar": "hooksSidebar"
+            },
+            {
+              "id": "hooks/layout-ui/use-infinite-scroll",
+              "path": "/docs/hooks/layout-ui/use-infinite-scroll",
+              "sidebar": "hooksSidebar"
+            },
+            {
+              "id": "hooks/layout-ui/use-steps",
+              "path": "/docs/hooks/layout-ui/use-steps",
+              "sidebar": "hooksSidebar"
+            },
+            {
+              "id": "hooks/layout-ui/use-sticky-header",
+              "path": "/docs/hooks/layout-ui/use-sticky-header",
+              "sidebar": "hooksSidebar"
+            },
+            {
+              "id": "hooks/layout-ui/use-virtual-list",
+              "path": "/docs/hooks/layout-ui/use-virtual-list",
+              "sidebar": "hooksSidebar"
+            },
+            {
+              "id": "hooks/state-data/use-counter",
+              "path": "/docs/hooks/state-data/use-counter",
+              "sidebar": "hooksSidebar"
+            },
+            {
+              "id": "hooks/state-data/use-default",
+              "path": "/docs/hooks/state-data/use-default",
+              "sidebar": "hooksSidebar"
+            },
+            {
+              "id": "hooks/state-data/use-disclosure",
+              "path": "/docs/hooks/state-data/use-disclosure",
+              "sidebar": "hooksSidebar"
+            },
+            {
+              "id": "hooks/state-data/use-history-state",
+              "path": "/docs/hooks/state-data/use-history-state",
+              "sidebar": "hooksSidebar"
+            },
+            {
+              "id": "hooks/state-data/use-list",
+              "path": "/docs/hooks/state-data/use-list",
+              "sidebar": "hooksSidebar"
+            },
+            {
+              "id": "hooks/state-data/use-local-storage",
+              "path": "/docs/hooks/state-data/use-local-storage",
+              "sidebar": "hooksSidebar"
+            },
+            {
+              "id": "hooks/state-data/use-map",
+              "path": "/docs/hooks/state-data/use-map",
+              "sidebar": "hooksSidebar"
+            },
+            {
+              "id": "hooks/state-data/use-queue",
+              "path": "/docs/hooks/state-data/use-queue",
+              "sidebar": "hooksSidebar"
+            },
+            {
+              "id": "hooks/state-data/use-session-storage",
+              "path": "/docs/hooks/state-data/use-session-storage",
+              "sidebar": "hooksSidebar"
+            },
+            {
+              "id": "hooks/state-data/use-set",
+              "path": "/docs/hooks/state-data/use-set",
+              "sidebar": "hooksSidebar"
+            },
+            {
+              "id": "hooks/state-data/use-stack",
+              "path": "/docs/hooks/state-data/use-stack",
+              "sidebar": "hooksSidebar"
+            },
+            {
+              "id": "hooks/state-data/use-toggle",
+              "path": "/docs/hooks/state-data/use-toggle",
+              "sidebar": "hooksSidebar"
+            },
+            {
+              "id": "hooks/state-data/use-uncontrolled",
+              "path": "/docs/hooks/state-data/use-uncontrolled",
+              "sidebar": "hooksSidebar"
+            },
+            {
+              "id": "hooks/timers-lifecycle/use-countdown",
+              "path": "/docs/hooks/timers-lifecycle/use-countdown",
+              "sidebar": "hooksSidebar"
+            },
+            {
+              "id": "hooks/timers-lifecycle/use-idle-timer",
+              "path": "/docs/hooks/timers-lifecycle/use-idle-timer",
+              "sidebar": "hooksSidebar"
+            },
+            {
+              "id": "hooks/timers-lifecycle/use-interval",
+              "path": "/docs/hooks/timers-lifecycle/use-interval",
+              "sidebar": "hooksSidebar"
+            },
+            {
+              "id": "hooks/timers-lifecycle/use-is-first-render",
+              "path": "/docs/hooks/timers-lifecycle/use-is-first-render",
+              "sidebar": "hooksSidebar"
+            },
+            {
+              "id": "hooks/timers-lifecycle/use-is-mounted",
+              "path": "/docs/hooks/timers-lifecycle/use-is-mounted",
+              "sidebar": "hooksSidebar"
+            },
+            {
+              "id": "hooks/timers-lifecycle/use-isomorphic-layout-effect",
+              "path": "/docs/hooks/timers-lifecycle/use-isomorphic-layout-effect",
+              "sidebar": "hooksSidebar"
+            },
+            {
+              "id": "hooks/timers-lifecycle/use-stopwatch",
+              "path": "/docs/hooks/timers-lifecycle/use-stopwatch",
+              "sidebar": "hooksSidebar"
+            },
+            {
+              "id": "hooks/timers-lifecycle/use-timeout",
+              "path": "/docs/hooks/timers-lifecycle/use-timeout",
+              "sidebar": "hooksSidebar"
+            },
+            {
+              "id": "hooks/timers-lifecycle/use-update-effect",
+              "path": "/docs/hooks/timers-lifecycle/use-update-effect",
+              "sidebar": "hooksSidebar"
+            },
+            {
+              "id": "hooks/values-memoization/use-const",
+              "path": "/docs/hooks/values-memoization/use-const",
+              "sidebar": "hooksSidebar"
+            },
+            {
+              "id": "hooks/values-memoization/use-debounce",
+              "path": "/docs/hooks/values-memoization/use-debounce",
+              "sidebar": "hooksSidebar"
+            },
+            {
+              "id": "hooks/values-memoization/use-debounced-callback",
+              "path": "/docs/hooks/values-memoization/use-debounced-callback",
+              "sidebar": "hooksSidebar"
+            },
+            {
+              "id": "hooks/values-memoization/use-latest",
+              "path": "/docs/hooks/values-memoization/use-latest",
+              "sidebar": "hooksSidebar"
+            },
+            {
+              "id": "hooks/values-memoization/use-previous",
+              "path": "/docs/hooks/values-memoization/use-previous",
+              "sidebar": "hooksSidebar"
+            },
+            {
+              "id": "hooks/values-memoization/use-synced-ref",
+              "path": "/docs/hooks/values-memoization/use-synced-ref",
+              "sidebar": "hooksSidebar"
+            },
+            {
+              "id": "hooks/values-memoization/use-throttle",
+              "path": "/docs/hooks/values-memoization/use-throttle",
+              "sidebar": "hooksSidebar"
+            },
+            {
+              "id": "hooks/values-memoization/use-throttled-callback",
+              "path": "/docs/hooks/values-memoization/use-throttled-callback",
+              "sidebar": "hooksSidebar"
+            },
+            {
+              "id": "intro",
+              "path": "/docs/intro",
+              "sidebar": "hooksSidebar"
+            }
+          ],
+          "draftIds": [],
+          "sidebars": {
+            "hooksSidebar": {
+              "link": {
+                "path": "/docs/intro",
+                "label": "intro"
+              }
+            }
+          }
+        }
+      ],
+      "breadcrumbs": true
+    }
+  }
+}

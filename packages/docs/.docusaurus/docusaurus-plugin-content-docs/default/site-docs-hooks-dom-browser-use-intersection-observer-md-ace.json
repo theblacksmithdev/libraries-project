@@ -1,0 +1,28 @@
+{
+  "id": "hooks/dom-browser/use-intersection-observer",
+  "title": "useIntersectionObserver",
+  "description": "Observes an element's intersection with the viewport or a root element using IntersectionObserver, providing full entry details.",
+  "source": "@site/docs/hooks/dom-browser/use-intersection-observer.md",
+  "sourceDirName": "hooks/dom-browser",
+  "slug": "/hooks/dom-browser/use-intersection-observer",
+  "permalink": "/docs/hooks/dom-browser/use-intersection-observer",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/oluwatobimaxwell/libraries-project/tree/master/packages/docs/docs/hooks/dom-browser/use-intersection-observer.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar_label": "useIntersectionObserver",
+    "title": "useIntersectionObserver",
+    "description": "Observes an element's intersection with the viewport or a root element using IntersectionObserver, providing full entry details."
+  },
+  "sidebar": "hooksSidebar",
+  "previous": {
+    "title": "useMutationObserver",
+    "permalink": "/docs/hooks/dom-browser/use-mutation-observer"
+  },
+  "next": {
+    "title": "useInterval",
+    "permalink": "/docs/hooks/timers-lifecycle/use-interval"
+  }
+}

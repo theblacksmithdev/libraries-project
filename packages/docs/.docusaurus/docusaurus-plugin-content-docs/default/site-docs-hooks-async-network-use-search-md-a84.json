@@ -1,0 +1,28 @@
+{
+  "id": "hooks/async-network/use-search",
+  "title": "useSearch",
+  "description": "Filters a list of items by a debounced search query using a custom filter function.",
+  "source": "@site/docs/hooks/async-network/use-search.md",
+  "sourceDirName": "hooks/async-network",
+  "slug": "/hooks/async-network/use-search",
+  "permalink": "/docs/hooks/async-network/use-search",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/oluwatobimaxwell/libraries-project/tree/master/packages/docs/docs/hooks/async-network/use-search.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar_label": "useSearch",
+    "title": "useSearch",
+    "description": "Filters a list of items by a debounced search query using a custom filter function."
+  },
+  "sidebar": "hooksSidebar",
+  "previous": {
+    "title": "useRetry",
+    "permalink": "/docs/hooks/async-network/use-retry"
+  },
+  "next": {
+    "title": "useMediaQuery",
+    "permalink": "/docs/hooks/browser-apis/use-media-query"
+  }
+}

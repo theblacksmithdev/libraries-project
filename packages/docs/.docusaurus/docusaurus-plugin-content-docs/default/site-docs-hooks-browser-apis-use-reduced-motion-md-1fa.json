@@ -1,0 +1,28 @@
+{
+  "id": "hooks/browser-apis/use-reduced-motion",
+  "title": "useReducedMotion",
+  "description": "Detects whether the user has requested reduced motion via their OS accessibility settings.",
+  "source": "@site/docs/hooks/browser-apis/use-reduced-motion.md",
+  "sourceDirName": "hooks/browser-apis",
+  "slug": "/hooks/browser-apis/use-reduced-motion",
+  "permalink": "/docs/hooks/browser-apis/use-reduced-motion",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/oluwatobimaxwell/libraries-project/tree/master/packages/docs/docs/hooks/browser-apis/use-reduced-motion.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "sidebar_label": "useReducedMotion",
+    "title": "useReducedMotion",
+    "description": "Detects whether the user has requested reduced motion via their OS accessibility settings."
+  },
+  "sidebar": "hooksSidebar",
+  "previous": {
+    "title": "useFavicon",
+    "permalink": "/docs/hooks/browser-apis/use-favicon"
+  },
+  "next": {
+    "title": "useBreakpoint",
+    "permalink": "/docs/hooks/browser-apis/use-breakpoint"
+  }
+}
