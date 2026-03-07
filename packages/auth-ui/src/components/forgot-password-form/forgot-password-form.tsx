@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { z } from 'zod'
 import { Button, Alert, AlertTitle, AlertDescription, Text } from '@blacksmith-ui/react'
 import { Form, FormInput } from '@blacksmith-ui/forms'
@@ -66,7 +66,7 @@ export function ForgotPasswordForm({
           </AlertDescription>
         </Alert>
       ) : (
-        <Form schema={forgotPasswordSchema} onSubmit={handleSubmit} mode="onSubmit">
+        <Form schema={forgotPasswordSchema} onSubmit={handleSubmit} mode="onSubmit" defaultValues={{ email: '' }}>
           {error && (
             <Alert variant="destructive">
               <AlertDescription>{error.message}</AlertDescription>

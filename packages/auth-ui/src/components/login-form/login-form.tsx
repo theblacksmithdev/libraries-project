@@ -1,4 +1,3 @@
-import React from 'react'
 import { z } from 'zod'
 import { Button, Alert, AlertDescription, Divider } from '@blacksmith-ui/react'
 import { Form, FormInput } from '@blacksmith-ui/forms'
@@ -65,7 +64,7 @@ export function LoginForm({
         ) : undefined
       }
     >
-      <Form schema={loginSchema} onSubmit={handleSubmit} mode="onSubmit">
+      <Form schema={loginSchema} onSubmit={handleSubmit} mode="onSubmit" defaultValues={{ email: '', password: '' }}>
         {error && (
           <Alert variant="destructive">
             <AlertDescription>{error.message}</AlertDescription>

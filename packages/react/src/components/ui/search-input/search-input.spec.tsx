@@ -31,7 +31,7 @@ describe('SearchInput', () => {
   })
 
   it('shows loading spinner', () => {
-    const { container } = render(<SearchInput value="test" loading />)
+    const { container } = render(<SearchInput value="test" loading onChange={() => {}} />)
     expect(container.querySelector('.animate-spin')).toBeInTheDocument()
   })
 

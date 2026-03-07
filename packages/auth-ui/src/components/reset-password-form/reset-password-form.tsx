@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { z } from 'zod'
 import { Button, Alert, AlertTitle, AlertDescription } from '@blacksmith-ui/react'
 import { Form, FormInput } from '@blacksmith-ui/forms'
@@ -76,7 +76,7 @@ export function ResetPasswordForm({
           )}
         </Alert>
       ) : (
-        <Form schema={resetPasswordSchema} onSubmit={handleSubmit} mode="onSubmit">
+        <Form schema={resetPasswordSchema} onSubmit={handleSubmit} mode="onSubmit" defaultValues={{ password: '', confirmPassword: '' }}>
           {error && (
             <Alert variant="destructive">
               <AlertDescription>{error.message}</AlertDescription>

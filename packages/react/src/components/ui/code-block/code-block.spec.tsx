@@ -1,4 +1,4 @@
-import { render, screen, fireEvent } from '@testing-library/react'
+import { render, screen, fireEvent, waitFor } from '@testing-library/react'
 import { CodeBlock, CodeBlockPrimitives } from '.'
 
 // Mock shiki to avoid async bundle loading in tests
@@ -40,7 +40,9 @@ describe('CodeBlock', () => {
     render(<CodeBlock code={sampleCode} language="typescript" />)
     const copyBtn = screen.getByLabelText('Copy code')
     fireEvent.click(copyBtn)
-    expect(writeText).toHaveBeenCalledWith(sampleCode)
+    await waitFor(() => {
+      expect(writeText).toHaveBeenCalledWith(sampleCode)
+    })
   })
 
   it('shows line numbers by default', () => {
