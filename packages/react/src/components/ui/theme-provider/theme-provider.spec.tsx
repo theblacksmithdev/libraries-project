@@ -132,11 +132,11 @@ describe('ThemeProvider', () => {
     expect(screen.getByTestId('mode')).toHaveTextContent('light')
     await user.click(screen.getByText('Set Dark'))
     expect(screen.getByTestId('mode')).toHaveTextContent('dark')
-    expect(localStorage.getItem('flatui-theme-mode')).toBe('dark')
+    expect(localStorage.getItem('blacksmith-ui-theme-mode')).toBe('dark')
   })
 
   it('reads initial mode from localStorage', () => {
-    localStorage.setItem('flatui-theme-mode', 'dark')
+    localStorage.setItem('blacksmith-ui-theme-mode', 'dark')
     render(
       <ThemeProvider defaultMode="light">
         <ThemeConsumer />
@@ -154,7 +154,7 @@ describe('ThemeProvider', () => {
     )
     await user.click(screen.getByText('Set Dark'))
     expect(localStorage.getItem('my-key')).toBe('dark')
-    expect(localStorage.getItem('flatui-theme-mode')).toBeNull()
+    expect(localStorage.getItem('blacksmith-ui-theme-mode')).toBeNull()
   })
 
   it('resolves system mode from matchMedia', () => {

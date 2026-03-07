@@ -1,8 +1,8 @@
 import type { Config } from 'tailwindcss';
-import flatuiConfig from '../react/tailwind.config';
+import blacksmithConfig from '../react/tailwind.config';
 
 const config: Config = {
-  ...flatuiConfig,
+  ...blacksmithConfig,
   content: [
     './src/**/*.{ts,tsx}',
     '../react/src/**/*.{ts,tsx}',

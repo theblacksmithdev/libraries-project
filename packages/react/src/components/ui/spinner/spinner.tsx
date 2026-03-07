@@ -67,7 +67,7 @@ const SpinnerDots = ({ className }: { className?: string }) => (
 const SpinnerBars = ({ className }: { className?: string }) => (
   <>
     <style>{`
-      @keyframes flatui-bar-scale {
+      @keyframes blacksmith-bar-scale {
         0%, 40%, 100% { transform: scaleY(0.4); }
         20% { transform: scaleY(1); }
       }
@@ -78,7 +78,7 @@ const SpinnerBars = ({ className }: { className?: string }) => (
           key={i}
           className="w-0.5 h-full rounded-full bg-current"
           style={{
-            animation: "flatui-bar-scale 1.2s ease-in-out infinite",
+            animation: "blacksmith-bar-scale 1.2s ease-in-out infinite",
             animationDelay: `${i * 100}ms`,
           }}
         />

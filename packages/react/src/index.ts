@@ -1,5 +1,5 @@
-// FlatUI — React component library with flat design
-// Powered by Tailwind CSS + shadcn/ui
+// BlacksmithUI — React component library with clean, flat design
+// Powered by Tailwind CSS + Radix UI
 
 export { cn } from './lib/utils'
 export type { StyleProps } from './lib/style-props'

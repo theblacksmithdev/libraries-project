@@ -3,7 +3,7 @@ import type { ThemeMode, ThemeProviderProps, ThemeContextValue } from '../../../
 import { buildCssVariables } from '../../../lib/theme-defaults'
 import { ThemeContext } from '../../../hooks/use-theme-config'
 
-const STORAGE_KEY_DEFAULT = 'flatui-theme-mode'
+const STORAGE_KEY_DEFAULT = 'blacksmith-ui-theme-mode'
 
 function getSystemMode(): 'light' | 'dark' {
   if (typeof window === 'undefined') return 'light'

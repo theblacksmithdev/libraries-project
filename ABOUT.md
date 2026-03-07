@@ -4,7 +4,7 @@ React Component Library
 
 A warm, minimal design system
 
-Anthropic-inspired flat UI · Tailwind CSS · 15 Components
+Anthropic-inspired design · Tailwind CSS · 60+ Components
 
 Project Description & Technical Overview
 
