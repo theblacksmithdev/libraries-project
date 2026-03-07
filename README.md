@@ -2,7 +2,7 @@
 
 A modern React component library with Apple/Anthropic-inspired flat design, powered by Tailwind CSS and Radix UI.
 
-Built as a Yarn workspaces monorepo with three composable packages — core primitives, smart forms, and authentication UI.
+Built as a Yarn workspaces monorepo with four composable packages — core primitives, smart forms, authentication UI, and a comprehensive hooks library.
 
 > **Part of the [blacksmith-cli](https://github.com/oluwatobimaxwell/blacksmith-cli) ecosystem.** These packages power the default UI for projects scaffolded with blacksmith-cli, but are fully standalone and can be used in any React application.
 
@@ -15,10 +15,12 @@ Built as a Yarn workspaces monorepo with three composable packages — core prim
 | [`@blacksmith-ui/react`](./packages/react) | Core UI primitives — 60+ accessible components built on Radix UI | ![npm](https://img.shields.io/npm/v/@blacksmith-ui/react) | [View](https://oluwatobimaxwell.github.io/libraries-project/react/) |
 | [`@blacksmith-ui/forms`](./packages/forms) | Smart form components with react-hook-form + Zod validation | ![npm](https://img.shields.io/npm/v/@blacksmith-ui/forms) | [View](https://oluwatobimaxwell.github.io/libraries-project/forms/) |
 | [`@blacksmith-ui/auth`](./packages/auth-ui) | Pre-built authentication flows — login, register, forgot/reset password | ![npm](https://img.shields.io/npm/v/@blacksmith-ui/auth) | [View](https://oluwatobimaxwell.github.io/libraries-project/auth/) |
+| [`@blacksmith-ui/hooks`](./packages/hooks) | 75 production-ready React hooks for state, DOM, async, timers, and more | ![npm](https://img.shields.io/npm/v/@blacksmith-ui/hooks) | [Docs](./packages/docs) |
 
 ### Dependency Graph
 
 ```
+@blacksmith-ui/hooks        (no internal deps)
 @blacksmith-ui/react        (no internal deps)
     ^
     |
@@ -30,6 +32,7 @@ Built as a Yarn workspaces monorepo with three composable packages — core prim
 
 ## Features
 
+- **75 React hooks** — State management, DOM interactions, async operations, timers, browser APIs, and layout patterns
 - **60+ components** — From buttons and cards to data tables, charts, and command palettes
 - **Accessible by default** — Built on Radix UI headless primitives with full keyboard navigation and ARIA support
 - **Tailwind CSS theming** — HSL CSS variables for effortless customization and dark mode support
@@ -46,6 +49,9 @@ Built as a Yarn workspaces monorepo with three composable packages — core prim
 ```bash
 # Core components (required)
 npm install @blacksmith-ui/react
+
+# React hooks (optional, standalone)
+npm install @blacksmith-ui/hooks
 
 # Form components (optional)
 npm install @blacksmith-ui/forms
@@ -407,6 +413,30 @@ function App() {
 }
 ```
 
+### @blacksmith-ui/hooks
+
+75 production-ready React hooks with zero dependencies beyond React. SSR-safe, fully typed, and tree-shakeable.
+
+```bash
+npm install @blacksmith-ui/hooks
+```
+
+```tsx
+import { useToggle, useLocalStorage, useDebounce, useFetch } from '@blacksmith-ui/hooks';
+```
+
+| Category | Count | Highlights |
+|----------|-------|------------|
+| **State & Data** | 13 | `useToggle`, `useLocalStorage`, `useList`, `useMap`, `useSet`, `useHistoryState` |
+| **Values & Memoization** | 8 | `useDebounce`, `useDebouncedCallback`, `useThrottle`, `usePrevious` |
+| **DOM & Browser** | 19 | `useClickOutside`, `useHover`, `useKeyCombo`, `useFocusTrap`, `useSwipe` |
+| **Timers & Lifecycle** | 9 | `useInterval`, `useCountdown`, `useStopwatch`, `useIdleTimer` |
+| **Async & Network** | 9 | `useFetch`, `useWebSocket`, `useSSE`, `usePolling`, `useRetry` |
+| **Browser APIs** | 12 | `useMediaQuery`, `useDarkMode`, `useCopyToClipboard`, `useOnline` |
+| **Layout & UI** | 5 | `useVirtualList`, `useInfiniteScroll`, `useCollapse`, `useSteps` |
+
+See the full [hooks README](./packages/hooks/README.md) or run `yarn docs` to browse the documentation site locally.
+
 ## Theming
 
 BlacksmithUI uses HSL CSS variables for theming. Override them in your own CSS to customize the look:
@@ -483,22 +513,25 @@ yarn test:all
 
 | Command | Description |
 |---------|-------------|
-| `yarn build:all` | Build all packages (react -> forms -> auth) |
+| `yarn build:all` | Build all packages (hooks -> react -> forms -> auth) |
 | `yarn test:all` | Run all test suites |
 | `yarn lint:all` | Lint all packages |
 | `yarn storybook` | Start @blacksmith-ui/react Storybook (port 6006) |
 | `yarn storybook:forms` | Start @blacksmith-ui/forms Storybook (port 6008) |
 | `yarn storybook:auth-ui` | Start @blacksmith-ui/auth Storybook (port 6007) |
+| `yarn docs` | Start hooks documentation site (port 3000) |
 
 ### Per-Package Commands
 
 ```bash
 # Build a single package
+yarn workspace @blacksmith-ui/hooks build
 yarn workspace @blacksmith-ui/react build
 yarn workspace @blacksmith-ui/forms build
 yarn workspace @blacksmith-ui/auth build
 
 # Test a single package
+yarn workspace @blacksmith-ui/hooks test
 yarn workspace @blacksmith-ui/react test
 yarn workspace @blacksmith-ui/forms test
 yarn workspace @blacksmith-ui/auth test
@@ -519,6 +552,11 @@ Each package uses Rollup + TypeScript:
 ```
 libraries-project/
 ├── packages/
+│   ├── hooks/           # @blacksmith-ui/hooks — 75 React hooks
+│   │   ├── src/
+│   │   │   ├── hooks/           # Hook implementations + tests
+│   │   │   └── index.ts         # Public API (barrel exports)
+│   │   └── rollup.config.mjs
 │   ├── react/           # @blacksmith-ui/react — Core UI primitives
 │   │   ├── src/
 │   │   │   ├── components/ui/   # All component source
@@ -534,13 +572,17 @@ libraries-project/
 │   │   │   ├── hooks/           # useFormMutation, useFormQuery
 │   │   │   └── index.ts
 │   │   └── rollup.config.mjs
-│   └── auth-ui/         # @blacksmith-ui/auth — Auth flows
-│       ├── src/
-│       │   ├── components/      # Login, Register, etc.
-│       │   ├── adapters/        # Auth adapters (mock, firebase)
-│       │   ├── context/         # AuthProvider
-│       │   └── index.ts
-│       └── rollup.config.mjs
+│   ├── auth-ui/         # @blacksmith-ui/auth — Auth flows
+│   │   ├── src/
+│   │   │   ├── components/      # Login, Register, etc.
+│   │   │   ├── adapters/        # Auth adapters (mock, firebase)
+│   │   │   ├── context/         # AuthProvider
+│   │   │   └── index.ts
+│   │   └── rollup.config.mjs
+│   └── docs/            # @blacksmith-ui/docs — Docusaurus docs site
+│       ├── docs/hooks/          # 75 hook documentation pages
+│       ├── src/pages/           # Landing page
+│       └── docusaurus.config.ts
 ├── package.json         # Root workspace config
 └── CLAUDE.md            # AI assistant instructions
 ```
@@ -577,6 +619,7 @@ cd packages/react && npm pack --dry-run
 npm login
 
 # Publish in dependency order
+yarn workspace @blacksmith-ui/hooks publish --access public
 yarn workspace @blacksmith-ui/react publish --access public
 yarn workspace @blacksmith-ui/forms publish --access public
 yarn workspace @blacksmith-ui/auth publish --access public
