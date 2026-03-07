@@ -3,7 +3,7 @@ import { presets, type PresetName } from './presets'
 
 const HSL_REGEX = /^\d{1,3}\s\d{1,3}%\s\d{1,3}%$/
 
-const PRESET_NAMES: PresetName[] = ['default', 'blue', 'green', 'violet', 'red', 'neutral']
+const PRESET_NAMES: PresetName[] = ['default', 'blue', 'green', 'violet', 'red', 'neutral', 'slate', 'rose', 'amber', 'teal', 'zinc', 'sapphire', 'sand', 'midnight']
 
 const REQUIRED_COLOR_KEYS = [
   'background', 'foreground', 'card', 'card-foreground',
@@ -14,8 +14,8 @@ const REQUIRED_COLOR_KEYS = [
 ] as const
 
 describe('presets', () => {
-  it('exports all 6 presets', () => {
-    expect(Object.keys(presets)).toHaveLength(6)
+  it('exports all 14 presets', () => {
+    expect(Object.keys(presets)).toHaveLength(14)
     for (const name of PRESET_NAMES) {
       expect(presets[name]).toBeDefined()
     }
