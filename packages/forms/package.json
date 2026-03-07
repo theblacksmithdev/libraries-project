@@ -1,6 +1,6 @@
 {
   "name": "@blacksmith-ui/forms",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Smart form components with Zod validation, react-hook-form integration, and React Query hooks — built on @blacksmith-ui/react",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -78,7 +78,7 @@
   },
   "license": "MIT",
   "author": "oluwatobimaxwell <tobisholanke@gmail.com>",
-   "repository": {
+  "repository": {
     "type": "git",
     "url": "https://github.com/oluwatobimaxwell/libraries-project",
     "directory": "packages/forms"

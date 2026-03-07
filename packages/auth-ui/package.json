@@ -1,6 +1,6 @@
 {
   "name": "@blacksmith-ui/auth",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Configurable authentication UI components built on @blacksmith-ui/react — supports standard and third-party auth providers",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -76,7 +76,7 @@
   },
   "license": "MIT",
   "author": "oluwatobimaxwell <tobisholanke@gmail.com>",
-   "repository": {
+  "repository": {
     "type": "git",
     "url": "https://github.com/oluwatobimaxwell/libraries-project",
     "directory": "packages/auth-ui"
