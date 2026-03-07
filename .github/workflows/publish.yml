@@ -38,11 +38,16 @@ jobs:
 
       - name: Bump patch version
         run: |
-          for pkg in packages/react packages/forms packages/auth-ui; do
+          for pkg in packages/hooks packages/react packages/forms packages/auth-ui; do
             cd $pkg
             npm version patch --no-git-tag-version
             cd $GITHUB_WORKSPACE
           done
+
+      - name: Publish @blacksmith-ui/hooks
+        run: yarn workspace @blacksmith-ui/hooks publish --non-interactive --no-git-tag-version --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Publish @blacksmith-ui/react
         run: yarn workspace @blacksmith-ui/react publish --non-interactive --no-git-tag-version --access public

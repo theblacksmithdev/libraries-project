@@ -42,6 +42,15 @@ jobs:
           yarn workspace @blacksmith-ui/forms build-storybook -o ../../storybook-static/forms
           yarn workspace @blacksmith-ui/auth build-storybook -o ../../storybook-static/auth
 
+      - name: Build hooks documentation
+        run: yarn docs:build
+        env:
+          SITE_URL: https://oluwatobimaxwell.github.io
+          BASE_URL: /libraries-project/docs/
+
+      - name: Copy docs to output
+        run: cp -r packages/docs/build storybook-static/docs
+
       - name: Create index page
         run: |
           cat > storybook-static/index.html << 'HTMLEOF'
@@ -126,7 +135,8 @@ jobs:
                 </p>
                 <div class="stats">
                   <span class="stat"><strong>60+</strong> components</span>
-                  <span class="stat"><strong>3</strong> packages</span>
+                  <span class="stat"><strong>75</strong> hooks</span>
+                  <span class="stat"><strong>4</strong> packages</span>
                   <span class="stat"><strong>6</strong> theme presets</span>
                   <span class="stat"><strong>100%</strong> TypeScript</span>
                 </div>
@@ -143,8 +153,8 @@ jobs:
                 BlacksmithUI is a composable, accessible component library designed to help you ship polished
                 interfaces quickly. It started as the default UI layer for
                 <strong style="color:#e5e5e5;">blacksmith-cli</strong> scaffolded projects, but every package
-                is standalone and works in any React app. The library is split into three layers: core
-                primitives, form components with Zod validation, and ready-made authentication flows — so you
+                is standalone and works in any React app. The library includes core UI primitives, 75 production-ready
+                React hooks, form components with Zod validation, and ready-made authentication flows — so you
                 can adopt exactly what you need.
               </p>
 
@@ -172,6 +182,13 @@ jobs:
                     <span class="arrow">&rarr;</span>
                   </div>
                   <p>Pre-built authentication flows — login, register, forgot password, and reset password. Pluggable adapter pattern supports Firebase, Supabase, or any custom backend.</p>
+                </a>
+                <a class="card" href="./docs/">
+                  <div class="card-header">
+                    <h2>@blacksmith-ui/hooks</h2>
+                    <span class="arrow">&rarr;</span>
+                  </div>
+                  <p>75 production-ready React hooks for state management, DOM interactions, async operations, timers, browser APIs, and layout patterns. SSR-safe, fully typed, zero dependencies beyond React.</p>
                 </a>
               </div>
 

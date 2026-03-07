@@ -1,379 +1,336 @@
 {
-  "/__docusaurus/debug-5ff": {
-    "__comp": "__comp---theme-debug-config-23-a-2ff",
-    "__context": {
-      "plugin": "plugin---docusaurus-debugb-38-ad3"
-    }
-  },
-  "/__docusaurus/debug/config-5ba": {
-    "__comp": "__comp---theme-debug-config-23-a-2ff",
-    "__context": {
-      "plugin": "plugin---docusaurus-debugb-38-ad3"
-    }
-  },
-  "/__docusaurus/debug/content-a2b": {
-    "__comp": "__comp---theme-debug-contentba-8-ce7",
-    "__context": {
-      "plugin": "plugin---docusaurus-debugb-38-ad3"
-    },
-    "__props": "__props---docusaurus-debug-content-3-c-0-be2"
-  },
-  "/__docusaurus/debug/globalData-c3c": {
-    "__comp": "__comp---theme-debug-global-dataede-0fa",
-    "__context": {
-      "plugin": "plugin---docusaurus-debugb-38-ad3"
-    }
-  },
-  "/__docusaurus/debug/metadata-156": {
-    "__comp": "__comp---theme-debug-site-metadata-68-e-3d4",
-    "__context": {
-      "plugin": "plugin---docusaurus-debugb-38-ad3"
-    }
-  },
-  "/__docusaurus/debug/registry-88c": {
-    "__comp": "__comp---theme-debug-registry-679-501",
-    "__context": {
-      "plugin": "plugin---docusaurus-debugb-38-ad3"
-    }
-  },
-  "/__docusaurus/debug/routes-000": {
-    "__comp": "__comp---theme-debug-routes-946-699",
-    "__context": {
-      "plugin": "plugin---docusaurus-debugb-38-ad3"
-    }
-  },
   "/search-822": {
-    "__comp": "__comp---theme-search-page-1-a-4-d6f",
+    "__comp": "1a4e3797",
     "__context": {
-      "plugin": "plugin---search-138-688"
+      "plugin": "138e0e15"
     }
   },
   "/docs-75f": {
-    "__comp": "__comp---theme-docs-root-5-e-9-0b6",
+    "__comp": "5e95c892",
     "__context": {
-      "plugin": "plugin---docsaba-d7c"
+      "plugin": "aba21aa0"
     }
   },
   "/docs-feb": {
-    "__comp": "__comp---theme-doc-version-roota-7-b-5de",
-    "__props": "__props---docs-005-788"
+    "__comp": "a7bd4aaa",
+    "__props": "0058b4c6"
   },
   "/docs-95a": {
-    "__comp": "__comp---theme-doc-roota-94-67a"
+    "__comp": "a94703ab"
   },
   "/docs/hooks/async-network/use-abort-controller-04a": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-hooks-async-network-use-abort-controllerc-2-e-b59"
+    "__comp": "17896441",
+    "content": "c2ec8ba3"
   },
   "/docs/hooks/async-network/use-async-9aa": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-hooks-async-network-use-asyncc-4-a-e82"
+    "__comp": "17896441",
+    "content": "c4aa2f18"
   },
   "/docs/hooks/async-network/use-fetch-40c": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-hooks-async-network-use-fetch-4-a-3-afc"
+    "__comp": "17896441",
+    "content": "4a38849c"
   },
   "/docs/hooks/async-network/use-polling-b50": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-hooks-async-network-use-pollingda-3-238"
+    "__comp": "17896441",
+    "content": "da39c247"
   },
   "/docs/hooks/async-network/use-retry-e0e": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-hooks-async-network-use-retrya-10-8c4"
+    "__comp": "17896441",
+    "content": "a1027c98"
   },
   "/docs/hooks/async-network/use-script-1ed": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-hooks-async-network-use-scripte-65-bf5"
+    "__comp": "17896441",
+    "content": "e65c7b19"
   },
   "/docs/hooks/async-network/use-search-77f": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-hooks-async-network-use-searcha-84-401"
+    "__comp": "17896441",
+    "content": "a84d8f65"
   },
   "/docs/hooks/async-network/use-sse-cfb": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-hooks-async-network-use-ssecde-d67"
+    "__comp": "17896441",
+    "content": "cde5cd7f"
   },
   "/docs/hooks/async-network/use-web-socket-1d4": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-hooks-async-network-use-web-socketcb-4-fe0"
+    "__comp": "17896441",
+    "content": "cb454e56"
   },
   "/docs/hooks/browser-apis/use-breakpoint-95c": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-hooks-browser-apis-use-breakpointbae-f68"
+    "__comp": "17896441",
+    "content": "baee5ba4"
   },
   "/docs/hooks/browser-apis/use-color-scheme-90d": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-hooks-browser-apis-use-color-scheme-742-473"
+    "__comp": "17896441",
+    "content": "742a39d0"
   },
   "/docs/hooks/browser-apis/use-copy-to-clipboard-0fb": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-hooks-browser-apis-use-copy-to-clipboard-143-504"
+    "__comp": "17896441",
+    "content": "143080a3"
   },
   "/docs/hooks/browser-apis/use-dark-mode-6e6": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-hooks-browser-apis-use-dark-mode-67-b-a31"
+    "__comp": "17896441",
+    "content": "67b8df4f"
   },
   "/docs/hooks/browser-apis/use-favicon-6f0": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-hooks-browser-apis-use-favicon-81-c-f76"
+    "__comp": "17896441",
+    "content": "81cedc58"
   },
   "/docs/hooks/browser-apis/use-is-client-643": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-hooks-browser-apis-use-is-clientfaa-8c1"
+    "__comp": "17896441",
+    "content": "faa78e57"
   },
   "/docs/hooks/browser-apis/use-media-query-f62": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-hooks-browser-apis-use-media-queryab-0-0e9"
+    "__comp": "17896441",
+    "content": "ab076fab"
   },
   "/docs/hooks/browser-apis/use-online-cae": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-hooks-browser-apis-use-online-333-062"
+    "__comp": "17896441",
+    "content": "333f883c"
   },
   "/docs/hooks/browser-apis/use-page-leave-fb8": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-hooks-browser-apis-use-page-leavefb-8-a64"
+    "__comp": "17896441",
+    "content": "fb8aaee2"
   },
   "/docs/hooks/browser-apis/use-page-visibility-1b2": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-hooks-browser-apis-use-page-visibility-2-ca-552"
+    "__comp": "17896441",
+    "content": "2cacc1c6"
   },
   "/docs/hooks/browser-apis/use-reduced-motion-a82": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-hooks-browser-apis-use-reduced-motion-1-fa-d0f"
+    "__comp": "17896441",
+    "content": "1fa4f33f"
   },
   "/docs/hooks/browser-apis/use-window-size-8c7": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-hooks-browser-apis-use-window-size-34-e-a70"
+    "__comp": "17896441",
+    "content": "34e38d6c"
   },
   "/docs/hooks/dom-browser/use-bounding-client-rect-2f3": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-hooks-dom-browser-use-bounding-client-recte-98-03a"
+    "__comp": "17896441",
+    "content": "e98915fb"
   },
   "/docs/hooks/dom-browser/use-click-outside-53f": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-hooks-dom-browser-use-click-outside-280-525"
+    "__comp": "17896441",
+    "content": "28011d93"
   },
   "/docs/hooks/dom-browser/use-drag-141": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-hooks-dom-browser-use-drag-2-e-1-16a"
+    "__comp": "17896441",
+    "content": "2e1c9f7b"
   },
   "/docs/hooks/dom-browser/use-element-size-bfb": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-hooks-dom-browser-use-element-size-711-080"
+    "__comp": "17896441",
+    "content": "7112d814"
   },
   "/docs/hooks/dom-browser/use-element-visibility-61d": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-hooks-dom-browser-use-element-visibility-2-a-5-b2b"
+    "__comp": "17896441",
+    "content": "2a5c4d51"
   },
   "/docs/hooks/dom-browser/use-event-listener-9a7": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-hooks-dom-browser-use-event-listener-084-50b"
+    "__comp": "17896441",
+    "content": "08444cba"
   },
   "/docs/hooks/dom-browser/use-focus-trap-001": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-hooks-dom-browser-use-focus-trap-4-a-1-dca"
+    "__comp": "17896441",
+    "content": "4a1b0634"
   },
   "/docs/hooks/dom-browser/use-focus-within-bda": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-hooks-dom-browser-use-focus-withinae-9-7fa"
+    "__comp": "17896441",
+    "content": "ae931435"
   },
   "/docs/hooks/dom-browser/use-fullscreen-0f7": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-hooks-dom-browser-use-fullscreen-291-500"
+    "__comp": "17896441",
+    "content": "29182bb5"
   },
   "/docs/hooks/dom-browser/use-hover-9d4": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-hooks-dom-browser-use-hoverd-5-d-8b2"
+    "__comp": "17896441",
+    "content": "d5dbf56c"
   },
   "/docs/hooks/dom-browser/use-intersection-observer-576": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-hooks-dom-browser-use-intersection-observerace-36e"
+    "__comp": "17896441",
+    "content": "ace84f26"
   },
   "/docs/hooks/dom-browser/use-key-combo-eb9": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-hooks-dom-browser-use-key-combo-220-ddc"
+    "__comp": "17896441",
+    "content": "220cf84c"
   },
   "/docs/hooks/dom-browser/use-key-press-1e5": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-hooks-dom-browser-use-key-pressab-1-60b"
+    "__comp": "17896441",
+    "content": "ab126326"
   },
   "/docs/hooks/dom-browser/use-long-press-368": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-hooks-dom-browser-use-long-press-64-a-09f"
+    "__comp": "17896441",
+    "content": "64a2f98b"
   },
   "/docs/hooks/dom-browser/use-mutation-observer-287": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-hooks-dom-browser-use-mutation-observer-5-fb-117"
+    "__comp": "17896441",
+    "content": "5fbc342c"
   },
   "/docs/hooks/dom-browser/use-scroll-lock-139": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-hooks-dom-browser-use-scroll-lockb-6-c-898"
+    "__comp": "17896441",
+    "content": "b6c4e270"
   },
   "/docs/hooks/dom-browser/use-scroll-position-ded": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-hooks-dom-browser-use-scroll-position-412-a13"
+    "__comp": "17896441",
+    "content": "412d6150"
   },
   "/docs/hooks/dom-browser/use-swipe-f8e": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-hooks-dom-browser-use-swipee-13-e93"
+    "__comp": "17896441",
+    "content": "e139a9db"
   },
   "/docs/hooks/dom-browser/use-text-selection-77e": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-hooks-dom-browser-use-text-selection-79-c-441"
+    "__comp": "17896441",
+    "content": "79ccaeae"
   },
   "/docs/hooks/getting-started-af4": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-hooks-getting-startedb-6-b-4aa"
+    "__comp": "17896441",
+    "content": "b6b826c1"
   },
   "/docs/hooks/layout-ui/use-collapse-17a": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-hooks-layout-ui-use-collapse-36-d-74f"
+    "__comp": "17896441",
+    "content": "36d4b636"
   },
   "/docs/hooks/layout-ui/use-infinite-scroll-961": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-hooks-layout-ui-use-infinite-scroll-4-d-8-514"
+    "__comp": "17896441",
+    "content": "4d89ebb6"
   },
   "/docs/hooks/layout-ui/use-steps-3c7": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-hooks-layout-ui-use-stepse-6-c-d6d"
+    "__comp": "17896441",
+    "content": "e6cb962f"
   },
   "/docs/hooks/layout-ui/use-sticky-header-ca7": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-hooks-layout-ui-use-sticky-header-519-64d"
+    "__comp": "17896441",
+    "content": "51946e88"
   },
   "/docs/hooks/layout-ui/use-virtual-list-d8c": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-hooks-layout-ui-use-virtual-listb-17-f80"
+    "__comp": "17896441",
+    "content": "b1749ba9"
   },
   "/docs/hooks/state-data/use-counter-1db": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-hooks-state-data-use-counterffc-c0b"
+    "__comp": "17896441",
+    "content": "ffcfe239"
   },
   "/docs/hooks/state-data/use-default-780": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-hooks-state-data-use-default-2-da-7f0"
+    "__comp": "17896441",
+    "content": "2da6aee9"
   },
   "/docs/hooks/state-data/use-disclosure-996": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-hooks-state-data-use-disclosure-515-fd3"
+    "__comp": "17896441",
+    "content": "515c8ec8"
   },
   "/docs/hooks/state-data/use-history-state-928": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-hooks-state-data-use-history-stateb-73-d29"
+    "__comp": "17896441",
+    "content": "b73ec6a5"
   },
   "/docs/hooks/state-data/use-list-f76": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-hooks-state-data-use-list-022-d10"
+    "__comp": "17896441",
+    "content": "0228bc7b"
   },
   "/docs/hooks/state-data/use-local-storage-032": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-hooks-state-data-use-local-storage-963-183"
+    "__comp": "17896441",
+    "content": "96319f07"
   },
   "/docs/hooks/state-data/use-map-718": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-hooks-state-data-use-map-51-d-5fc"
+    "__comp": "17896441",
+    "content": "51df1098"
   },
   "/docs/hooks/state-data/use-queue-df2": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-hooks-state-data-use-queue-528-fc3"
+    "__comp": "17896441",
+    "content": "5280e1d3"
   },
   "/docs/hooks/state-data/use-session-storage-64d": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-hooks-state-data-use-session-storage-04-c-834"
+    "__comp": "17896441",
+    "content": "04c1b74f"
   },
   "/docs/hooks/state-data/use-set-b14": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-hooks-state-data-use-sete-12-cdf"
+    "__comp": "17896441",
+    "content": "e12462d9"
   },
   "/docs/hooks/state-data/use-stack-180": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-hooks-state-data-use-stackea-4-e45"
+    "__comp": "17896441",
+    "content": "ea4724e1"
   },
   "/docs/hooks/state-data/use-toggle-5d5": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-hooks-state-data-use-toggle-5-b-9-8c6"
+    "__comp": "17896441",
+    "content": "5b96bdcf"
   },
   "/docs/hooks/state-data/use-uncontrolled-86a": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-hooks-state-data-use-uncontrolled-02-d-27a"
+    "__comp": "17896441",
+    "content": "02d9c85a"
   },
   "/docs/hooks/timers-lifecycle/use-countdown-941": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-hooks-timers-lifecycle-use-countdown-0-fd-45b"
+    "__comp": "17896441",
+    "content": "0fdecbf7"
   },
   "/docs/hooks/timers-lifecycle/use-idle-timer-c2a": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-hooks-timers-lifecycle-use-idle-timer-178-8bf"
+    "__comp": "17896441",
+    "content": "178f54f5"
   },
   "/docs/hooks/timers-lifecycle/use-interval-0d8": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-hooks-timers-lifecycle-use-intervala-01-a92"
+    "__comp": "17896441",
+    "content": "a0182100"
   },
   "/docs/hooks/timers-lifecycle/use-is-first-render-f2c": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-hooks-timers-lifecycle-use-is-first-renderde-0-58e"
+    "__comp": "17896441",
+    "content": "de03db99"
   },
   "/docs/hooks/timers-lifecycle/use-is-mounted-de5": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-hooks-timers-lifecycle-use-is-mounted-67-d-35c"
+    "__comp": "17896441",
+    "content": "67db9111"
   },
   "/docs/hooks/timers-lifecycle/use-isomorphic-layout-effect-29b": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-hooks-timers-lifecycle-use-isomorphic-layout-effectaa-7-524"
+    "__comp": "17896441",
+    "content": "aa7fca5f"
   },
   "/docs/hooks/timers-lifecycle/use-stopwatch-406": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-hooks-timers-lifecycle-use-stopwatchb-28-db5"
+    "__comp": "17896441",
+    "content": "b28d7668"
   },
   "/docs/hooks/timers-lifecycle/use-timeout-c66": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-hooks-timers-lifecycle-use-timeout-80-c-d87"
+    "__comp": "17896441",
+    "content": "80ce966b"
   },
   "/docs/hooks/timers-lifecycle/use-update-effect-e37": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-hooks-timers-lifecycle-use-update-effectde-7-908"
+    "__comp": "17896441",
+    "content": "de7a27fd"
   },
   "/docs/hooks/values-memoization/use-const-bec": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-hooks-values-memoization-use-constfed-d4f"
+    "__comp": "17896441",
+    "content": "fed1af88"
   },
   "/docs/hooks/values-memoization/use-debounce-277": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-hooks-values-memoization-use-debounce-27-c-4f8"
+    "__comp": "17896441",
+    "content": "27c60da2"
   },
   "/docs/hooks/values-memoization/use-debounced-callback-a58": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-hooks-values-memoization-use-debounced-callbackeb-4-95e"
+    "__comp": "17896441",
+    "content": "eb4b1ccd"
   },
   "/docs/hooks/values-memoization/use-latest-808": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-hooks-values-memoization-use-latestda-3-ca7"
+    "__comp": "17896441",
+    "content": "da34036d"
   },
   "/docs/hooks/values-memoization/use-previous-ef7": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-hooks-values-memoization-use-previous-2-a-7-301"
+    "__comp": "17896441",
+    "content": "2a7aa6e5"
   },
   "/docs/hooks/values-memoization/use-synced-ref-edf": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-hooks-values-memoization-use-synced-refb-1-b-d26"
+    "__comp": "17896441",
+    "content": "b1b2e64a"
   },
   "/docs/hooks/values-memoization/use-throttle-8ba": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-hooks-values-memoization-use-throttleeaa-faa"
+    "__comp": "17896441",
+    "content": "eaa1da9f"
   },
   "/docs/hooks/values-memoization/use-throttled-callback-17c": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-hooks-values-memoization-use-throttled-callback-7-c-1-a42"
+    "__comp": "17896441",
+    "content": "7c1b4f40"
   },
   "/docs/intro-cc0": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-intro-0-e-3-be1"
+    "__comp": "17896441",
+    "content": "0e384e19"
   },
   "/-e5f": {
-    "__comp": "__comp---site-src-pages-index-tsx-1-df-d3e",
+    "__comp": "1df93b7f",
     "__context": {
-      "plugin": "plugin---a-74-9d6"
+      "plugin": "a7456010"
     },
-    "config": "config---5-e-9-4f3"
+    "config": "5e9f5e1a"
   }
 }
