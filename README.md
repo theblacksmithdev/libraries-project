@@ -4,6 +4,8 @@ A modern React component library with Apple/Anthropic-inspired flat design, powe
 
 Built as a Yarn workspaces monorepo with three composable packages — core primitives, smart forms, and authentication UI.
 
+> **Part of the [blacksmith-cli](https://github.com/oluwatobimaxwell/blacksmith-cli) ecosystem.** These packages power the default UI for projects scaffolded with blacksmith-cli, but are fully standalone and can be used in any React application.
+
 ## Packages
 
 | Package | Description | Version |
