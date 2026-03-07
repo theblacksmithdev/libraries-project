@@ -15,7 +15,7 @@ jobs:
     environment: Production
 
     permissions:
-      contents: read
+      contents: write
 
     steps:
       - name: Checkout
@@ -36,17 +36,34 @@ jobs:
       - name: Run tests
         run: yarn test:all
 
+      - name: Bump patch version
+        run: |
+          for pkg in packages/react packages/forms packages/auth-ui; do
+            cd $pkg
+            npm version patch --no-git-tag-version
+            cd $GITHUB_WORKSPACE
+          done
+
       - name: Publish @blacksmith-ui/react
-        run: yarn workspace @blacksmith-ui/react publish --non-interactive --no-git-tag-version --access public || true
+        run: yarn workspace @blacksmith-ui/react publish --non-interactive --no-git-tag-version --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Publish @blacksmith-ui/forms
-        run: yarn workspace @blacksmith-ui/forms publish --non-interactive --no-git-tag-version --access public || true
+        run: yarn workspace @blacksmith-ui/forms publish --non-interactive --no-git-tag-version --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Publish @blacksmith-ui/auth
-        run: yarn workspace @blacksmith-ui/auth publish --non-interactive --no-git-tag-version --access public || true
+        run: yarn workspace @blacksmith-ui/auth publish --non-interactive --no-git-tag-version --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Commit version bump
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add packages/*/package.json
+          VERSION=$(node -p "require('./packages/react/package.json').version")
+          git commit -m "chore: release v${VERSION} [skip ci]"
+          git push
