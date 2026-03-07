@@ -99,6 +99,7 @@ export * from './components/ui/spotlight-tour'
 export * from './hooks/use-toast'
 export * from './hooks/use-mobile'
 export * from './hooks/use-notification-center'
+export { useDarkMode } from './hooks/use-dark-mode'
 
 // Theme system
 export { ThemeProvider } from './components/ui/theme-provider'

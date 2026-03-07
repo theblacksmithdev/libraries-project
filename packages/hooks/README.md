@@ -1,6 +1,6 @@
 # @blacksmith-ui/hooks
 
-A collection of 75 production-ready React hooks for common UI patterns, state management, DOM interactions, async operations, and more.
+A collection of 74 production-ready React hooks for common UI patterns, state management, DOM interactions, async operations, and more.
 
 ## Installation
 
@@ -125,7 +125,6 @@ function App() {
 | Hook | Description |
 |------|-------------|
 | `useMediaQuery` | Reactive CSS media query matching |
-| `useDarkMode` | Dark mode toggle (`.dark` class on documentElement) |
 | `useColorScheme` | Detect system color scheme preference |
 | `useCopyToClipboard` | Copy text to clipboard with status feedback |
 | `useOnline` | Track network connectivity |
