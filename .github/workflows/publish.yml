@@ -30,11 +30,11 @@ jobs:
       - name: Install dependencies
         run: yarn install --frozen-lockfile
 
-      - name: Run tests
-        run: yarn test:all
-
       - name: Build all packages
         run: yarn build:all
+
+      - name: Run tests
+        run: yarn test:all
 
       - name: Publish @blacksmith-ui/react
         run: yarn workspace @blacksmith-ui/react publish --non-interactive --no-git-tag-version --access public || true
