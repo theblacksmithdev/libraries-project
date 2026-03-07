@@ -1,10 +1,11 @@
 # BlacksmithUI Component Library
 
-Yarn workspaces monorepo with 3 packages. **Requires Node >= 20** (use `nvm use` — `.nvmrc` is set to 20).
+Yarn workspaces monorepo with 4 packages. **Requires Node >= 20** (use `nvm use` — `.nvmrc` is set to 20).
 
 ## Package Dependency Graph
 
 ```
+@blacksmith-ui/hooks  (reusable React hooks, no internal deps)
 @blacksmith-ui/react  (core primitives, no internal deps)
     ↑
 @blacksmith-ui/forms  (depends on @blacksmith-ui/react)
@@ -12,12 +13,13 @@ Yarn workspaces monorepo with 3 packages. **Requires Node >= 20** (use `nvm use`
 @blacksmith-ui/auth (depends on @blacksmith-ui/react + @blacksmith-ui/forms)
 ```
 
-Build order must follow this graph: `react → forms → auth`.
+Build order must follow this graph: `hooks (independent) | react → forms → auth`.
 
 ## Packages
 
 | Package | Path | Port | Description |
 |---------|------|------|-------------|
+| `@blacksmith-ui/hooks` | `packages/hooks` | — | Reusable React hooks (useLocalStorage, useMediaQuery, useDebounce, useDarkMode, etc.) |
 | `@blacksmith-ui/react` | `packages/react` | 6006 | Core UI primitives (Button, Card, Alert, Input, etc.) built on Radix UI + Tailwind |
 | `@blacksmith-ui/forms` | `packages/forms` | 6008 | Form components (Form, FormInput, etc.) with react-hook-form + Zod validation |
 | `@blacksmith-ui/auth` | `packages/auth-ui` | 6007 | Auth flows (Login, Register, Forgot/Reset Password) built on forms + react primitives |
@@ -32,6 +34,8 @@ yarn build:all
 yarn test:all
 
 # Single package
+yarn workspace @blacksmith-ui/hooks build
+yarn workspace @blacksmith-ui/hooks test
 yarn workspace @blacksmith-ui/react build
 yarn workspace @blacksmith-ui/react test
 yarn workspace @blacksmith-ui/forms build
