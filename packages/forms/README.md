@@ -6,6 +6,7 @@ Smart form components with Zod schema validation, react-hook-form integration, a
 
 [![npm version](https://img.shields.io/npm/v/@blacksmith-ui/forms)](https://www.npmjs.com/package/@blacksmith-ui/forms)
 [![license](https://img.shields.io/npm/l/@blacksmith-ui/forms)](./LICENSE)
+[![storybook](https://img.shields.io/badge/storybook-forms-ff4785)](https://oluwatobimaxwell.github.io/libraries-project/forms/)
 
 ## Features
 

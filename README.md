@@ -6,13 +6,15 @@ Built as a Yarn workspaces monorepo with three composable packages — core prim
 
 > **Part of the [blacksmith-cli](https://github.com/oluwatobimaxwell/blacksmith-cli) ecosystem.** These packages power the default UI for projects scaffolded with blacksmith-cli, but are fully standalone and can be used in any React application.
 
+**[Live Storybook](https://oluwatobimaxwell.github.io/libraries-project/)** — Browse all components with interactive examples.
+
 ## Packages
 
-| Package | Description | Version |
-|---------|-------------|---------|
-| [`@blacksmith-ui/react`](./packages/react) | Core UI primitives — 60+ accessible components built on Radix UI | ![npm](https://img.shields.io/npm/v/@blacksmith-ui/react) |
-| [`@blacksmith-ui/forms`](./packages/forms) | Smart form components with react-hook-form + Zod validation | ![npm](https://img.shields.io/npm/v/@blacksmith-ui/forms) |
-| [`@blacksmith-ui/auth`](./packages/auth-ui) | Pre-built authentication flows — login, register, forgot/reset password | ![npm](https://img.shields.io/npm/v/@blacksmith-ui/auth) |
+| Package | Description | Version | Storybook |
+|---------|-------------|---------|-----------|
+| [`@blacksmith-ui/react`](./packages/react) | Core UI primitives — 60+ accessible components built on Radix UI | ![npm](https://img.shields.io/npm/v/@blacksmith-ui/react) | [View](https://oluwatobimaxwell.github.io/libraries-project/react/) |
+| [`@blacksmith-ui/forms`](./packages/forms) | Smart form components with react-hook-form + Zod validation | ![npm](https://img.shields.io/npm/v/@blacksmith-ui/forms) | [View](https://oluwatobimaxwell.github.io/libraries-project/forms/) |
+| [`@blacksmith-ui/auth`](./packages/auth-ui) | Pre-built authentication flows — login, register, forgot/reset password | ![npm](https://img.shields.io/npm/v/@blacksmith-ui/auth) | [View](https://oluwatobimaxwell.github.io/libraries-project/auth/) |
 
 ### Dependency Graph
 

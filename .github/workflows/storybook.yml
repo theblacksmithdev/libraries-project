@@ -44,48 +44,175 @@ jobs:
 
       - name: Create index page
         run: |
-          cat > storybook-static/index.html << 'EOF'
+          cat > storybook-static/index.html << 'HTMLEOF'
           <!DOCTYPE html>
           <html lang="en">
           <head>
             <meta charset="UTF-8" />
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-            <title>BlacksmithUI Storybook</title>
+            <title>BlacksmithUI — Component Library</title>
+            <meta name="description" content="A modern React component library with 60+ accessible components, smart forms, and authentication flows. Powered by Tailwind CSS and Radix UI." />
             <style>
               * { margin: 0; padding: 0; box-sizing: border-box; }
-              body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0f0f0f; color: #e5e5e5; min-height: 100vh; display: flex; align-items: center; justify-content: center; }
-              .container { max-width: 640px; width: 100%; padding: 2rem; }
-              h1 { font-size: 2rem; font-weight: 700; margin-bottom: 0.5rem; }
-              p { color: #a3a3a3; margin-bottom: 2rem; }
-              .cards { display: flex; flex-direction: column; gap: 1rem; }
-              a { text-decoration: none; color: inherit; display: block; padding: 1.5rem; border-radius: 12px; border: 1px solid #262626; background: #171717; transition: border-color 0.2s, background 0.2s; }
-              a:hover { border-color: #525252; background: #1c1c1c; }
-              a h2 { font-size: 1.125rem; font-weight: 600; margin-bottom: 0.25rem; }
-              a span { color: #a3a3a3; font-size: 0.875rem; }
+              body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0a0a0a; color: #e5e5e5; min-height: 100vh; }
+              .page { max-width: 720px; margin: 0 auto; padding: 4rem 2rem; }
+
+              /* Header */
+              .header { margin-bottom: 3rem; }
+              .badge { display: inline-block; font-size: 0.75rem; font-weight: 500; color: #a78bfa; background: rgba(167,139,250,0.1); border: 1px solid rgba(167,139,250,0.2); padding: 0.25rem 0.75rem; border-radius: 9999px; margin-bottom: 1rem; }
+              h1 { font-size: 2.5rem; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 1rem; background: linear-gradient(135deg, #fff 0%, #a3a3a3 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+              .tagline { font-size: 1.125rem; color: #a3a3a3; line-height: 1.6; margin-bottom: 1.5rem; }
+
+              /* Stats */
+              .stats { display: flex; gap: 2rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+              .stat { font-size: 0.875rem; color: #737373; }
+              .stat strong { color: #e5e5e5; font-weight: 600; }
+
+              /* Links row */
+              .links { display: flex; gap: 1rem; margin-bottom: 0.5rem; flex-wrap: wrap; }
+              .links a { font-size: 0.875rem; color: #a78bfa; text-decoration: none; }
+              .links a:hover { text-decoration: underline; }
+
+              /* Divider */
+              hr { border: none; border-top: 1px solid #1c1c1c; margin: 2.5rem 0; }
+
+              /* Section */
+              .section-label { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: #525252; margin-bottom: 1rem; }
+
+              /* About */
+              .about { color: #a3a3a3; line-height: 1.7; font-size: 0.9375rem; margin-bottom: 0; }
+
+              /* Cards */
+              .cards { display: flex; flex-direction: column; gap: 0.75rem; }
+              .card { text-decoration: none; color: inherit; display: block; padding: 1.25rem 1.5rem; border-radius: 12px; border: 1px solid #1c1c1c; background: #111; transition: border-color 0.2s, background 0.2s, transform 0.2s; }
+              .card:hover { border-color: #333; background: #161616; transform: translateY(-1px); }
+              .card-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.375rem; }
+              .card h2 { font-size: 1rem; font-weight: 600; }
+              .card .arrow { color: #525252; transition: color 0.2s; }
+              .card:hover .arrow { color: #a3a3a3; }
+              .card p { color: #737373; font-size: 0.875rem; line-height: 1.5; }
+
+              /* Features */
+              .features { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+              .feature { padding: 1rem 1.25rem; border-radius: 10px; border: 1px solid #1c1c1c; background: #111; }
+              .feature h3 { font-size: 0.8125rem; font-weight: 600; margin-bottom: 0.25rem; }
+              .feature p { color: #737373; font-size: 0.8125rem; line-height: 1.4; }
+
+              /* Author */
+              .author { display: flex; align-items: center; gap: 1rem; padding: 1.25rem 1.5rem; border-radius: 12px; border: 1px solid #1c1c1c; background: #111; }
+              .author-avatar { width: 48px; height: 48px; border-radius: 50%; background: #262626; display: flex; align-items: center; justify-content: center; font-size: 1.25rem; font-weight: 700; color: #a78bfa; flex-shrink: 0; overflow: hidden; }
+              .author-avatar img { width: 100%; height: 100%; object-fit: cover; }
+              .author-info h3 { font-size: 0.9375rem; font-weight: 600; margin-bottom: 0.125rem; }
+              .author-info p { color: #737373; font-size: 0.8125rem; }
+              .author-info a { color: #a78bfa; text-decoration: none; }
+              .author-info a:hover { text-decoration: underline; }
+
+              @media (max-width: 480px) {
+                h1 { font-size: 1.75rem; }
+                .features { grid-template-columns: 1fr; }
+                .stats { gap: 1rem; }
+              }
             </style>
           </head>
           <body>
-            <div class="container">
-              <h1>BlacksmithUI</h1>
-              <p>Component library documentation</p>
+            <div class="page">
+              <div class="header">
+                <span class="badge">Open Source</span>
+                <h1>BlacksmithUI</h1>
+                <p class="tagline">
+                  A modern React component library with clean, flat design — built for the
+                  <a href="https://github.com/oluwatobimaxwell/blacksmith-cli" style="color:#a78bfa;text-decoration:none;">blacksmith-cli</a>
+                  ecosystem and any React project. Powered by Tailwind CSS, Radix UI, and TypeScript.
+                </p>
+                <div class="stats">
+                  <span class="stat"><strong>60+</strong> components</span>
+                  <span class="stat"><strong>3</strong> packages</span>
+                  <span class="stat"><strong>6</strong> theme presets</span>
+                  <span class="stat"><strong>100%</strong> TypeScript</span>
+                </div>
+                <div class="links">
+                  <a href="https://github.com/oluwatobimaxwell/libraries-project">GitHub</a>
+                  <a href="https://www.npmjs.com/org/blacksmith-ui">npm</a>
+                </div>
+              </div>
+
+              <hr />
+
+              <p class="section-label">About</p>
+              <p class="about">
+                BlacksmithUI is a composable, accessible component library designed to help you ship polished
+                interfaces quickly. It started as the default UI layer for
+                <strong style="color:#e5e5e5;">blacksmith-cli</strong> scaffolded projects, but every package
+                is standalone and works in any React app. The library is split into three layers: core
+                primitives, form components with Zod validation, and ready-made authentication flows — so you
+                can adopt exactly what you need.
+              </p>
+
+              <hr />
+
+              <p class="section-label">Storybook Documentation</p>
               <div class="cards">
-                <a href="./react/">
-                  <h2>@blacksmith-ui/react</h2>
-                  <span>Core UI primitives — 60+ accessible components</span>
+                <a class="card" href="./react/">
+                  <div class="card-header">
+                    <h2>@blacksmith-ui/react</h2>
+                    <span class="arrow">&rarr;</span>
+                  </div>
+                  <p>Core UI primitives — 60+ accessible components including buttons, cards, dialogs, data tables, charts, and more. Built on Radix UI with full keyboard navigation and ARIA support.</p>
                 </a>
-                <a href="./forms/">
-                  <h2>@blacksmith-ui/forms</h2>
-                  <span>Smart form components with Zod validation</span>
+                <a class="card" href="./forms/">
+                  <div class="card-header">
+                    <h2>@blacksmith-ui/forms</h2>
+                    <span class="arrow">&rarr;</span>
+                  </div>
+                  <p>17 smart form field components with Zod schema validation and react-hook-form integration. Includes React Query hooks for API-connected forms.</p>
                 </a>
-                <a href="./auth/">
-                  <h2>@blacksmith-ui/auth</h2>
-                  <span>Authentication flows — login, register, password reset</span>
+                <a class="card" href="./auth/">
+                  <div class="card-header">
+                    <h2>@blacksmith-ui/auth</h2>
+                    <span class="arrow">&rarr;</span>
+                  </div>
+                  <p>Pre-built authentication flows — login, register, forgot password, and reset password. Pluggable adapter pattern supports Firebase, Supabase, or any custom backend.</p>
                 </a>
+              </div>
+
+              <hr />
+
+              <p class="section-label">Highlights</p>
+              <div class="features">
+                <div class="feature">
+                  <h3>Accessible</h3>
+                  <p>Radix UI headless primitives with keyboard nav and ARIA built in</p>
+                </div>
+                <div class="feature">
+                  <h3>Themeable</h3>
+                  <p>HSL CSS variables with 6 presets and dark mode support</p>
+                </div>
+                <div class="feature">
+                  <h3>Tree-shakable</h3>
+                  <p>preserveModules build — only bundle what you use</p>
+                </div>
+                <div class="feature">
+                  <h3>Type-safe</h3>
+                  <p>Full TypeScript with exported prop types for every component</p>
+                </div>
+              </div>
+
+              <hr />
+
+              <p class="section-label">Author</p>
+              <div class="author">
+                <div class="author-avatar">
+                  <img src="https://avatars.githubusercontent.com/u/39818137?s=96&v=4" alt="Tobi Sholanke" />
+                </div>
+                <div class="author-info">
+                  <h3>Tobi Sholanke</h3>
+                  <p>Senior Software Developer, Helsinki &middot; <a href="https://github.com/oluwatobimaxwell">@oluwatobimaxwell</a></p>
+                </div>
               </div>
             </div>
           </body>
           </html>
-          EOF
+          HTMLEOF
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3

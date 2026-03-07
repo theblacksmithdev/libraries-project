@@ -6,6 +6,7 @@ Drop-in authentication UI components for React — login, registration, password
 
 [![npm version](https://img.shields.io/npm/v/@blacksmith-ui/auth)](https://www.npmjs.com/package/@blacksmith-ui/auth)
 [![license](https://img.shields.io/npm/l/@blacksmith-ui/auth)](./LICENSE)
+[![storybook](https://img.shields.io/badge/storybook-auth-ff4785)](https://oluwatobimaxwell.github.io/libraries-project/auth/)
 
 ## Features
 

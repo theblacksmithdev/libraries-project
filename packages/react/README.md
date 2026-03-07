@@ -6,6 +6,7 @@ Core UI component library for [BlacksmithUI](https://github.com/oluwatobimaxwell
 
 [![npm version](https://img.shields.io/npm/v/@blacksmith-ui/react)](https://www.npmjs.com/package/@blacksmith-ui/react)
 [![license](https://img.shields.io/npm/l/@blacksmith-ui/react)](./LICENSE)
+[![storybook](https://img.shields.io/badge/storybook-react-ff4785)](https://oluwatobimaxwell.github.io/libraries-project/react/)
 
 ## Features
 
