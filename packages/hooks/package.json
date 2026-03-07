@@ -1,6 +1,6 @@
 {
   "name": "@blacksmith-ui/hooks",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A collection of commonly reusable React hooks",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
