@@ -30,27 +30,37 @@ describe('useIntersectionObserver', () => {
     expect(result.current.entry).toBeNull();
   });
 
-  it('updates when element becomes visible', () => {
-    const { result } = renderHook(() => useIntersectionObserver<HTMLDivElement>());
-
+  it('updates when observer fires intersection callback', () => {
     const el = document.createElement('div');
-    Object.defineProperty(result.current.ref, 'current', { value: el, writable: true });
 
-    // Force re-render to trigger useEffect with ref set
-    const { result: result2 } = renderHook(() => useIntersectionObserver<HTMLDivElement>());
-    Object.defineProperty(result2.current.ref, 'current', { value: el, writable: true });
+    const { result } = renderHook(() => {
+      const hookResult = useIntersectionObserver<HTMLDivElement>();
+      (hookResult.ref as React.MutableRefObject<HTMLDivElement | null>).current = el;
+      return hookResult;
+    });
 
-    // Simulate intersection
     act(() => {
       observeCallback?.([{ isIntersecting: true }]);
     });
 
-    expect(result2.current.isIntersecting).toBe(true);
+    expect(result.current.isIntersecting).toBe(true);
   });
 
   it('returns a ref object', () => {
     const { result } = renderHook(() => useIntersectionObserver<HTMLDivElement>());
     expect(result.current.ref).toBeDefined();
     expect(result.current.ref.current).toBeNull();
+  });
+
+  it('calls observe on the element', () => {
+    const el = document.createElement('div');
+
+    renderHook(() => {
+      const hookResult = useIntersectionObserver<HTMLDivElement>();
+      (hookResult.ref as React.MutableRefObject<HTMLDivElement | null>).current = el;
+      return hookResult;
+    });
+
+    expect(observeSpy).toHaveBeenCalledWith(el);
   });
 });
