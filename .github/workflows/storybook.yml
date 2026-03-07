@@ -1,0 +1,97 @@
+name: Deploy Storybook to GitHub Pages
+
+on:
+  push:
+    branches:
+      - master
+
+concurrency:
+  group: storybook-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    permissions:
+      pages: write
+      id-token: write
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Build all packages
+        run: yarn build:all
+
+      - name: Build Storybook for each package
+        run: |
+          yarn workspace @blacksmith-ui/react build-storybook -o ../../storybook-static/react
+          yarn workspace @blacksmith-ui/forms build-storybook -o ../../storybook-static/forms
+          yarn workspace @blacksmith-ui/auth build-storybook -o ../../storybook-static/auth
+
+      - name: Create index page
+        run: |
+          cat > storybook-static/index.html << 'EOF'
+          <!DOCTYPE html>
+          <html lang="en">
+          <head>
+            <meta charset="UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <title>BlacksmithUI Storybook</title>
+            <style>
+              * { margin: 0; padding: 0; box-sizing: border-box; }
+              body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0f0f0f; color: #e5e5e5; min-height: 100vh; display: flex; align-items: center; justify-content: center; }
+              .container { max-width: 640px; width: 100%; padding: 2rem; }
+              h1 { font-size: 2rem; font-weight: 700; margin-bottom: 0.5rem; }
+              p { color: #a3a3a3; margin-bottom: 2rem; }
+              .cards { display: flex; flex-direction: column; gap: 1rem; }
+              a { text-decoration: none; color: inherit; display: block; padding: 1.5rem; border-radius: 12px; border: 1px solid #262626; background: #171717; transition: border-color 0.2s, background 0.2s; }
+              a:hover { border-color: #525252; background: #1c1c1c; }
+              a h2 { font-size: 1.125rem; font-weight: 600; margin-bottom: 0.25rem; }
+              a span { color: #a3a3a3; font-size: 0.875rem; }
+            </style>
+          </head>
+          <body>
+            <div class="container">
+              <h1>BlacksmithUI</h1>
+              <p>Component library documentation</p>
+              <div class="cards">
+                <a href="./react/">
+                  <h2>@blacksmith-ui/react</h2>
+                  <span>Core UI primitives — 60+ accessible components</span>
+                </a>
+                <a href="./forms/">
+                  <h2>@blacksmith-ui/forms</h2>
+                  <span>Smart form components with Zod validation</span>
+                </a>
+                <a href="./auth/">
+                  <h2>@blacksmith-ui/auth</h2>
+                  <span>Authentication flows — login, register, password reset</span>
+                </a>
+              </div>
+            </div>
+          </body>
+          </html>
+          EOF
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: storybook-static
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
