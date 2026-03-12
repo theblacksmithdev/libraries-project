@@ -1,6 +1,6 @@
 {
   "name": "@blacksmith-ui/auth",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "Configurable authentication UI components built on @blacksmith-ui/react — supports standard and third-party auth providers",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
