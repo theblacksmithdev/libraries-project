@@ -1,9 +1,42 @@
-// Style-prop primitives — typed React props that map to Tailwind classes
-// Full string literals throughout so Tailwind JIT can detect every class in source.
+// Style-prop primitives — typed React props that map to standard Tailwind classes.
+// Semantic tokens (xs, sm, md …) map to Tailwind's default scale so no custom
+// CSS variables or Tailwind extensions are needed.
 
 // ── Token types ──────────────────────────────────────────────────────
 
-export type SpacingToken = '0' | 'unit' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl'
+/**
+ * Semantic spacing tokens → standard Tailwind spacing values.
+ *
+ * | Token  | Tailwind | Value    |
+ * |--------|----------|----------|
+ * | '0'    | -0       | 0        |
+ * | 'px'   | -px      | 1px      |
+ * | '3xs'  | -0.5     | 0.125rem |
+ * | '2xs'  | -1       | 0.25rem  |
+ * | 'xs'   | -1.5     | 0.375rem |
+ * | 'sm'   | -2       | 0.5rem   |
+ * | 'sm+'  | -3       | 0.75rem  |
+ * | 'md'   | -4       | 1rem     |
+ * | 'md+'  | -5       | 1.25rem  |
+ * | 'lg'   | -6       | 1.5rem   |
+ * | 'lg+'  | -7       | 1.75rem  |
+ * | 'xl'   | -8       | 2rem     |
+ * | 'xl+'  | -10      | 2.5rem   |
+ * | '2xl'  | -12      | 3rem     |
+ * | '3xl'  | -16      | 4rem     |
+ * | '4xl'  | -20      | 5rem     |
+ * | '5xl'  | -24      | 6rem     |
+ * | '6xl'  | -32      | 8rem     |
+ * | '7xl'  | -40      | 10rem    |
+ * | '8xl'  | -48      | 12rem    |
+ * | '9xl'  | -64      | 16rem    |
+ * | '10xl' | -80      | 20rem    |
+ * | '11xl' | -96      | 24rem    |
+ */
+export type SpacingToken =
+  | '0' | 'px' | '3xs' | '2xs' | 'xs'
+  | 'sm' | 'sm+' | 'md' | 'md+' | 'lg' | 'lg+' | 'xl' | 'xl+'
+  | '2xl' | '3xl' | '4xl' | '5xl' | '6xl' | '7xl' | '8xl' | '9xl' | '10xl' | '11xl'
 
 export type ColorToken =
   | 'background' | 'foreground'
@@ -15,184 +48,121 @@ export type ColorToken =
   | 'destructive' | 'destructive-foreground'
   | 'border' | 'input' | 'ring'
   | 'transparent' | 'white' | 'black'
+  | 'current' | 'inherit'
 
-export type ShadowToken = 'none' | 'sm' | 'md' | 'lg' | 'xl'
-export type RadiusToken = 'none' | 'sm' | 'md' | 'lg' | 'full'
-export type FontSizeToken = 'sm' | 'base' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl'
-export type FontWeightToken = 'light' | 'normal' | 'medium' | 'semibold' | 'bold' | 'extrabold'
-export type DisplayToken = 'block' | 'inline-block' | 'inline' | 'flex' | 'inline-flex' | 'grid' | 'hidden' | 'none'
+export type ShadowToken = 'none' | 'sm' | 'DEFAULT' | 'md' | 'lg' | 'xl' | '2xl' | 'inner'
+export type RadiusToken = 'none' | 'sm' | 'DEFAULT' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | 'full'
+export type FontSizeToken = 'xs' | 'sm' | 'base' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl' | '5xl' | '6xl' | '7xl' | '8xl' | '9xl'
+export type FontWeightToken = 'thin' | 'extralight' | 'light' | 'normal' | 'medium' | 'semibold' | 'bold' | 'extrabold' | 'black'
+export type DisplayToken = 'block' | 'inline-block' | 'inline' | 'flex' | 'inline-flex' | 'grid' | 'inline-grid' | 'hidden' | 'none' | 'contents' | 'table' | 'table-row' | 'table-cell'
 export type PositionToken = 'static' | 'relative' | 'absolute' | 'fixed' | 'sticky'
-export type OverflowToken = 'auto' | 'hidden' | 'visible' | 'scroll'
+export type OverflowToken = 'auto' | 'hidden' | 'visible' | 'scroll' | 'clip'
 export type FlexDirectionToken = 'row' | 'row-reverse' | 'col' | 'col-reverse'
 export type AlignToken = 'start' | 'center' | 'end' | 'stretch' | 'baseline'
 export type JustifyToken = 'start' | 'center' | 'end' | 'between' | 'around' | 'evenly'
 export type WrapToken = 'wrap' | 'nowrap' | 'wrap-reverse'
 export type TextAlignToken = 'left' | 'center' | 'right' | 'justify'
 export type FontFamilyToken = 'sans' | 'serif' | 'mono'
-export type WidthToken = 'full' | 'screen' | 'auto' | 'min' | 'max' | 'fit'
+export type SizeToken =
+  | 'full' | 'screen' | 'auto' | 'min' | 'max' | 'fit'
+  | 'svw' | 'lvw' | 'dvw' | 'svh' | 'lvh' | 'dvh'
+  | '0' | 'px' | '0.5' | '1' | '1.5' | '2' | '3' | '4' | '5' | '6' | '7' | '8'
+  | '9' | '10' | '11' | '12' | '14' | '16' | '20' | '24' | '28' | '32'
+  | '36' | '40' | '44' | '48' | '52' | '56' | '60' | '64' | '72' | '80' | '96'
+  | '1/2' | '1/3' | '2/3' | '1/4' | '3/4' | '1/5' | '2/5' | '3/5' | '4/5'
 export type BorderWidthToken = '0' | '1' | '2' | '4' | '8'
 export type OpacityToken = '0' | '5' | '10' | '20' | '25' | '30' | '40' | '50' | '60' | '70' | '75' | '80' | '90' | '95' | '100'
+export type LineHeightToken = 'none' | 'tight' | 'snug' | 'normal' | 'relaxed' | 'loose' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | '10'
+export type LetterSpacingToken = 'tighter' | 'tight' | 'normal' | 'wide' | 'wider' | 'widest'
+export type TextTransformToken = 'uppercase' | 'lowercase' | 'capitalize' | 'normal-case'
+export type TextDecorationToken = 'underline' | 'overline' | 'line-through' | 'no-underline'
+export type TextOverflowToken = 'truncate' | 'ellipsis' | 'clip'
+export type WhiteSpaceToken = 'normal' | 'nowrap' | 'pre' | 'pre-line' | 'pre-wrap' | 'break-spaces'
+export type WordBreakToken = 'normal' | 'words' | 'all' | 'keep'
+export type ZIndexToken = '0' | '10' | '20' | '30' | '40' | '50' | 'auto'
+export type InsetToken = '0' | 'px' | 'auto' | 'full' | '1/2' | '1/3' | '2/3' | '1/4' | '3/4'
+export type AspectRatioToken = 'auto' | 'square' | 'video'
+export type ObjectFitToken = 'contain' | 'cover' | 'fill' | 'none' | 'scale-down'
+export type AlignSelfToken = 'auto' | 'start' | 'center' | 'end' | 'stretch' | 'baseline'
+export type JustifySelfToken = 'auto' | 'start' | 'center' | 'end' | 'stretch'
+export type FlexToken = '1' | 'auto' | 'initial' | 'none'
+export type OrderToken = 'first' | 'last' | 'none' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | '10' | '11' | '12'
+export type GridColsToken = '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | '10' | '11' | '12' | 'none'
+export type ColSpanToken = '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | '10' | '11' | '12' | 'full'
+export type GridRowsToken = '1' | '2' | '3' | '4' | '5' | '6' | 'none'
+export type RowSpanToken = '1' | '2' | '3' | '4' | '5' | '6' | 'full'
+export type PlaceItemsToken = 'start' | 'center' | 'end' | 'stretch' | 'baseline'
+export type CursorToken = 'auto' | 'default' | 'pointer' | 'wait' | 'text' | 'move' | 'help' | 'not-allowed' | 'none' | 'grab' | 'grabbing'
+export type UserSelectToken = 'none' | 'text' | 'all' | 'auto'
+export type PointerEventsToken = 'none' | 'auto'
+export type TransitionToken = 'none' | 'all' | 'DEFAULT' | 'colors' | 'opacity' | 'shadow' | 'transform'
+export type DurationToken = '75' | '100' | '150' | '200' | '300' | '500' | '700' | '1000'
+export type EaseToken = 'linear' | 'in' | 'out' | 'in-out'
+export type BorderStyleToken = 'solid' | 'dashed' | 'dotted' | 'double' | 'hidden' | 'none'
+
+// ── Spacing lookup ───────────────────────────────────────────────────
+
+/** Maps semantic token → Tailwind numeric suffix */
+const spacingSuffix: Record<SpacingToken, string> = {
+  '0': '0',
+  'px': 'px',
+  '3xs': '0.5',
+  '2xs': '1',
+  'xs': '1.5',
+  'sm': '2',
+  'sm+': '3',
+  'md': '4',
+  'md+': '5',
+  'lg': '6',
+  'lg+': '7',
+  'xl': '8',
+  'xl+': '10',
+  '2xl': '12',
+  '3xl': '16',
+  '4xl': '20',
+  '5xl': '24',
+  '6xl': '32',
+  '7xl': '40',
+  '8xl': '48',
+  '9xl': '64',
+  '10xl': '80',
+  '11xl': '96',
+}
+
+/** Builds a Tailwind spacing class, e.g. ('p', 'md') → 'p-4' */
+function spacingClass(prefix: string, token: SpacingToken): string {
+  return `${prefix}-${spacingSuffix[token]}`
+}
+
+// ── Helper functions ─────────────────────────────────────────────────
+
+/** Builds a color class with a prefix, e.g. ('bg', 'primary') → 'bg-primary' */
+function colorClass(prefix: string, token: ColorToken): string {
+  return `${prefix}-${token}`
+}
+
+/** Builds a size class with a prefix, e.g. ('w', 'full') → 'w-full' */
+function sizeClass(prefix: string, token: SizeToken): string {
+  return `${prefix}-${token}`
+}
+
+/** Builds an overflow class, e.g. ('overflow', 'hidden') → 'overflow-hidden' */
+function overflowClass(prefix: string, token: OverflowToken): string {
+  return `${prefix}-${token}`
+}
 
 // ── Lookup maps ──────────────────────────────────────────────────────
 
-const spacingMap: Record<SpacingToken, string> = {
-  '0': '0',
-  'unit': 'unit',
-  'xs': 'xs',
-  'sm': 'sm-space',
-  'md': 'md-space',
-  'lg': 'lg-space',
-  'xl': 'xl-space',
-  '2xl': '2xl-space',
-}
-
-const paddingMap: Record<string, Record<SpacingToken, string>> = {
-  p: {
-    '0': 'p-0', 'unit': 'p-unit', 'xs': 'p-xs',
-    'sm': 'p-sm-space', 'md': 'p-md-space', 'lg': 'p-lg-space',
-    'xl': 'p-xl-space', '2xl': 'p-2xl-space',
-  },
-  px: {
-    '0': 'px-0', 'unit': 'px-unit', 'xs': 'px-xs',
-    'sm': 'px-sm-space', 'md': 'px-md-space', 'lg': 'px-lg-space',
-    'xl': 'px-xl-space', '2xl': 'px-2xl-space',
-  },
-  py: {
-    '0': 'py-0', 'unit': 'py-unit', 'xs': 'py-xs',
-    'sm': 'py-sm-space', 'md': 'py-md-space', 'lg': 'py-lg-space',
-    'xl': 'py-xl-space', '2xl': 'py-2xl-space',
-  },
-  pt: {
-    '0': 'pt-0', 'unit': 'pt-unit', 'xs': 'pt-xs',
-    'sm': 'pt-sm-space', 'md': 'pt-md-space', 'lg': 'pt-lg-space',
-    'xl': 'pt-xl-space', '2xl': 'pt-2xl-space',
-  },
-  pr: {
-    '0': 'pr-0', 'unit': 'pr-unit', 'xs': 'pr-xs',
-    'sm': 'pr-sm-space', 'md': 'pr-md-space', 'lg': 'pr-lg-space',
-    'xl': 'pr-xl-space', '2xl': 'pr-2xl-space',
-  },
-  pb: {
-    '0': 'pb-0', 'unit': 'pb-unit', 'xs': 'pb-xs',
-    'sm': 'pb-sm-space', 'md': 'pb-md-space', 'lg': 'pb-lg-space',
-    'xl': 'pb-xl-space', '2xl': 'pb-2xl-space',
-  },
-  pl: {
-    '0': 'pl-0', 'unit': 'pl-unit', 'xs': 'pl-xs',
-    'sm': 'pl-sm-space', 'md': 'pl-md-space', 'lg': 'pl-lg-space',
-    'xl': 'pl-xl-space', '2xl': 'pl-2xl-space',
-  },
-}
-
-const marginMap: Record<string, Record<SpacingToken, string>> = {
-  m: {
-    '0': 'm-0', 'unit': 'm-unit', 'xs': 'm-xs',
-    'sm': 'm-sm-space', 'md': 'm-md-space', 'lg': 'm-lg-space',
-    'xl': 'm-xl-space', '2xl': 'm-2xl-space',
-  },
-  mx: {
-    '0': 'mx-0', 'unit': 'mx-unit', 'xs': 'mx-xs',
-    'sm': 'mx-sm-space', 'md': 'mx-md-space', 'lg': 'mx-lg-space',
-    'xl': 'mx-xl-space', '2xl': 'mx-2xl-space',
-  },
-  my: {
-    '0': 'my-0', 'unit': 'my-unit', 'xs': 'my-xs',
-    'sm': 'my-sm-space', 'md': 'my-md-space', 'lg': 'my-lg-space',
-    'xl': 'my-xl-space', '2xl': 'my-2xl-space',
-  },
-  mt: {
-    '0': 'mt-0', 'unit': 'mt-unit', 'xs': 'mt-xs',
-    'sm': 'mt-sm-space', 'md': 'mt-md-space', 'lg': 'mt-lg-space',
-    'xl': 'mt-xl-space', '2xl': 'mt-2xl-space',
-  },
-  mr: {
-    '0': 'mr-0', 'unit': 'mr-unit', 'xs': 'mr-xs',
-    'sm': 'mr-sm-space', 'md': 'mr-md-space', 'lg': 'mr-lg-space',
-    'xl': 'mr-xl-space', '2xl': 'mr-2xl-space',
-  },
-  mb: {
-    '0': 'mb-0', 'unit': 'mb-unit', 'xs': 'mb-xs',
-    'sm': 'mb-sm-space', 'md': 'mb-md-space', 'lg': 'mb-lg-space',
-    'xl': 'mb-xl-space', '2xl': 'mb-2xl-space',
-  },
-  ml: {
-    '0': 'ml-0', 'unit': 'ml-unit', 'xs': 'ml-xs',
-    'sm': 'ml-sm-space', 'md': 'ml-md-space', 'lg': 'ml-lg-space',
-    'xl': 'ml-xl-space', '2xl': 'ml-2xl-space',
-  },
-}
-
-const gapMap: Record<SpacingToken, string> = {
-  '0': 'gap-0', 'unit': 'gap-unit', 'xs': 'gap-xs',
-  'sm': 'gap-sm-space', 'md': 'gap-md-space', 'lg': 'gap-lg-space',
-  'xl': 'gap-xl-space', '2xl': 'gap-2xl-space',
-}
-
-const bgMap: Record<ColorToken, string> = {
-  'background': 'bg-background', 'foreground': 'bg-foreground',
-  'card': 'bg-card', 'card-foreground': 'bg-card-foreground',
-  'primary': 'bg-primary', 'primary-foreground': 'bg-primary-foreground',
-  'secondary': 'bg-secondary', 'secondary-foreground': 'bg-secondary-foreground',
-  'muted': 'bg-muted', 'muted-foreground': 'bg-muted-foreground',
-  'accent': 'bg-accent', 'accent-foreground': 'bg-accent-foreground',
-  'destructive': 'bg-destructive', 'destructive-foreground': 'bg-destructive-foreground',
-  'border': 'bg-border', 'input': 'bg-input', 'ring': 'bg-ring',
-  'transparent': 'bg-transparent', 'white': 'bg-white', 'black': 'bg-black',
-}
-
-const colorMap: Record<ColorToken, string> = {
-  'background': 'text-background', 'foreground': 'text-foreground',
-  'card': 'text-card', 'card-foreground': 'text-card-foreground',
-  'primary': 'text-primary', 'primary-foreground': 'text-primary-foreground',
-  'secondary': 'text-secondary', 'secondary-foreground': 'text-secondary-foreground',
-  'muted': 'text-muted', 'muted-foreground': 'text-muted-foreground',
-  'accent': 'text-accent', 'accent-foreground': 'text-accent-foreground',
-  'destructive': 'text-destructive', 'destructive-foreground': 'text-destructive-foreground',
-  'border': 'text-border', 'input': 'text-input', 'ring': 'text-ring',
-  'transparent': 'text-transparent', 'white': 'text-white', 'black': 'text-black',
-}
-
-const borderColorMap: Record<ColorToken, string> = {
-  'background': 'border-background', 'foreground': 'border-foreground',
-  'card': 'border-card', 'card-foreground': 'border-card-foreground',
-  'primary': 'border-primary', 'primary-foreground': 'border-primary-foreground',
-  'secondary': 'border-secondary', 'secondary-foreground': 'border-secondary-foreground',
-  'muted': 'border-muted', 'muted-foreground': 'border-muted-foreground',
-  'accent': 'border-accent', 'accent-foreground': 'border-accent-foreground',
-  'destructive': 'border-destructive', 'destructive-foreground': 'border-destructive-foreground',
-  'border': 'border-border', 'input': 'border-input', 'ring': 'border-ring',
-  'transparent': 'border-transparent', 'white': 'border-white', 'black': 'border-black',
-}
-
 const displayMap: Record<DisplayToken, string> = {
   'block': 'block', 'inline-block': 'inline-block', 'inline': 'inline',
-  'flex': 'flex', 'inline-flex': 'inline-flex', 'grid': 'grid',
-  'hidden': 'hidden', 'none': 'hidden',
+  'flex': 'flex', 'inline-flex': 'inline-flex', 'grid': 'grid', 'inline-grid': 'inline-grid',
+  'hidden': 'hidden', 'none': 'hidden', 'contents': 'contents',
+  'table': 'table', 'table-row': 'table-row', 'table-cell': 'table-cell',
 }
 
 const positionMap: Record<PositionToken, string> = {
   'static': 'static', 'relative': 'relative', 'absolute': 'absolute',
   'fixed': 'fixed', 'sticky': 'sticky',
-}
-
-const overflowMap: Record<OverflowToken, string> = {
-  'auto': 'overflow-auto', 'hidden': 'overflow-hidden',
-  'visible': 'overflow-visible', 'scroll': 'overflow-scroll',
-}
-
-const widthMap: Record<WidthToken, string> = {
-  'full': 'w-full', 'screen': 'w-screen', 'auto': 'w-auto',
-  'min': 'w-min', 'max': 'w-max', 'fit': 'w-fit',
-}
-
-const heightMap: Record<WidthToken, string> = {
-  'full': 'h-full', 'screen': 'h-screen', 'auto': 'h-auto',
-  'min': 'h-min', 'max': 'h-max', 'fit': 'h-fit',
-}
-
-const maxWidthMap: Record<WidthToken, string> = {
-  'full': 'max-w-full', 'screen': 'max-w-screen', 'auto': 'max-w-none',
-  'min': 'max-w-min', 'max': 'max-w-max', 'fit': 'max-w-fit',
 }
 
 const directionMap: Record<FlexDirectionToken, string> = {
@@ -214,26 +184,26 @@ const wrapMap: Record<WrapToken, string> = {
   'wrap': 'flex-wrap', 'nowrap': 'flex-nowrap', 'wrap-reverse': 'flex-wrap-reverse',
 }
 
-const growMap: Record<string, string> = {
-  '0': 'grow-0', '1': 'grow',
-}
-
-const shrinkMap: Record<string, string> = {
-  '0': 'shrink-0', '1': 'shrink',
-}
+const growMap: Record<string, string> = { '0': 'grow-0', '1': 'grow' }
+const shrinkMap: Record<string, string> = { '0': 'shrink-0', '1': 'shrink' }
 
 const shadowMap: Record<ShadowToken, string> = {
-  'none': 'shadow-none', 'sm': 'shadow-sm', 'md': 'shadow-md',
-  'lg': 'shadow-lg', 'xl': 'shadow-xl',
+  'none': 'shadow-none', 'sm': 'shadow-sm', 'DEFAULT': 'shadow', 'md': 'shadow-md',
+  'lg': 'shadow-lg', 'xl': 'shadow-xl', '2xl': 'shadow-2xl', 'inner': 'shadow-inner',
 }
 
 const roundedMap: Record<RadiusToken, string> = {
-  'none': 'rounded-none', 'sm': 'rounded-sm', 'md': 'rounded-md',
-  'lg': 'rounded-lg', 'full': 'rounded-full',
+  'none': 'rounded-none', 'sm': 'rounded-sm', 'DEFAULT': 'rounded', 'md': 'rounded-md',
+  'lg': 'rounded-lg', 'xl': 'rounded-xl', '2xl': 'rounded-2xl', '3xl': 'rounded-3xl', 'full': 'rounded-full',
 }
 
 const borderWidthMap: Record<BorderWidthToken, string> = {
   '0': 'border-0', '1': 'border', '2': 'border-2', '4': 'border-4', '8': 'border-8',
+}
+
+const borderStyleMap: Record<BorderStyleToken, string> = {
+  'solid': 'border-solid', 'dashed': 'border-dashed', 'dotted': 'border-dotted',
+  'double': 'border-double', 'hidden': 'border-hidden', 'none': 'border-none',
 }
 
 const opacityMap: Record<OpacityToken, string> = {
@@ -245,13 +215,15 @@ const opacityMap: Record<OpacityToken, string> = {
 }
 
 const fontSizeMap: Record<FontSizeToken, string> = {
-  'sm': 'text-sm', 'base': 'text-base', 'lg': 'text-lg',
+  'xs': 'text-xs', 'sm': 'text-sm', 'base': 'text-base', 'lg': 'text-lg',
   'xl': 'text-xl', '2xl': 'text-2xl', '3xl': 'text-3xl', '4xl': 'text-4xl',
+  '5xl': 'text-5xl', '6xl': 'text-6xl', '7xl': 'text-7xl', '8xl': 'text-8xl', '9xl': 'text-9xl',
 }
 
 const fontWeightMap: Record<FontWeightToken, string> = {
-  'light': 'font-light', 'normal': 'font-normal', 'medium': 'font-medium',
-  'semibold': 'font-semibold', 'bold': 'font-bold', 'extrabold': 'font-extrabold',
+  'thin': 'font-thin', 'extralight': 'font-extralight', 'light': 'font-light',
+  'normal': 'font-normal', 'medium': 'font-medium', 'semibold': 'font-semibold',
+  'bold': 'font-bold', 'extrabold': 'font-extrabold', 'black': 'font-black',
 }
 
 const fontFamilyMap: Record<FontFamilyToken, string> = {
@@ -260,6 +232,140 @@ const fontFamilyMap: Record<FontFamilyToken, string> = {
 
 const textAlignMap: Record<TextAlignToken, string> = {
   'left': 'text-left', 'center': 'text-center', 'right': 'text-right', 'justify': 'text-justify',
+}
+
+const lineHeightMap: Record<LineHeightToken, string> = {
+  'none': 'leading-none', 'tight': 'leading-tight', 'snug': 'leading-snug',
+  'normal': 'leading-normal', 'relaxed': 'leading-relaxed', 'loose': 'leading-loose',
+  '3': 'leading-3', '4': 'leading-4', '5': 'leading-5', '6': 'leading-6',
+  '7': 'leading-7', '8': 'leading-8', '9': 'leading-9', '10': 'leading-10',
+}
+
+const letterSpacingMap: Record<LetterSpacingToken, string> = {
+  'tighter': 'tracking-tighter', 'tight': 'tracking-tight', 'normal': 'tracking-normal',
+  'wide': 'tracking-wide', 'wider': 'tracking-wider', 'widest': 'tracking-widest',
+}
+
+const textTransformMap: Record<TextTransformToken, string> = {
+  'uppercase': 'uppercase', 'lowercase': 'lowercase', 'capitalize': 'capitalize', 'normal-case': 'normal-case',
+}
+
+const textDecorationMap: Record<TextDecorationToken, string> = {
+  'underline': 'underline', 'overline': 'overline', 'line-through': 'line-through', 'no-underline': 'no-underline',
+}
+
+const textOverflowMap: Record<TextOverflowToken, string> = {
+  'truncate': 'truncate', 'ellipsis': 'text-ellipsis', 'clip': 'text-clip',
+}
+
+const whiteSpaceMap: Record<WhiteSpaceToken, string> = {
+  'normal': 'whitespace-normal', 'nowrap': 'whitespace-nowrap', 'pre': 'whitespace-pre',
+  'pre-line': 'whitespace-pre-line', 'pre-wrap': 'whitespace-pre-wrap', 'break-spaces': 'whitespace-break-spaces',
+}
+
+const wordBreakMap: Record<WordBreakToken, string> = {
+  'normal': 'break-normal', 'words': 'break-words', 'all': 'break-all', 'keep': 'break-keep',
+}
+
+const zIndexMap: Record<ZIndexToken, string> = {
+  '0': 'z-0', '10': 'z-10', '20': 'z-20', '30': 'z-30', '40': 'z-40', '50': 'z-50', 'auto': 'z-auto',
+}
+
+const insetMap: Record<InsetToken, string> = {
+  '0': '0', 'px': 'px', 'auto': 'auto', 'full': 'full', '1/2': '1/2', '1/3': '1/3', '2/3': '2/3', '1/4': '1/4', '3/4': '3/4',
+}
+
+function insetClass(prefix: string, token: InsetToken): string {
+  return `${prefix}-${insetMap[token]}`
+}
+
+const aspectRatioMap: Record<AspectRatioToken, string> = {
+  'auto': 'aspect-auto', 'square': 'aspect-square', 'video': 'aspect-video',
+}
+
+const objectFitMap: Record<ObjectFitToken, string> = {
+  'contain': 'object-contain', 'cover': 'object-cover', 'fill': 'object-fill',
+  'none': 'object-none', 'scale-down': 'object-scale-down',
+}
+
+const alignSelfMap: Record<AlignSelfToken, string> = {
+  'auto': 'self-auto', 'start': 'self-start', 'center': 'self-center',
+  'end': 'self-end', 'stretch': 'self-stretch', 'baseline': 'self-baseline',
+}
+
+const justifySelfMap: Record<JustifySelfToken, string> = {
+  'auto': 'justify-self-auto', 'start': 'justify-self-start', 'center': 'justify-self-center',
+  'end': 'justify-self-end', 'stretch': 'justify-self-stretch',
+}
+
+const flexMap: Record<FlexToken, string> = {
+  '1': 'flex-1', 'auto': 'flex-auto', 'initial': 'flex-initial', 'none': 'flex-none',
+}
+
+const orderMap: Record<OrderToken, string> = {
+  'first': 'order-first', 'last': 'order-last', 'none': 'order-none',
+  '1': 'order-1', '2': 'order-2', '3': 'order-3', '4': 'order-4',
+  '5': 'order-5', '6': 'order-6', '7': 'order-7', '8': 'order-8',
+  '9': 'order-9', '10': 'order-10', '11': 'order-11', '12': 'order-12',
+}
+
+const gridColsMap: Record<GridColsToken, string> = {
+  '1': 'grid-cols-1', '2': 'grid-cols-2', '3': 'grid-cols-3', '4': 'grid-cols-4',
+  '5': 'grid-cols-5', '6': 'grid-cols-6', '7': 'grid-cols-7', '8': 'grid-cols-8',
+  '9': 'grid-cols-9', '10': 'grid-cols-10', '11': 'grid-cols-11', '12': 'grid-cols-12',
+  'none': 'grid-cols-none',
+}
+
+const colSpanMap: Record<ColSpanToken, string> = {
+  '1': 'col-span-1', '2': 'col-span-2', '3': 'col-span-3', '4': 'col-span-4',
+  '5': 'col-span-5', '6': 'col-span-6', '7': 'col-span-7', '8': 'col-span-8',
+  '9': 'col-span-9', '10': 'col-span-10', '11': 'col-span-11', '12': 'col-span-12',
+  'full': 'col-span-full',
+}
+
+const gridRowsMap: Record<GridRowsToken, string> = {
+  '1': 'grid-rows-1', '2': 'grid-rows-2', '3': 'grid-rows-3',
+  '4': 'grid-rows-4', '5': 'grid-rows-5', '6': 'grid-rows-6', 'none': 'grid-rows-none',
+}
+
+const rowSpanMap: Record<RowSpanToken, string> = {
+  '1': 'row-span-1', '2': 'row-span-2', '3': 'row-span-3',
+  '4': 'row-span-4', '5': 'row-span-5', '6': 'row-span-6', 'full': 'row-span-full',
+}
+
+const placeItemsMap: Record<PlaceItemsToken, string> = {
+  'start': 'place-items-start', 'center': 'place-items-center', 'end': 'place-items-end',
+  'stretch': 'place-items-stretch', 'baseline': 'place-items-baseline',
+}
+
+const cursorMap: Record<CursorToken, string> = {
+  'auto': 'cursor-auto', 'default': 'cursor-default', 'pointer': 'cursor-pointer',
+  'wait': 'cursor-wait', 'text': 'cursor-text', 'move': 'cursor-move',
+  'help': 'cursor-help', 'not-allowed': 'cursor-not-allowed', 'none': 'cursor-none',
+  'grab': 'cursor-grab', 'grabbing': 'cursor-grabbing',
+}
+
+const userSelectMap: Record<UserSelectToken, string> = {
+  'none': 'select-none', 'text': 'select-text', 'all': 'select-all', 'auto': 'select-auto',
+}
+
+const pointerEventsMap: Record<PointerEventsToken, string> = {
+  'none': 'pointer-events-none', 'auto': 'pointer-events-auto',
+}
+
+const transitionMap: Record<TransitionToken, string> = {
+  'none': 'transition-none', 'all': 'transition-all', 'DEFAULT': 'transition',
+  'colors': 'transition-colors', 'opacity': 'transition-opacity',
+  'shadow': 'transition-shadow', 'transform': 'transition-transform',
+}
+
+const durationMap: Record<DurationToken, string> = {
+  '75': 'duration-75', '100': 'duration-100', '150': 'duration-150', '200': 'duration-200',
+  '300': 'duration-300', '500': 'duration-500', '700': 'duration-700', '1000': 'duration-1000',
+}
+
+const easeMap: Record<EaseToken, string> = {
+  'linear': 'ease-linear', 'in': 'ease-in', 'out': 'ease-out', 'in-out': 'ease-in-out',
 }
 
 // ── StyleProps interface ─────────────────────────────────────────────
@@ -281,6 +387,8 @@ export interface StyleProps {
   mb?: SpacingToken
   ml?: SpacingToken
   gap?: SpacingToken
+  gapX?: SpacingToken
+  gapY?: SpacingToken
   // Colors
   bg?: ColorToken
   color?: ColorToken
@@ -289,9 +397,24 @@ export interface StyleProps {
   display?: DisplayToken
   position?: PositionToken
   overflow?: OverflowToken
-  w?: WidthToken
-  h?: WidthToken
-  maxW?: WidthToken
+  overflowX?: OverflowToken
+  overflowY?: OverflowToken
+  w?: SizeToken
+  h?: SizeToken
+  minW?: SizeToken
+  minH?: SizeToken
+  maxW?: SizeToken
+  maxH?: SizeToken
+  zIndex?: ZIndexToken
+  top?: InsetToken
+  right?: InsetToken
+  bottom?: InsetToken
+  left?: InsetToken
+  inset?: InsetToken
+  insetX?: InsetToken
+  insetY?: InsetToken
+  aspectRatio?: AspectRatioToken
+  objectFit?: ObjectFitToken
   // Flex
   direction?: FlexDirectionToken
   align?: AlignToken
@@ -299,16 +422,42 @@ export interface StyleProps {
   wrap?: WrapToken
   grow?: '0' | '1'
   shrink?: '0' | '1'
+  alignSelf?: AlignSelfToken
+  justifySelf?: JustifySelfToken
+  flex?: FlexToken
+  order?: OrderToken
+  // Grid
+  gridCols?: GridColsToken
+  colSpan?: ColSpanToken
+  gridRows?: GridRowsToken
+  rowSpan?: RowSpanToken
+  placeItems?: PlaceItemsToken
   // Visual
   shadow?: ShadowToken
   rounded?: RadiusToken
   borderWidth?: BorderWidthToken
+  borderStyle?: BorderStyleToken
   opacity?: OpacityToken
   // Typography
   fontSize?: FontSizeToken
   fontWeight?: FontWeightToken
   fontFamily?: FontFamilyToken
   textAlign?: TextAlignToken
+  lineHeight?: LineHeightToken
+  letterSpacing?: LetterSpacingToken
+  textTransform?: TextTransformToken
+  textDecoration?: TextDecorationToken
+  textOverflow?: TextOverflowToken
+  whiteSpace?: WhiteSpaceToken
+  wordBreak?: WordBreakToken
+  // Interactivity
+  cursor?: CursorToken
+  userSelect?: UserSelectToken
+  pointerEvents?: PointerEventsToken
+  // Transitions
+  transition?: TransitionToken
+  duration?: DurationToken
+  ease?: EaseToken
 }
 
 // ── All style prop keys (for splitting) ──────────────────────────────
@@ -316,12 +465,21 @@ export interface StyleProps {
 const STYLE_PROP_KEYS = new Set<string>([
   'p', 'px', 'py', 'pt', 'pr', 'pb', 'pl',
   'm', 'mx', 'my', 'mt', 'mr', 'mb', 'ml',
-  'gap',
+  'gap', 'gapX', 'gapY',
   'bg', 'color', 'borderColor',
-  'display', 'position', 'overflow', 'w', 'h', 'maxW',
+  'display', 'position', 'overflow', 'overflowX', 'overflowY',
+  'w', 'h', 'minW', 'minH', 'maxW', 'maxH',
+  'zIndex', 'top', 'right', 'bottom', 'left', 'inset', 'insetX', 'insetY',
+  'aspectRatio', 'objectFit',
   'direction', 'align', 'justify', 'wrap', 'grow', 'shrink',
-  'shadow', 'rounded', 'borderWidth', 'opacity',
+  'alignSelf', 'justifySelf', 'flex', 'order',
+  'gridCols', 'colSpan', 'gridRows', 'rowSpan', 'placeItems',
+  'shadow', 'rounded', 'borderWidth', 'borderStyle', 'opacity',
   'fontSize', 'fontWeight', 'fontFamily', 'textAlign',
+  'lineHeight', 'letterSpacing', 'textTransform', 'textDecoration',
+  'textOverflow', 'whiteSpace', 'wordBreak',
+  'cursor', 'userSelect', 'pointerEvents',
+  'transition', 'duration', 'ease',
 ])
 
 // ── buildStyleClasses ────────────────────────────────────────────────
@@ -330,38 +488,55 @@ export function buildStyleClasses(props: Partial<StyleProps>): string {
   const classes: string[] = []
 
   // Spacing — padding
-  if (props.p != null) classes.push(paddingMap.p[props.p])
-  if (props.px != null) classes.push(paddingMap.px[props.px])
-  if (props.py != null) classes.push(paddingMap.py[props.py])
-  if (props.pt != null) classes.push(paddingMap.pt[props.pt])
-  if (props.pr != null) classes.push(paddingMap.pr[props.pr])
-  if (props.pb != null) classes.push(paddingMap.pb[props.pb])
-  if (props.pl != null) classes.push(paddingMap.pl[props.pl])
+  if (props.p != null) classes.push(spacingClass('p', props.p))
+  if (props.px != null) classes.push(spacingClass('px', props.px))
+  if (props.py != null) classes.push(spacingClass('py', props.py))
+  if (props.pt != null) classes.push(spacingClass('pt', props.pt))
+  if (props.pr != null) classes.push(spacingClass('pr', props.pr))
+  if (props.pb != null) classes.push(spacingClass('pb', props.pb))
+  if (props.pl != null) classes.push(spacingClass('pl', props.pl))
 
   // Spacing — margin
-  if (props.m != null) classes.push(marginMap.m[props.m])
-  if (props.mx != null) classes.push(marginMap.mx[props.mx])
-  if (props.my != null) classes.push(marginMap.my[props.my])
-  if (props.mt != null) classes.push(marginMap.mt[props.mt])
-  if (props.mr != null) classes.push(marginMap.mr[props.mr])
-  if (props.mb != null) classes.push(marginMap.mb[props.mb])
-  if (props.ml != null) classes.push(marginMap.ml[props.ml])
+  if (props.m != null) classes.push(spacingClass('m', props.m))
+  if (props.mx != null) classes.push(spacingClass('mx', props.mx))
+  if (props.my != null) classes.push(spacingClass('my', props.my))
+  if (props.mt != null) classes.push(spacingClass('mt', props.mt))
+  if (props.mr != null) classes.push(spacingClass('mr', props.mr))
+  if (props.mb != null) classes.push(spacingClass('mb', props.mb))
+  if (props.ml != null) classes.push(spacingClass('ml', props.ml))
 
   // Spacing — gap
-  if (props.gap != null) classes.push(gapMap[props.gap])
+  if (props.gap != null) classes.push(spacingClass('gap', props.gap))
+  if (props.gapX != null) classes.push(spacingClass('gap-x', props.gapX))
+  if (props.gapY != null) classes.push(spacingClass('gap-y', props.gapY))
 
   // Colors
-  if (props.bg != null) classes.push(bgMap[props.bg])
-  if (props.color != null) classes.push(colorMap[props.color])
-  if (props.borderColor != null) classes.push(borderColorMap[props.borderColor])
+  if (props.bg != null) classes.push(colorClass('bg', props.bg))
+  if (props.color != null) classes.push(colorClass('text', props.color))
+  if (props.borderColor != null) classes.push(colorClass('border', props.borderColor))
 
   // Layout
   if (props.display != null) classes.push(displayMap[props.display])
   if (props.position != null) classes.push(positionMap[props.position])
-  if (props.overflow != null) classes.push(overflowMap[props.overflow])
-  if (props.w != null) classes.push(widthMap[props.w])
-  if (props.h != null) classes.push(heightMap[props.h])
-  if (props.maxW != null) classes.push(maxWidthMap[props.maxW])
+  if (props.overflow != null) classes.push(overflowClass('overflow', props.overflow))
+  if (props.overflowX != null) classes.push(overflowClass('overflow-x', props.overflowX))
+  if (props.overflowY != null) classes.push(overflowClass('overflow-y', props.overflowY))
+  if (props.w != null) classes.push(sizeClass('w', props.w))
+  if (props.h != null) classes.push(sizeClass('h', props.h))
+  if (props.minW != null) classes.push(sizeClass('min-w', props.minW))
+  if (props.minH != null) classes.push(sizeClass('min-h', props.minH))
+  if (props.maxW != null) classes.push(sizeClass('max-w', props.maxW))
+  if (props.maxH != null) classes.push(sizeClass('max-h', props.maxH))
+  if (props.zIndex != null) classes.push(zIndexMap[props.zIndex])
+  if (props.top != null) classes.push(insetClass('top', props.top))
+  if (props.right != null) classes.push(insetClass('right', props.right))
+  if (props.bottom != null) classes.push(insetClass('bottom', props.bottom))
+  if (props.left != null) classes.push(insetClass('left', props.left))
+  if (props.inset != null) classes.push(insetClass('inset', props.inset))
+  if (props.insetX != null) classes.push(insetClass('inset-x', props.insetX))
+  if (props.insetY != null) classes.push(insetClass('inset-y', props.insetY))
+  if (props.aspectRatio != null) classes.push(aspectRatioMap[props.aspectRatio])
+  if (props.objectFit != null) classes.push(objectFitMap[props.objectFit])
 
   // Flex
   if (props.direction != null) classes.push(directionMap[props.direction])
@@ -370,11 +545,23 @@ export function buildStyleClasses(props: Partial<StyleProps>): string {
   if (props.wrap != null) classes.push(wrapMap[props.wrap])
   if (props.grow != null) classes.push(growMap[props.grow])
   if (props.shrink != null) classes.push(shrinkMap[props.shrink])
+  if (props.alignSelf != null) classes.push(alignSelfMap[props.alignSelf])
+  if (props.justifySelf != null) classes.push(justifySelfMap[props.justifySelf])
+  if (props.flex != null) classes.push(flexMap[props.flex])
+  if (props.order != null) classes.push(orderMap[props.order])
+
+  // Grid
+  if (props.gridCols != null) classes.push(gridColsMap[props.gridCols])
+  if (props.colSpan != null) classes.push(colSpanMap[props.colSpan])
+  if (props.gridRows != null) classes.push(gridRowsMap[props.gridRows])
+  if (props.rowSpan != null) classes.push(rowSpanMap[props.rowSpan])
+  if (props.placeItems != null) classes.push(placeItemsMap[props.placeItems])
 
   // Visual
   if (props.shadow != null) classes.push(shadowMap[props.shadow])
   if (props.rounded != null) classes.push(roundedMap[props.rounded])
   if (props.borderWidth != null) classes.push(borderWidthMap[props.borderWidth])
+  if (props.borderStyle != null) classes.push(borderStyleMap[props.borderStyle])
   if (props.opacity != null) classes.push(opacityMap[props.opacity])
 
   // Typography
@@ -382,6 +569,23 @@ export function buildStyleClasses(props: Partial<StyleProps>): string {
   if (props.fontWeight != null) classes.push(fontWeightMap[props.fontWeight])
   if (props.fontFamily != null) classes.push(fontFamilyMap[props.fontFamily])
   if (props.textAlign != null) classes.push(textAlignMap[props.textAlign])
+  if (props.lineHeight != null) classes.push(lineHeightMap[props.lineHeight])
+  if (props.letterSpacing != null) classes.push(letterSpacingMap[props.letterSpacing])
+  if (props.textTransform != null) classes.push(textTransformMap[props.textTransform])
+  if (props.textDecoration != null) classes.push(textDecorationMap[props.textDecoration])
+  if (props.textOverflow != null) classes.push(textOverflowMap[props.textOverflow])
+  if (props.whiteSpace != null) classes.push(whiteSpaceMap[props.whiteSpace])
+  if (props.wordBreak != null) classes.push(wordBreakMap[props.wordBreak])
+
+  // Interactivity
+  if (props.cursor != null) classes.push(cursorMap[props.cursor])
+  if (props.userSelect != null) classes.push(userSelectMap[props.userSelect])
+  if (props.pointerEvents != null) classes.push(pointerEventsMap[props.pointerEvents])
+
+  // Transitions
+  if (props.transition != null) classes.push(transitionMap[props.transition])
+  if (props.duration != null) classes.push(durationMap[props.duration])
+  if (props.ease != null) classes.push(easeMap[props.ease])
 
   return classes.join(' ')
 }

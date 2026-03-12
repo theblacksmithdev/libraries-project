@@ -16,36 +16,6 @@ const TYPOGRAPHY_MAP: Record<string, string> = {
   fontFamily: '--font-family',
   fontFamilyHeading: '--font-family-heading',
   fontFamilyMono: '--font-family-mono',
-  fontSizeBase: '--font-size-base',
-  fontSizeSm: '--font-size-sm',
-  fontSizeLg: '--font-size-lg',
-  fontSizeXl: '--font-size-xl',
-  fontSize2xl: '--font-size-2xl',
-  fontSize3xl: '--font-size-3xl',
-  fontSize4xl: '--font-size-4xl',
-  lineHeight: '--line-height',
-}
-
-const SPACING_MAP: Record<string, string> = {
-  unit: '--spacing-unit',
-  xs: '--spacing-xs',
-  sm: '--spacing-sm',
-  md: '--spacing-md',
-  lg: '--spacing-lg',
-  xl: '--spacing-xl',
-  '2xl': '--spacing-2xl',
-}
-
-const SHADOW_MAP: Record<string, string> = {
-  sm: '--shadow-sm',
-  md: '--shadow-md',
-  lg: '--shadow-lg',
-  xl: '--shadow-xl',
-}
-
-const BORDER_WIDTH_MAP: Record<string, string> = {
-  DEFAULT: '--border-width',
-  thick: '--border-width-thick',
 }
 
 export function buildCssVariables(
@@ -75,44 +45,10 @@ export function buildCssVariables(
     vars['--radius'] = theme.radius
   }
 
-  // Typography
+  // Typography (font families only — sizes use Tailwind defaults)
   if (theme.typography) {
     for (const [key, cssVar] of Object.entries(TYPOGRAPHY_MAP)) {
       const value = theme.typography[key as keyof typeof theme.typography]
-      if (value !== undefined) {
-        vars[cssVar] = value
-      }
-    }
-  }
-
-  // Spacing
-  if (theme.spacing) {
-    for (const [key, cssVar] of Object.entries(SPACING_MAP)) {
-      const value = theme.spacing[key as keyof typeof theme.spacing]
-      if (value !== undefined) {
-        vars[cssVar] = value
-      }
-    }
-  }
-
-  // Shadows — merge darkShadows over shadows when in dark mode
-  const baseShadows = theme.shadows ?? {}
-  const darkShadows = theme.darkShadows ?? {}
-  const shadows = resolvedMode === 'dark'
-    ? { ...baseShadows, ...darkShadows }
-    : baseShadows
-
-  for (const [key, cssVar] of Object.entries(SHADOW_MAP)) {
-    const value = shadows[key as keyof typeof shadows]
-    if (value !== undefined) {
-      vars[cssVar] = value
-    }
-  }
-
-  // Border widths
-  if (theme.borderWidths) {
-    for (const [key, cssVar] of Object.entries(BORDER_WIDTH_MAP)) {
-      const value = theme.borderWidths[key as keyof typeof theme.borderWidths]
       if (value !== undefined) {
         vars[cssVar] = value
       }

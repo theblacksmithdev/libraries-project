@@ -72,54 +72,14 @@ describe('buildCssVariables', () => {
     expect(vars['--radius']).toBe('0.75rem')
   })
 
-  it('maps typography', () => {
+  it('maps typography font families', () => {
     const theme: ThemeConfig = {
       typography: {
         fontFamily: 'Inter, sans-serif',
-        fontSizeBase: '16px',
-        lineHeight: '1.6',
       },
     }
     const vars = buildCssVariables(theme, 'light')
     expect(vars['--font-family']).toBe('Inter, sans-serif')
-    expect(vars['--font-size-base']).toBe('16px')
-    expect(vars['--line-height']).toBe('1.6')
-  })
-
-  it('maps spacing', () => {
-    const theme: ThemeConfig = {
-      spacing: { unit: '0.5rem', xs: '0.5rem', '2xl': '4rem' },
-    }
-    const vars = buildCssVariables(theme, 'light')
-    expect(vars['--spacing-unit']).toBe('0.5rem')
-    expect(vars['--spacing-xs']).toBe('0.5rem')
-    expect(vars['--spacing-2xl']).toBe('4rem')
-  })
-
-  it('maps shadows', () => {
-    const theme: ThemeConfig = {
-      shadows: { sm: '0 1px 2px black' },
-    }
-    const vars = buildCssVariables(theme, 'light')
-    expect(vars['--shadow-sm']).toBe('0 1px 2px black')
-  })
-
-  it('uses darkShadows in dark mode', () => {
-    const theme: ThemeConfig = {
-      shadows: { sm: '0 1px 2px black' },
-      darkShadows: { sm: '0 1px 2px white' },
-    }
-    const vars = buildCssVariables(theme, 'dark')
-    expect(vars['--shadow-sm']).toBe('0 1px 2px white')
-  })
-
-  it('maps border widths', () => {
-    const theme: ThemeConfig = {
-      borderWidths: { DEFAULT: '2px', thick: '4px' },
-    }
-    const vars = buildCssVariables(theme, 'light')
-    expect(vars['--border-width']).toBe('2px')
-    expect(vars['--border-width-thick']).toBe('4px')
   })
 
   it('only emits defined keys (partial overrides)', () => {

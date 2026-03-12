@@ -160,8 +160,6 @@ export const CustomTypography: Story = {
       theme={{
         typography: {
           fontFamily: 'Georgia, serif',
-          fontSizeBase: '1.125rem',
-          lineHeight: '1.8',
         },
       }}
     >
@@ -183,23 +181,6 @@ export const CustomRadius: Story = {
         </ThemeProvider>
       ))}
     </div>
-  ),
-}
-
-export const CustomShadows: Story = {
-  render: () => (
-    <ThemeProvider
-      theme={{
-        shadows: {
-          sm: '0 2px 8px 0 rgb(0 0 0 / 0.15)',
-          md: '0 4px 16px 0 rgb(0 0 0 / 0.15)',
-        },
-      }}
-    >
-      <div className="bg-background text-foreground p-6 rounded-lg">
-        <SampleCard label="Custom Shadows" />
-      </div>
-    </ThemeProvider>
   ),
 }
 

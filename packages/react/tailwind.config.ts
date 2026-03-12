@@ -63,37 +63,6 @@ const config: Config = {
   			heading: 'var(--font-family-heading)',
   			mono: 'var(--font-family-mono)',
   		},
-  		fontSize: {
-  			base: 'var(--font-size-base)',
-  			sm: 'var(--font-size-sm)',
-  			lg: 'var(--font-size-lg)',
-  			xl: 'var(--font-size-xl)',
-  			'2xl': 'var(--font-size-2xl)',
-  			'3xl': 'var(--font-size-3xl)',
-  			'4xl': 'var(--font-size-4xl)',
-  		},
-  		lineHeight: {
-  			normal: 'var(--line-height)',
-  		},
-  		spacing: {
-  			unit: 'var(--spacing-unit)',
-  			xs: 'var(--spacing-xs)',
-  			'sm-space': 'var(--spacing-sm)',
-  			'md-space': 'var(--spacing-md)',
-  			'lg-space': 'var(--spacing-lg)',
-  			'xl-space': 'var(--spacing-xl)',
-  			'2xl-space': 'var(--spacing-2xl)',
-  		},
-  		boxShadow: {
-  			sm: 'var(--shadow-sm)',
-  			md: 'var(--shadow-md)',
-  			lg: 'var(--shadow-lg)',
-  			xl: 'var(--shadow-xl)',
-  		},
-  		borderWidth: {
-  			DEFAULT: 'var(--border-width)',
-  			thick: 'var(--border-width-thick)',
-  		},
   		borderRadius: {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',

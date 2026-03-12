@@ -17,7 +17,7 @@ describe('Box', () => {
   it('applies style props as Tailwind classes', () => {
     render(<Box data-testid="box" p="md" bg="primary" rounded="lg" />)
     const el = screen.getByTestId('box')
-    expect(el.className).toContain('p-md-space')
+    expect(el.className).toContain('p-4')
     expect(el.className).toContain('bg-primary')
     expect(el.className).toContain('rounded-lg')
   })

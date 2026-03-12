@@ -38,36 +38,6 @@ export interface ThemeTypography {
   fontFamily?: string
   fontFamilyHeading?: string
   fontFamilyMono?: string
-  fontSizeBase?: string
-  fontSizeSm?: string
-  fontSizeLg?: string
-  fontSizeXl?: string
-  fontSize2xl?: string
-  fontSize3xl?: string
-  fontSize4xl?: string
-  lineHeight?: string
-}
-
-export interface ThemeSpacing {
-  unit?: string
-  xs?: string
-  sm?: string
-  md?: string
-  lg?: string
-  xl?: string
-  '2xl'?: string
-}
-
-export interface ThemeShadows {
-  sm?: string
-  md?: string
-  lg?: string
-  xl?: string
-}
-
-export interface ThemeBorderWidths {
-  DEFAULT?: string
-  thick?: string
 }
 
 export interface ThemeConfig {
@@ -75,10 +45,6 @@ export interface ThemeConfig {
   darkColors?: ThemeColors
   radius?: string
   typography?: ThemeTypography
-  spacing?: ThemeSpacing
-  shadows?: ThemeShadows
-  darkShadows?: ThemeShadows
-  borderWidths?: ThemeBorderWidths
 }
 
 export type ThemeMode = 'light' | 'dark' | 'system'

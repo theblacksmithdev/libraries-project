@@ -22,13 +22,13 @@ describe('Flex', () => {
 
   it('applies gap prop with spacing tokens', () => {
     const { rerender } = render(<Flex data-testid="flex" gap="sm" />)
-    expect(screen.getByTestId('flex').className).toContain('gap-sm-space')
+    expect(screen.getByTestId('flex').className).toContain('gap-2')
 
     rerender(<Flex data-testid="flex" gap="md" />)
-    expect(screen.getByTestId('flex').className).toContain('gap-md-space')
+    expect(screen.getByTestId('flex').className).toContain('gap-4')
 
     rerender(<Flex data-testid="flex" gap="lg" />)
-    expect(screen.getByTestId('flex').className).toContain('gap-lg-space')
+    expect(screen.getByTestId('flex').className).toContain('gap-6')
   })
 
   it('applies direction and gap together', () => {
@@ -36,7 +36,7 @@ describe('Flex', () => {
     const el = screen.getByTestId('flex')
     expect(el.className).toContain('flex')
     expect(el.className).toContain('flex-col')
-    expect(el.className).toContain('gap-md-space')
+    expect(el.className).toContain('gap-4')
   })
 
   it('applies flex-specific style props', () => {
@@ -44,7 +44,7 @@ describe('Flex', () => {
     const el = screen.getByTestId('flex')
     expect(el.className).toContain('items-center')
     expect(el.className).toContain('justify-between')
-    expect(el.className).toContain('gap-md-space')
+    expect(el.className).toContain('gap-4')
   })
 
   it('applies wrap prop', () => {
